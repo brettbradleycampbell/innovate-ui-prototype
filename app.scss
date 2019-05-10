@@ -61,8 +61,8 @@ $group-contained: yes;
 
 } @else if $style == g {
 
-$mdc-theme-primary: #5653fe;
-$mdc-theme-secondary: #5653fe; // #e4ad07;
+$mdc-theme-primary: #536dfe;
+$mdc-theme-secondary: #536dfe; // #e4ad07;
 $perks-bar-inner: $mdc-theme-primary;
 $background-color-header-row-one: $gray-bg;
 $header-row-one-border: $light-border;
@@ -73,7 +73,7 @@ $question-number-background-color: $mdc-theme-primary;
 
 } @else if $style == google-dark-bar {
 
-} @else if $style == red {
+} @else if $style == matte {
 
 $mdc-theme-primary: red;  
 
