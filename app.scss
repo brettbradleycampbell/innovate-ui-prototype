@@ -421,7 +421,10 @@ hr {
 /////////////////
 
 .app-body {
-  overflow: auto;
+  @include breakpoint-medium-up {
+    overflow: auto;
+  }
+
   flex-grow: 1;
 }
 
