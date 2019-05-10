@@ -1,0 +1,145 @@
+// Theme Variables
+$mdc-theme-primary: #536dfe;
+$mdc-theme-secondary: red;
+$mdc-theme-on-primary: #ffffff;
+$mdc-theme-on-secondary: #ffffff;
+
+$white: #ffffff;
+$body-text-color: #222222;
+$light-border: 1px solid #e4e4e4;
+
+$sidebar-width: 176px;
+$top-app-bar-height: 116px;
+$settings-menu-width: 240px;
+
+
+// Google Material modules
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/button/mdc-button";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/typography/mdc-typography";
+@import "@material/textfield/mdc-text-field";
+@import "@material/icon-button/mdc-icon-button";
+@import "@material/menu-surface/mdc-menu-surface";
+@import "@material/menu/mdc-menu";
+@import "@material/list/mdc-list";
+@import "@material/select/mdc-select";
+@import "@material/switch/mdc-switch";
+@import "@material/form-field/mdc-form-field";
+@import "@material/checkbox/mdc-checkbox";
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+a {
+  text-decoration: none;
+
+  span {
+    vertical-align: middle;
+  }
+}
+
+// Google Material class overrides
+.mdc-top-app-bar--fixed-adjust {
+  padding-top: $top-app-bar-height;
+}
+
+//Innovate Styles
+.app-header {
+  @include mdc-top-app-bar-fill-color($white);
+  @include mdc-top-app-bar-ink-color($body-text-color);
+  .mdc-top-app-bar__row {
+    padding: 0 10px;
+    border-bottom: $light-border;
+
+    font-size: .875rem;
+    &.header-row-two {
+      height: 68px;
+    }
+  }
+  .app-header__item {
+    // display: inline-flex;
+    // align-items: center;
+    // height: 100%;
+
+    a {
+      @include mdc-top-app-bar-ink-color($body-text-color);
+    }
+  }
+}
+
+#sidebar {
+  position: fixed;
+  z-index: 1;
+  top: $top-app-bar-height;
+  width: $sidebar-width;
+  height: 100%;
+}
+#main-app {
+  padding-left: $sidebar-width;
+}
+#create-survey {
+  padding: 0;
+
+  .mdc-layout-grid__inner {
+    grid-gap: 0;
+  }
+}
+.survey-builder-container {
+  position: relative;
+  padding-right: $settings-menu-width;
+}
+
+.survey-builder-preview-container {
+  border-left: $light-border;
+}
+
+.survey-builder-settings {
+  width: $settings-menu-width;
+  position: absolute;
+  right: 0; 
+  top: 0;
+  bottom: 0;
+  border-left: $light-border;
+  padding: 10px;
+}
+
+.mdc-menu.q-settings {
+  min-width: 200px;
+}
+
+
+.secondary-button {
+  @include mdc-button-ink-color($mdc-theme-secondary);
+  @include mdc-states($mdc-theme-secondary);
+}
+
+.text-field-custom-dense {
+  height: 36px;
+  padding-top: 0;
+  padding-bottom: 0;
+  &.mdc-text-field--outlined .mdc-floating-label {
+    top: 7px;
+  }
+  .mdc-text-field__icon {
+    margin-top: 7px;
+    margin-left: 4px;
+  }
+}
+
+.survey-builder-settings {
+  .mdc-form-field {
+    display: flex;
+  }
+  .mdc-select--outlined .mdc-select__selected-text {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .mdc-select, .mdc-select__native-control, .mdc-select__selected-text {
+    height: 42px;
+  }
+
+}

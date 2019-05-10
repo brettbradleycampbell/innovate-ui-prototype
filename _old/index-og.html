@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="bundle.css">
+  <link rel="stylesheet" href="//necolas.github.io/normalize.css/latest/normalize.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body class="mdc-typography">
+  <header class=" mdc-top-app-bar mdc-top-app-bar--dense mdc-top-app-bar--fixed app-header">
+    <div class="mdc-top-app-bar__row header-row-one">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <span class=""><img src="images/innovate-logo.png" width="105" style="margin-top: 2px;"></span> 
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+        <div class="app-header__item">
+          <a class="material-icons app-header__link">search</a>
+        </div>
+        <div class="app-header__item">
+          <span>Perks</span>
+          <span class="header-perks-bar-outer" style="width: 140px; display: inline-block; vertical-align: middle; font-size: 0; background: #eeeeee;">
+            <span class="header-perks-bar-inner" style="width: 45%; display: inline-block; height: 20px; background: #84ffff;"></span>
+          </span>
+        </div>
+        <div class="app-header__item">
+          <a href="">
+            <span class="material-icons">person</span>
+            <span>Matt Dusig</span>
+          </a>
+        </div>
+      </section>
+    </div>
+    <div class="mdc-top-app-bar__row header-row-two">
+      <section class="mdc-top-app-bar__section">
+        <div class="app-header__item">
+          <span class="material-icons">home</span> / <span>Surveys</span>  / <span>Customer Feedback Survey 1</span>
+        </div>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+        <div class="app-header__item">
+          <span>Create</span>
+          <span>Share</span>
+          <span>Results</span>
+        </div>
+        <div class="app-header__item">
+          <span>All changes saved...</span>
+        </div>
+        <div class="app-header__item">
+          <a><span>View</span> <span class="material-icons">open_in_new</span></a>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <div id="sidebar">
+    <ul class="mdc-list">
+      <li class="mdc-list-item"><a><span class="material-icons">edit</span> <span>Content</span></a></li>
+      <li class="mdc-list-item"><a><span class="material-icons">color_lens</span> Design</a></li>
+      <li class="mdc-list-item"><a><span class="material-icons">settings</span> Settings</a></li>
+    </ul>
+  </div>
+
+  <div id="main-app" class="mdc-top-app-bar--fixed-adjust">
+    <div id="create-survey" class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span-8 survey-builder-container">
+          <div class="survey-builder-content">
+            <h6 class="mdc-typography--headline6">Survey Builder</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit duis tristique sollicitudin nibh sit amet commodo nulla. Egestas diam in arcu cursus. Duis convallis convallis tellus id interdum velit. Senectus et netus et malesuada fames ac turpis. Mattis nunc sed blandit libero volutpat. Cursus mattis molestie a iaculis at erat pellentesque. Etiam erat velit scelerisque in dictum non consectetur a. Vulputate ut pharetra sit amet. Proin sagittis nisl rhoncus mattis. At elementum eu facilisis sed odio morbi quis. Venenatis tellus in metus vulputate. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Semper eget duis at tellus at urna condimentum mattis pellentesque. Tincidunt id aliquet risus feugiat in. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. Tellus cras adipiscing enim eu turpis egestas pretium aenean. Duis ultricies lacus sed turpis tincidunt id aliquet. In fermentum posuere urna nec tincidunt praesent. Sagittis eu volutpat odio facilisis mauris sit amet massa.</p>
+          </div>
+          <div class="survey-builder-settings">
+
+            <div class="question-settings-form-field">
+              <label>Question Type</label>
+              <div class="mdc-select mdc-select--outlined">
+                <input type="hidden" name="enhanced-select">
+                <i class="mdc-select__dropdown-icon"></i>
+                <div class="mdc-select__selected-text"></div>
+                <div class="mdc-select__menu mdc-menu mdc-menu-surface q-settings">
+                  <ul class="mdc-list">
+                    <li class="mdc-list-item mdc-list-item--selected" data-value="multiple-choice" aria-selected="true">
+                      Multiple Choice
+                    </li>
+                    <li class="mdc-list-item" data-value="star">
+                      Star Rating
+                    </li>
+                    <li class="mdc-list-item" data-value="scale">
+                      Scale
+                    </li>
+                  </ul>
+                </div>
+                  <!-- Other elements from the native or enhanced select remain. -->
+                 <div class="mdc-notched-outline">
+                   <div class="mdc-notched-outline__leading"></div>
+                   <div class="mdc-notched-outline__notch">
+                   </div>
+                   <div class="mdc-notched-outline__trailing"></div>
+                 </div>
+              </div>
+            </div>
+
+            <div class="question-settings-form-field mdc-form-field">
+              <label for="basic-switch">Sort</label>
+              <div class="mdc-switch mdc-switch1">
+                <div class="mdc-switch__track"></div>
+                <div class="mdc-switch__thumb-underlay">
+                  <div class="mdc-switch__thumb">
+                      <input type="checkbox" id="basic-switch" class="mdc-switch__native-control" role="switch">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-settings-form-field mdc-form-field">
+              <label for="checkbox-1">Allow multiple answers</label>
+              <div class="mdc-checkbox">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-settings-form-field mdc-form-field">
+              <label for="checkbox-2">Allow multiple answers</label>
+              <div class="mdc-checkbox">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-2"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="mdc-layout-grid__cell--span-4 survey-builder-preview-container">
+          <iframe src="" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="bundle.js" async></script>
+</body>
+</html>

@@ -1,0 +1,896 @@
+/////////////////
+// Variables
+/////////////////
+
+// Material Theme Variables
+$mdc-theme-primary: #395064;
+$mdc-theme-secondary: #395064; // #3386ff  // #568cdb // Google blue: #536dfe; // Innovate Blue alternative: #4294f9;
+$mdc-theme-on-primary: #ffffff;
+$mdc-theme-on-secondary: #ffffff;
+$light-blue: #eceefb;
+
+// Colors
+$white: #ffffff;
+$black: #222222;
+$body-text-color: $black;
+$light-border: none; // #d4d4d4;
+$dark-blue: #282e33;
+$gray-bg: #f0f1f3;
+$dark-bg: #32384a; // #34414e; // #465461; // #394148;
+$perks-bar-outer: $white;
+$perks-bar-inner: $mdc-theme-primary;
+$background-color-header-row-one: $dark-bg; // #384f63
+$background-color-header-row-two: $white;
+$background-color-settings-menu: #f7f7f9;
+$header-row-one-border: none;
+$background-color-question-group: $white;
+$background-color-question-hover: #f7f7f9;
+$background-color-survey-builder-container: $gray-bg;
+$header-search-bar-background-color: rgba(0,0,0,.24);
+$question-number-background-color: $dark-bg;
+$text-on-dark-header: #9da4ab;
+$breadcrumb-current-color: $white;
+
+// Breakpoints
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+
+// Layout widths
+$top-app-bar-height-row-one: 48px; // 36px // 48px is default for dense header
+$top-app-bar-height-row-two: 56px; // 56px
+$top-app-bar-height: $top-app-bar-height-row-one + $top-app-bar-height-row-two;
+$settings-menu-width: 228px;
+$survey-preview-width: 350px;
+
+// Paddings, Margins, etc.
+$global-padding: 4px;
+$global-padding-large: 24px;
+$global-margin: 4px;
+$global-margin-large: 24px;
+$global-border-radius: 3px;
+
+// Presets
+$style: g;
+$group-contained: yes;
+
+
+@if $style == i {
+
+// default variables above 
+
+} @else if $style == g {
+
+$mdc-theme-primary: #5653fe;
+$mdc-theme-secondary: #5653fe; // #e4ad07;
+$perks-bar-inner: $mdc-theme-primary;
+$background-color-header-row-one: $gray-bg;
+$header-row-one-border: $light-border;
+$header-search-bar-background-color: $white;
+$text-on-dark-header: #565656;
+$breadcrumb-current-color: $body-text-color;
+$question-number-background-color: $mdc-theme-primary;
+
+} @else if $style == google-dark-bar {
+
+} @else if $style == red {
+
+$mdc-theme-primary: red;  
+
+}
+
+
+/////////////////
+// Media Queries
+/////////////////
+
+@mixin breakpoint-small {
+  @media (max-width: #{$breakpoint-small}) {
+    @content;
+  }
+}
+@mixin breakpoint-medium {
+  @media (max-width: #{$breakpoint-medium}) {
+    @content;
+  }  
+}
+@mixin breakpoint-large {
+  @media (max-width: #{$breakpoint-large}) {
+    @content;
+  }  
+}
+@mixin breakpoint-medium-up {
+  @media (min-width: #{$breakpoint-small + 1}) {
+    @content;
+  }
+}
+@mixin breakpoint-medium-only {
+  @media (min-width: #{$breakpoint-small + 1}) and (max-width: #{$breakpoint-medium}) {
+    @content;
+  }
+}
+@mixin breakpoint-large-up {
+  @media (min-width: #{$breakpoint-medium + 1}) {
+    @content;
+  }
+}
+
+/////////////////
+// Material modules
+/////////////////
+
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/button/mdc-button";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/typography/mdc-typography";
+@import "@material/textfield/mdc-text-field";
+@import "@material/icon-button/mdc-icon-button";
+@import "@material/menu-surface/mdc-menu-surface";
+@import "@material/menu/mdc-menu";
+@import "@material/list/mdc-list";
+@import "@material/select/mdc-select";
+@import "@material/switch/mdc-switch";
+@import "@material/form-field/mdc-form-field";
+@import "@material/checkbox/mdc-checkbox";
+@import "@material/drawer/mdc-drawer";
+@import "@material/dialog/mdc-dialog";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
+@import "@material/radio/mdc-radio";
+
+
+/////////////////
+// General
+/////////////////
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  color: $black;
+  cursor: default;
+}
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  border-bottom: $light-border;
+}
+
+/////////////////
+// Material Class overrides
+/////////////////
+
+.mdc-top-app-bar--fixed-adjust {
+  padding-top: $top-app-bar-height;
+}
+.mdc-button {
+  text-transform: none;
+  letter-spacing: 0;
+}
+.mdc-dialog .mdc-dialog__scrim {
+  background: rgba(0,0,0,.56);
+}
+
+/////////////////
+// Helper classes
+/////////////////
+
+.small-hide {
+  @include breakpoint-small {
+    display: none;
+  }
+}
+.small-show {
+  @include breakpoint-medium-up {
+    display: none;
+  }
+}
+
+/////////////////
+// App Header
+/////////////////
+
+.app-header {
+  @include mdc-top-app-bar-fill-color($white);
+  @include mdc-top-app-bar-ink-color($body-text-color);
+
+  font-size: 0.875rem;
+
+  .mdc-top-app-bar__row {
+    padding: 0 10px;
+    border-bottom: $light-border;
+    // font-size: .875rem;
+
+    &.header-row-one {
+      height: $top-app-bar-height-row-one; // 48px is default for dense header
+      background: $background-color-header-row-one;
+      border-bottom: $header-row-one-border;
+    }
+    &.header-row-two {
+      height: $top-app-bar-height-row-two;
+      background: $background-color-header-row-two;
+      padding-left: 0;
+    }
+  }
+  .app-header__item {
+    span, a {
+      vertical-align: middle;
+    }
+    a {
+      @include mdc-top-app-bar-ink-color($body-text-color);
+    }
+  }
+  .header-breadcrumbs {
+    margin-left: $global-margin*2;
+
+    .breadcrumb-link,
+    .breadcrumb-slash {
+      color: $text-on-dark-header;
+      padding-left: 4px;
+      padding-right: 4px;
+
+      &.breadcrumb-current {
+        color: $breadcrumb-current-color;
+      }
+    }
+    .breadcrumb-link {
+      &:hover {
+        color: $white;
+      }
+    }
+
+    .pause-play-survey {
+      font-size: 18px;
+      color: $text-on-dark-header;
+    }    
+  }
+
+}
+.header-search-bar.mdc-text-field {
+  border-radius: 4px; 
+  height: 32px; 
+  margin-right: 24px;
+  background: $header-search-bar-background-color;
+
+  .header-search-bar-input.mdc-text-field__input {
+    color: #fff;
+    caret-color: #fff;
+    padding: 0 8px 0 36px;
+    border: none;
+    font-size: 0.875rem;
+    height: 100%;
+  }
+  .header-search-bar-icon.mdc-text-field__icon {
+    color: $text-on-dark-header; 
+    left: 8px;
+    bottom: 4px;
+
+  }
+}
+
+
+#header-desktop {
+  @include breakpoint-medium {
+    display: none;
+  }
+}
+#header-mobile {
+  @include breakpoint-large-up {
+    display: none;
+  }
+}
+
+.mdc-button.header-button {
+  // background: #ffffff;
+  color: $text-on-dark-header;
+  font-weight: normal;
+}
+
+.header-perks-bar-outer {
+  position: relative;
+  width: 140px; 
+  margin-right: 24px;
+  display: inline-block; 
+  vertical-align: middle; 
+  font-size: 0; 
+  background: $perks-bar-outer; 
+  border-radius: 40px; 
+  overflow: hidden;
+}
+.header-perks-bar-inner {
+  width: 35%; 
+  display: inline-block; 
+  height: 24px; 
+  background: $perks-bar-inner;
+}
+
+.perks-text {
+  position: absolute;
+  color: $text-on-dark-header;
+  font-weight: 500;
+  right: 4px;
+  top: 3px;
+  text-transform: uppercase;
+  font-size: 12px;
+
+  .material-icons {
+    font-size: 18px;
+  }
+}
+
+.header-main-nav-links {
+  // margin-right: $global-margin-large*4;
+  align-items: stretch;
+
+  &.mdc-top-app-bar__section {
+    padding-left: 0;
+  }
+
+  .app-header__item {
+    display: inline-flex;
+    align-items: center;
+    
+    @include breakpoint-small {
+      padding-left: $global-padding*2;
+      padding-right: $global-padding*2;
+    }
+    @include breakpoint-medium-up {
+      padding-left: $global-padding*4;
+      padding-right: $global-padding*4;
+    }
+
+    &:hover {
+      background: $gray-bg;
+    }
+
+  }
+  a {
+    padding: $global-padding;
+    // font-size: 16px;
+  }
+}
+
+.hmnl-selected.app-header__item {
+  border-bottom: 2px solid $mdc-theme-primary;
+  font-weight: 500;
+}
+.app-header__item.hmnl-submenu {
+  // padding-left: 0;
+  // padding-right: $global-padding-large/2;
+  background: $gray-bg;
+
+  .material-icons {
+    font-size: 18px;
+  }
+}
+
+.mobile-menu-icon {
+  color: $breadcrumb-current-color;
+}
+
+
+/////////////////
+// Sidebar
+/////////////////
+
+.mdc-drawer.app-sidebar {
+  width: 57px;
+  // width: 164px; // with text (also change icon margin-right)
+  border: none;
+  z-index: 2;
+  border-right: $light-border;
+
+  // // Hide sidebar: 
+  // width: 0;
+  // border: none;
+
+  @include breakpoint-small {
+    display: none;
+  }
+
+  nav.mdc-list {
+    hr {
+      border: none;
+      border-top: $light-border;
+      max-width: 74%;
+    }
+  }
+
+} 
+.innovate-logo {
+  width: 95px;
+  margin-top: 4px;
+}
+
+.mdc-list-item.submenu {
+  padding-left: 45px;
+}
+.mdc-list-item__graphic {
+  margin-right: 0;
+  // margin-right: 12px; // with text
+}
+
+/////////////////
+// App Body
+/////////////////
+
+.app-body {
+  overflow: auto;
+  flex-grow: 1;
+}
+
+/////////////////
+// Survey Builder
+/////////////////
+
+#create-survey {
+  padding: 0;
+
+  .mdc-layout-grid__inner {
+    grid-gap: 0;
+  }
+}
+
+.survey-builder-content {
+  height: 690px; // figure out how to make this full height
+  overflow: scroll;
+  padding-bottom: $global-padding*40;
+
+  .material-icons {
+    color: rgba(0,0,0,.6);
+  }
+}
+
+.survey-builder-container {
+  position: relative;
+  background: $background-color-survey-builder-container;
+  padding-right: 0; 
+
+  @include breakpoint-large-up {
+    padding-right: $settings-menu-width + $survey-preview-width;
+  }
+  @include breakpoint-large {
+    padding-right: $settings-menu-width;
+  }
+  @include breakpoint-medium {
+    padding-right: 0;
+  }
+
+}
+.sbc-question-group {
+  margin: $global-margin-large;
+  border: $light-border;
+  border-radius: $global-border-radius;
+  background: $background-color-question-group;
+
+  @if $group-contained == no {
+    border: none;
+    background: transparent;
+    border-radius: none;
+
+  }
+}
+
+.sbc-question-group-header {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+
+  .sbc-question-group-title,
+  .sbc-question-group-icons {
+    display: inline-flex;
+    flex: 1 1 auto;
+    align-items: center;
+    min-width: 0;
+    padding: $global-padding-large/2;
+    z-index: 1;
+  }
+  .sbc-question-group-title {
+    padding-left: $global-padding-large;
+    @if $group-contained == no {
+      padding-left: 0;
+    }
+
+  }
+  .sbc-question-group-icons {
+    justify-content: flex-end;
+  }
+
+}
+
+.sbc-question-outer {
+  border-top: $light-border;
+  padding: $global-padding-large*1.5 $global-padding-large/2 $global-padding-large*1.5 $global-padding-large;
+  position: relative;
+  // transition: background-color, .2s; // this was causing weird reload side effects (question outers stretching height on reload. )
+
+  @if $group-contained == no {
+    border-left: $light-border;
+    border-right: $light-border;
+    background: $white;
+  }
+
+  &:hover {
+    background: $background-color-question-hover;
+  }
+
+  .button-add-circle-outer {
+    visibility: hidden;
+    position: absolute;
+    bottom: -14px;
+    height: 28px;
+    right: $global-margin-large;
+    z-index: 2;
+    border-radius: $global-border-radius;
+    display: inline-flex;
+    border: $light-border;
+    background: $gray-bg;
+
+    button {
+      background: transparent;
+      border: none;
+      color: $body-text-color;
+      padding: 0;
+
+      &.button-add-circle {
+        width: 28px;
+      }
+
+      &.button-add-circle-dropdown {
+        width: 28px;
+        border-left: $light-border;
+      }
+
+      .material-icons {
+        font-size: 18px;
+      }
+
+    }
+  }
+
+  &.sbc-question-first {
+    border-top: $light-border;
+    
+    @if $group-contained == no {
+      border-top-left-radius: $global-border-radius;
+    }
+  }
+  &.sbc-question-last {
+    border-bottom: $light-border;
+    @if $group-contained == no {
+      border-bottom-left-radius: $global-border-radius;
+    }
+  }
+  &.sbc-question-only {
+    border-top: $light-border;
+    border-bottom: $light-border;
+    @if $group-contained == no {
+      border-radius: $global-border-radius;
+    }
+
+  }
+  &.sbc-selected {
+    background: $background-color-settings-menu;
+    border-top: $light-border;
+    border-bottom: $light-border;
+
+    // &:after { // trying to make the menu connect to the outer, and hide the border in between. 
+    //   content: "";
+    //   background: blue;
+    //   position: absolute;
+    //   width: 25px;
+    //   top: 0;
+    //   bottom: 0;
+    //   right: 0;
+    //   }
+
+    @include breakpoint-large-up {
+      width: calc(100% + 25px);
+
+      .sbc-question-inner {
+        width: calc(100% - 25px);
+      }
+
+      .button-add-circle-outer {
+        right: $global-margin-large + 25px; // 24px + 25px;
+      }
+
+    }
+
+    &+.sbc-question-outer {
+      border-top: none;
+    }
+    .button-add-circle-outer,
+    .sbc-question-icons {
+      visibility: visible;
+    }
+
+  }
+  &:hover {
+    .button-add-circle-outer {
+      visibility: visible;
+    }
+  }
+
+}
+
+.sbc-question-header {
+  margin-bottom: $global-margin-large;
+  display: flex;
+
+  .sbc-question-title,
+  .sbc-question-icons {
+    display: inline-flex;
+    flex: 1 1 auto;
+  }
+  .sbc-question-title {
+  }
+  .sbc-question-number {
+    background: $question-number-background-color;
+    border-radius: 3px;
+    padding: 4px 8px;
+    top: -2px;
+    position: relative;
+    margin-right: 8px;
+    font-size: 0.875rem;
+    color: #fff;
+    height: 1.5rem;
+  }
+  .sbc-question-icons {
+    justify-content: flex-end;
+    height: 1rem; // to align to top of question title regardless of length (height) of question text. 
+    visibility: hidden;
+
+
+    button {
+      position: relative;
+      top: -16px;
+    }
+  }
+}
+
+.sbc-answer-text-editor {
+  margin-left: $global-margin-large;
+
+  .sbc-answer-text-line {
+    margin-top: $global-margin*2;
+    position: relative;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    // &.last-line {
+    //   color: #ddd;
+    //   opacity: 0;
+
+    //   &:hover {
+    //     opacity: 1;
+    //   }
+    // }
+
+    .sbc-atl-menu {
+      opacity: .24;
+      position: absolute;
+      left: -28px;
+      top: -2px;
+      color: $body-text-color;
+      user-select: none;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    // &:before {
+    //   content: "-";
+    //   position: absolute;
+    //   left: -12px;
+    // }
+  }
+}
+
+.new-question-button.mdc-button {
+  margin: $global-margin-large/2;
+  background: $gray-bg;
+  color: rgba(0,0,0,.6);
+  padding-right: 12px;
+}
+
+.new-group-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+/////////////////
+// Survey Builder Settings Menu
+/////////////////
+
+.survey-builder-settings {
+  width: $settings-menu-width;
+  background: $background-color-settings-menu;
+  position: absolute;
+  right: $survey-preview-width; 
+  top: 0;
+  bottom: 0;
+  border-left: $light-border;
+  padding: $global-padding*2 $global-padding-large/2 0 $global-padding-large/2;
+
+  @include breakpoint-large {
+    right: 0;
+  }
+  @include breakpoint-medium {
+    display: none;
+  }
+
+  .question-settings-form-field {
+
+    .mdc-select {
+      display: flex;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-top: $global-margin;
+      margin-bottom: $global-margin;
+      background: $white;
+      border-radius: 4px;
+
+    }
+    .mdc-select,
+    .mdc-select__selected-text {
+      height: 40px;
+      align-items: center;
+
+    }
+
+    .mdc-select__selected-text {
+      padding-left: 8px;
+      font-size: 0.875rem;
+    }
+    .mdc-select__dropdown-icon {
+      bottom: 8px;
+    }
+
+    label {
+      display: flex;
+      font-size: 0.875rem;
+    }
+
+    &.mdc-form-field {
+      display: flex;
+
+      > label {
+        padding-left: 0;
+        width: 100%;
+      }
+    }
+
+  }
+
+  .close-menu {
+    display: flex;
+    justify-content: flex-end;
+    
+    .material-icons {
+      font-size: 18px;
+      color: #cacaca;
+    }
+  }
+}
+
+.sb-settings .mdc-list-item {
+  height: 36px;
+  font-size: 0.875rem;
+}
+.mdc-menu.sb-settings {
+  min-width: 200px;
+}
+
+/////////////////
+// Survey Builder Preview
+/////////////////
+
+.survey-builder-preview-container {
+  
+  @include breakpoint-large {
+    display: none;
+  }
+  background: $white;
+  width: $survey-preview-width;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-left: $light-border;
+
+  .iframe-wrapper {
+    height: 690px;
+  }
+  // .iframe-wrapper {
+  //   border-radius: $global-border-radius;
+  //   width: 100%;
+  //   height: 630px;
+  //   border: 4px solid #333333;
+  //   border-radius: 24px;
+  //   overflow: hidden; 
+  //   max-width: 328px;
+  //   margin: $global-margin-large auto;
+  //   // border-top: 24px solid #333333;
+  //   // border-bottom: 58px solid #333333;
+  // }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+/////////////////
+// Demo survey styles (for preview window)
+/////////////////
+
+.demo-survey {
+  background: #ede6fa;
+  padding: 20px;
+
+  .demo-survey-container {
+    width: 100%;
+    color: #422773;
+
+    label {
+      color: #422773;
+      font-size: 18px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      font-family: serif;
+    }
+
+    .mdc-radio .mdc-radio__native-control:enabled:not(:checked) + .mdc-radio__background .mdc-radio__outer-circle {
+      border-color: rgba(103, 58, 183, 0.33);
+    }
+    .mdc-radio .mdc-radio__native-control:enabled:checked + .mdc-radio__background .mdc-radio__outer-circle,
+    .mdc-radio .mdc-radio__native-control:enabled + .mdc-radio__background .mdc-radio__inner-circle {
+      border-color: #e91e63;
+    }
+    .mdc-radio::before, .mdc-radio::after,
+    .mdc-radio .mdc-radio__background::before {
+      background: #e91e63;
+    }
+
+  }
+  .mdc-form-field {
+    display: flex;
+  }
+}
+
+
+/////////////////
+// Old, might use again
+/////////////////
+
+// .secondary-button {
+//   @include mdc-button-ink-color($mdc-theme-secondary);
+//   @include mdc-states($mdc-theme-secondary);
+// }
+
+// .text-field-custom-dense {
+//   height: 36px;
+//   padding-top: 0;
+//   padding-bottom: 0;
+//   &.mdc-text-field--outlined .mdc-floating-label {
+//     top: 7px;
+//   }
+//   .mdc-text-field__icon {
+//     margin-top: 7px;
+//     margin-left: 4px;
+//   }
+// }

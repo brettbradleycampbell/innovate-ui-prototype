@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bundle.css">
+  <link rel="stylesheet" href="//necolas.github.io/normalize.css/latest/normalize.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body class="mdc-typography" style="display: flex;">
+
+  <header id="header-desktop" class="mdc-top-app-bar mdc-top-app-bar--dense mdc-top-app-bar--fixed app-header">
+    <div class="mdc-top-app-bar__row header-row-one">
+      <section class="mdc-top-app-bar__section">
+<!--         <div class="app-header__item">
+          <span><img src="images/innovate-logo.png" class="innovate-logo"></span> 
+        </div> -->
+        <div class="app-header__item">
+          <span class="material-icons">home</span> 
+        </div>
+        <div class="app-header__item">
+          / <span>Surveys</span>  / <span>Customer Feedback Survey 1</span>
+        </div>
+
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+        <div class="app-header__item">
+          <div class="mdc-text-field mdc-text-field--no-label mdc-text-field--with-leading-icon" style="border-radius: 4px; height: 36px; margin-right: 24px; ">
+            <i class="material-icons mdc-text-field__icon" style="left: 8px; bottom: 6px;">search</i>
+            <input class="mdc-text-field__input" style="padding: 0 12px 0 36px; border: none; font-size: 0.875rem;">
+          </div>
+        </div>
+        <div class="app-header__item">
+          <div class="header-perks-bar-outer">
+            <div class="perks-text">
+              <span>Perks</span>
+              <span class="material-icons">monetization_on</span>
+            </div>
+            <div class="header-perks-bar-inner"></div>
+          </div>
+        </div>
+        <div class="app-header__item">
+          <button class="mdc-button header-button">
+            <i class="material-icons mdc-button__icon">person</i>
+            <span class="mdc-button__label">Matt Dusig</span>
+            <!-- <i class="material-icons mdc-button__icon">arrow_drop_down</i> -->
+          </button>
+        </div>
+      </section>
+    </div>
+    <div class="mdc-top-app-bar__row header-row-two">
+      <!-- <section class="mdc-top-app-bar__section">
+        <div class="app-header__item">
+          <span class="material-icons">home</span> 
+        </div>
+        <div class="app-header__item">
+          / <span>Surveys</span>  / <span>Customer Feedback Survey 1</span>
+        </div>
+        <div class="app-header__item">
+          <span class="material-icons">pause_circle_outline</span>
+        </div>
+      </section> -->
+      <section class="mdc-top-app-bar__section">
+        <div class="app-header__item header-main-nav-links">
+          <a href="#"><span>Create</span></a>
+          <span class="material-icons">chevron_right</span>
+          <a href="#"><span>Share</span></a>
+          <span class="material-icons">chevron_right</span>
+          <a href="#"><span>Results</span></a>
+        </div>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+        <div class="app-header__item" style="margin-right: 48px;">
+          <span style="color: #a2a3a7; text-decoration: underline;">Saving...</span>
+        </div>
+        <div class="app-header__item">
+          <button class="mdc-button mdc-button--unelevated">
+            <span class="mdc-button__label">View</span>
+            <i class="material-icons mdc-button__icon" aria-hidden="true">open_in_new</i>
+          </button>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <header id="header-mobile" class=" mdc-top-app-bar mdc-top-app-bar--dense mdc-top-app-bar--fixed app-header">
+    <div class="mdc-top-app-bar__row header-row-one">
+      <section class="mdc-top-app-bar__section">
+        <div class="app-header__item">
+          <span class="material-icons">menu</span> 
+        </div>
+        <div class="app-header__item">
+          <span>Customer Feedback Survey 1</span><i class="material-icons">pause_circle_outline</i>
+        </div>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+        <div class="app-header__item">
+          <button class="mdc-button">
+            <span class="mdc-button__label">View</span>
+            <i class="material-icons mdc-button__icon" aria-hidden="true">open_in_new</i>
+          </button>
+        </div>
+      </section>
+    </div>
+    <div class="mdc-top-app-bar__row header-row-two">
+      <section class="mdc-top-app-bar__section">
+        <div class="app-header__item" style="margin: auto;">
+          <span>Create</span> <span>Share</span> <span>Results</span>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <aside class="mdc-drawer mdc-top-app-bar--fixed-adjust app-sidebar">
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+        <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">edit</i>
+          <!-- <span class="mdc-list-item__text">Content</span> -->
+        </a>
+        <a class="mdc-list-item" href="#">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">color_lens</i>
+          <!-- <span class="mdc-list-item__text">Design</span> -->
+        </a>
+        <a class="mdc-list-item" href="#">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">settings</i>
+          <!-- <span class="mdc-list-item__text">Settings</span> -->
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Put in a mobile drawer menu-->
+
+  <div class="app-body mdc-top-app-bar--fixed-adjust">
+    <div id="create-survey" class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span-12 survey-builder-container">
+          
+          <div class="survey-builder-content">
+            <div class="sbc-question-group">
+              <div class="sbc-question-group-header">
+                <div class="sbc-question-group-title">Question Group 1</div>
+                <div class="sbc-question-group-icons">
+
+                  <i class="material-icons qg-logic">call_split</i>
+
+                  <div style="position: relative;">
+                    <i class="material-icons qg-menu">more_vert</i>
+                    <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="right: -12px;">
+                      <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                        <li class="mdc-list-item" role="menuitem">
+                          <span class="mdc-list-item__text qg-collapse">Collapse</span>
+                        </li>
+                        <li class="mdc-list-item" role="menuitem">
+                          <span class="mdc-list-item__text qg-collapse">Duplicate</span>
+                        </li>
+                        <li class="mdc-list-item" role="menuitem">
+                          <span class="mdc-list-item__text qg-collapse">Delete</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="sbc-question-outer sbc-question-first sbc-selected">
+                <div class="sbc-question-inner">
+                  <div class="sbc-question-title">
+                    1. What is your age? 
+                  </div>
+                  <div>
+                    - 18 - 24
+                    <br>
+                    - 25 - 34
+                    <br>
+                    - 35 - 44
+                    <br>
+                    - 45 - 54
+                    <br>
+                    - 55+
+                  </div>
+                </div> 
+                <div class="button-add-circle-outer">
+                  <button class="button-add-circle">
+                    <!-- Look at how it's handled in "Filter/views" button in Google sheets. -->
+                    <i class="material-icons">add</i>
+                    <i class="mdc-select__dropdown-icon"></i>
+                  </button>
+                </div>               
+              </div>
+
+              <div class="sbc-question-outer">
+                <div class="sbc-question-inner">
+                  <div class="sbc-question-title">
+                    2. What state do you live in? 
+                  </div>
+                  <div>
+                    - US States Abbreviated
+                  </div>
+                </div>
+                <button class="button-add-circle">
+                  <i class="material-icons">add</i>
+                </button>
+              </div>
+
+              <div class="sbc-question-outer">
+                <div class="sbc-question-inner">
+                  <div class="sbc-question-title">
+                    3. What state do you live in? 
+                  </div>
+                  <div>
+                    - US States Abbreviated
+                  </div>
+                </div>
+                <button class="button-add-circle">
+                  <i class="material-icons">add</i>
+                </button>
+              </div>
+
+              <div class="sbc-question-outer sbc-question-last">
+                <div class="sbc-question-inner">
+                  <div class="sbc-question-title">
+                    4. What state do you live in? 
+                  </div>
+                  <div>
+                    - US States Abbreviated
+                  </div>
+                </div>
+                <button class="button-add-circle">
+                  <i class="material-icons">add</i>
+                </button>
+              </div>
+
+            <button class="mdc-button">
+              <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+              <span class="mdc-button__label">New Question</span>
+            </button>
+
+            </div> <!-- / question group-->
+  
+            <button class="mdc-button">
+              <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+              <span class="mdc-button__label">New Group</span>
+            </button>
+
+            <div class="sbc-question-group">
+              <div class="sbc-question-group-header">
+                <div class="sbc-question-group-title">Question Group 2</div>
+                <div class="sbc-question-group-icons">
+                  <button class="mdc-icon-button material-icons">call_split</button>
+                  <button class="mdc-icon-button material-icons">more_vert</button>
+                </div>
+              </div>
+              <div class="sbc-question-outer sbc-question-only">
+                <div class="sbc-question-inner">
+                  <div class="sbc-question-title">
+                    1. What is your age? 
+                  </div>
+                  <div>
+                    - 18 - 24
+                    <br>
+                    - 25 - 34
+                    <br>
+                    - 35 - 44
+                    <br>
+                    - 45 - 54
+                    <br>
+                    - 55+
+                  </div>
+                </div>
+              </div>
+
+            <button class="mdc-button">
+              <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+              <span class="mdc-button__label">New Question</span>
+            </button>
+
+            </div> <!-- / question group-->
+
+          </div>
+
+          <div class="survey-builder-settings">
+
+            <div class="question-settings-form-field">
+              <div class="close-menu">CLOSE</div>
+              <label>Question Type</label>
+              <div class="mdc-select mdc-select--outlined">
+                <input type="hidden" name="enhanced-select">
+                <i class="mdc-select__dropdown-icon"></i>
+                <div class="mdc-select__selected-text"></div>
+                <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
+                  <ul class="mdc-list">
+                    <li class="mdc-list-item mdc-list-item--selected" data-value="multiple-choice" aria-selected="true">
+                      Multiple Choice
+                    </li>
+                    <li class="mdc-list-item" data-value="star">
+                      Star Rating
+                    </li>
+                    <li class="mdc-list-item" data-value="scale">
+                      Scale
+                    </li>
+                  </ul>
+                </div>
+                  <!-- Other elements from the native or enhanced select remain. -->
+                 <div class="mdc-notched-outline">
+                   <div class="mdc-notched-outline__leading"></div>
+                   <div class="mdc-notched-outline__notch">
+                   </div>
+                   <div class="mdc-notched-outline__trailing"></div>
+                 </div>
+              </div>
+            </div>
+
+            <div class="question-settings-form-field mdc-form-field">
+              <label for="basic-switch">Sort</label>
+              <div class="mdc-switch mdc-switch1">
+                <div class="mdc-switch__track"></div>
+                <div class="mdc-switch__thumb-underlay">
+                  <div class="mdc-switch__thumb">
+                      <input type="checkbox" id="basic-switch" class="mdc-switch__native-control" role="switch">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-settings-form-field mdc-form-field">
+              <label for="checkbox-1">Allow multiple answers</label>
+              <div class="mdc-checkbox">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-1"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question-settings-form-field mdc-form-field">
+              <label for="checkbox-2">Allow multiple answers</label>
+              <div class="mdc-checkbox">
+                <input type="checkbox"
+                       class="mdc-checkbox__native-control"
+                       id="checkbox-2"/>
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark"
+                       viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path"
+                          fill="none"
+                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          
+          <div class="survey-builder-preview-container">
+            <div class="iframe-wrapper"><iframe src="//brettbradleycampbell.com"></iframe></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mdc-dialog mdc-dialog--scrollable qg-logic-dialog"
+       role="alertdialog"
+       aria-modal="true"
+       aria-labelledby="my-dialog-title"
+       aria-describedby="my-dialog-content">
+    <div class="mdc-dialog__container">
+      <div class="mdc-dialog__surface">
+        <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+        <h2 class="mdc-dialog__title" id="my-dialog-title">Logic</h2>
+        <div class="mdc-dialog__content" id="my-dialog-content">
+          <span>[ content ]</span>
+        </div>
+        <footer class="mdc-dialog__actions">
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
+            <span class="mdc-button__label">Cancel</span>
+          </button>
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="accept">
+            <span class="mdc-button__label">OK</span>
+          </button>
+        </footer>
+      </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="bundle.js" async></script>
+<script src="jquery-functions.js" async></script>
+</body>
+</html>
