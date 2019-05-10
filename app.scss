@@ -438,8 +438,11 @@ hr {
 }
 
 .survey-builder-content {
-  height: 690px; // figure out how to make this full height
-  overflow: scroll;
+
+  @include breakpoint-large-up {
+    height: 690px; // figure out how to make this full height
+    overflow: scroll;
+  }
   padding-bottom: $global-padding*40;
 
   .material-icons {
@@ -810,7 +813,10 @@ hr {
   border-left: $light-border;
 
   .iframe-wrapper {
-    height: 690px;
+    @include breakpoint-large-up {
+      height: 690px;
+    }
+
   }
   // .iframe-wrapper {
   //   border-radius: $global-border-radius;
