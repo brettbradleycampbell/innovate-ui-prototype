@@ -18,7 +18,7 @@ $dark-blue: #282e33;
 $gray-bg: #f0f1f3;
 $dark-bg: #32384a; // #34414e; // #465461; // #394148;
 $perks-bar-outer: $white;
-$perks-bar-inner: $mdc-theme-primary;
+$perks-bar-inner: #568cdb;
 $background-color-header-row-one: $dark-bg; // #384f63
 $background-color-header-row-two: $white;
 $background-color-settings-menu: #f7f7f9;
@@ -51,7 +51,7 @@ $global-margin-large: 24px;
 $global-border-radius: 3px;
 
 // Presets
-$style: g;
+$style: i;
 $group-contained: yes;
 
 
@@ -836,7 +836,7 @@ hr {
 /////////////////
 
 .demo-survey {
-  background: #ede6fa;
+  background: #f5e6fa;
   padding: 20px;
 
   .demo-survey-container {
