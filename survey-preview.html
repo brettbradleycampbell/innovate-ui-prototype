@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+  <link rel="stylesheet" href="bundle.css">
+</head>
+<body class="mdc-typography" style="display: flex;">
+
+  <header class="mdc-top-app-bar mdc-top-app-bar--dense app-header sp-bar">
+    <div class="mdc-top-app-bar__row">
+
+      <section class="mdc-top-app-bar__section">
+        <div class="app-header__item">
+          <div style="position: relative;">
+            <button class="mdc-icon-button material-icons qg-menu sp-menu-icon">menu</button>
+            <!-- <i class="material-icons qg-menu">more_vert</i> -->
+            <div class="mdc-menu mdc-menu-surface sp-menu" tabindex="-1">
+              <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                <li class="mdc-list-item" role="menuitem">
+                  <span class="mdc-list-item__text">Ignore logic</span>
+                </li>
+                <li class="mdc-list-item" role="menuitem">
+                  <span class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">bookmark</span>
+                  <span class="mdc-list-item__text">Ignore validation</span>
+                </li>
+                <li class="mdc-list-item sp-hide-bar" role="menuitem">
+                  <span class="mdc-list-item__text">Hide preview bar</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="app-header__item small-hide">
+          <button class="mdc-button mdc-button--unelevated sp-toggle-width">
+            <i class="material-icons mdc-button__icon" aria-hidden="true">phone_android</i>
+          </button>
+        </div>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">      
+
+        <div class="app-header__item">
+          <button class="mdc-icon-button material-icons">bookmark_outlined</button>
+        </div>
+        <div class="app-header__item">
+
+          <div class="split-button-outer">
+            <button class="mdc-button mdc-button--unelevated split-button-left" onclick="window.location.href = '/survey-preview.html'; return false">
+              <i class="material-icons mdc-button__icon" aria-hidden="true">replay</i>
+              <span class="mdc-button__label">Restart</span>
+            </button>
+            <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+              <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+            </button>
+            <div class="mdc-menu mdc-menu-surface sp-menu" tabindex="-1" style="right: 14px; top: 50px;">
+              <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                <li class="mdc-list-item" role="menuitem">
+                  <span class="mdc-list-item__text qg-collapse">Q1 - What is your age? (trailing icon: Bookmark)</span>
+                </li>
+                <hr>
+                <li class="mdc-list-item" role="menuitem">
+                  <span class="mdc-list-item__text qg-collapse">Q1 - What is your age?</span>
+                </li>
+                <li class="mdc-list-item" role="menuitem">
+                  <span class="mdc-list-item__text qg-collapse">Q2 - What state do you live in?</span>
+                </li>
+                <li class="mdc-list-item" role="menuitem">
+                  <span class="mdc-list-item__text qg-collapse">Q3 - How satisfied were you with the support you received?</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+    </div>
+
+  </header>
+  <div class="sp-main-container">
+    <div class="sp-iframe-wrapper">
+      <iframe src="demo-survey.html"></iframe>
+    </div>
+  </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="bundle.js" async></script>
+<script src="jquery-functions.js" async></script>
+</body>
+</html>

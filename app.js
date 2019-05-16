@@ -15,6 +15,7 @@ import {MDCMenuSurface} from '@material/menu-surface';
 import {MDCDialog} from '@material/dialog';
 import {MDCTabBar} from '@material/tab-bar';
 import {MDCRadio} from '@material/radio';
+import {MDCRipple} from '@material/ripple';
 
 // Instantiation
 const topAppBarElement = document.querySelector('.mdc-top-app-bar');
@@ -42,3 +43,7 @@ const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
 
 const radio = new MDCRadio(document.querySelector('.mdc-radio'));
 formField.input = radio;
+
+
+const iconButtonRipple = new MDCRipple(document.querySelector('.mdc-icon-button'));
+iconButtonRipple.unbounded = true;

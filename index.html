@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bundle.css">
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+  <link rel="stylesheet" href="bundle.css">
 </head>
 <body class="mdc-typography" style="display: flex;">
 
@@ -35,15 +35,6 @@
           </div>
         </div>
         <div class="app-header__item">
-          <div class="header-perks-bar-outer">
-            <div class="perks-text">
-              <span>Perks</span>
-              <span class="material-icons">monetization_on</span>
-            </div>
-            <div class="header-perks-bar-inner"></div>
-          </div>
-        </div>
-        <div class="app-header__item">
           <button class="mdc-button header-button">
             <i class="material-icons mdc-button__icon">person</i>
             <span class="mdc-button__label">Matt Dusig</span>
@@ -57,17 +48,6 @@
         <div class="app-header__item hmnl-selected">
           <a href="#"><span>Create</span></a>
         </div>
-<!--         <div class="app-header__item hmnl-submenu">
-          <a class=" href="#" aria-current="page">
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">edit</i>
-          </a>
-          <a class="" href="#">
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">color_lens</i>
-          </a>
-          <a class="" href="#">
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">settings</i>
-          </a>
-        </div> -->
         <div class="app-header__item">
           <a href="#"><span>Share</span></a>
         </div>
@@ -83,7 +63,7 @@
           <span style="color: #a2a3a7; text-decoration: underline;">Saving...</span>
         </div>
         <div class="app-header__item">
-          <button class="mdc-button mdc-button--unelevated">
+          <button class="mdc-button mdc-button--unelevated" onclick="window.open('/survey-preview.html'); return false;">
             <span class="mdc-button__label">View</span>
             <i class="material-icons mdc-button__icon" aria-hidden="true">open_in_new</i>
           </button>
@@ -147,20 +127,6 @@
           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">settings</i>
           <span class="mdc-list-item__text">Settings</span>
         </a>
-        <!-- <hr>
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
-        </a>
-        <hr>
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">poll</i>
-        </a>
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">people</i>
-        </a>
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">pie_chart</i>
-        </a> -->
       </nav>
     </div>
   </aside>
@@ -244,15 +210,29 @@
 
                   </div>
                 </div> 
-                <div class="button-add-circle-outer">
-                  <button class="button-add-circle">
-                    <i class="material-icons">add</i>
+                <div class="split-button-outer button-add-circle-outer">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
                   </button>
-                  <button class="button-add-circle-dropdown">
-                    <i class="material-icons">arrow_drop_down</i>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
                   </button>
-                </div> 
-                <div class="heyy"></div>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; right: 0;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
 
 
               </div>
@@ -296,14 +276,28 @@
                     </div>
                   </div>
                 </div> 
-                <div class="button-add-circle-outer">
-                  <button class="button-add-circle">
-                    <i class="material-icons">add</i>
+                <div class="split-button-outer button-add-circle-outer">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
                   </button>
-                  <button class="button-add-circle-dropdown">
-                    <i class="material-icons">arrow_drop_down</i>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
                   </button>
-                </div>               
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; right: 0;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>             
               </div>
 
             <button class="mdc-button new-question-button">
@@ -366,15 +360,29 @@
 
                   </div>
                 </div> 
-                <div class="button-add-circle-outer">
-                  <button class="button-add-circle">
-                    <i class="material-icons">add</i>
-                  </button>
-                  <button class="button-add-circle-dropdown">
-                    <i class="material-icons">arrow_drop_down</i>
-                  </button>
-                </div> 
 
+                <div class="split-button-outer button-add-circle-outer">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                  </button>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; right: 0;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
 
               </div>
 
@@ -532,47 +540,6 @@
                 </div>
               </div>
             </div>
-
-<!--             <div class="question-settings-form-field">
-              <label>Sort order</label>
-              <div class="mdc-select mdc-select--outlined mdc-select-2">
-                <input type="hidden" name="enhanced-select">
-                <i class="mdc-select__dropdown-icon"></i>
-                <div class="mdc-select__selected-text"></div>
-                <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
-                  <ul class="mdc-list">
-                    <li class="mdc-list-item mdc-list-item--selected" data-value="multiple-choice" aria-selected="true">
-                      Multiple Choice
-                    </li>
-                    <li class="mdc-list-item" data-value="star">
-                      Random
-                    </li>
-                    <li class="mdc-list-item" data-value="scale">
-                      Scale
-                    </li>
-                  </ul>
-                </div>
-                 <div class="mdc-notched-outline">
-                   <div class="mdc-notched-outline__leading"></div>
-                   <div class="mdc-notched-outline__notch">
-                   </div>
-                   <div class="mdc-notched-outline__trailing"></div>
-                 </div>
-              </div>
-            </div> -->
-
-
-<!--             <div class="question-settings-form-field mdc-form-field">
-              <label for="basic-switch">Switch</label>
-              <div class="mdc-switch mdc-switch1">
-                <div class="mdc-switch__track"></div>
-                <div class="mdc-switch__thumb-underlay">
-                  <div class="mdc-switch__thumb">
-                      <input type="checkbox" id="basic-switch" class="mdc-switch__native-control" role="switch">
-                  </div>
-                </div>
-              </div>
-            </div> -->
 
           </div>
           

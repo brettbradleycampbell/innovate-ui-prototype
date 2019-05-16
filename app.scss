@@ -16,7 +16,7 @@ $body-text-color: $black;
 $light-border: none; // #d4d4d4;
 $dark-blue: #282e33;
 $gray-bg: #f0f1f3;
-$dark-bg: #32384a; // #34414e; // #465461; // #394148;
+$dark-bg: #343846; // #32384a; // #34414e; // #465461; // #394148;
 $perks-bar-outer: $white;
 $perks-bar-inner: #568cdb;
 $background-color-header-row-one: $dark-bg; // #384f63
@@ -51,7 +51,7 @@ $global-margin-large: 24px;
 $global-border-radius: 3px;
 
 // Presets
-$style: i;
+$style: gd;
 $group-contained: yes;
 
 
@@ -71,7 +71,11 @@ $text-on-dark-header: #565656;
 $breadcrumb-current-color: $body-text-color;
 $question-number-background-color: $mdc-theme-primary;
 
-} @else if $style == google-dark-bar {
+} @else if $style == gd {
+
+$mdc-theme-primary: #536dfe;
+$mdc-theme-secondary: #536dfe; // #e4ad07;
+
 
 } @else if $style == matte {
 
@@ -176,6 +180,13 @@ hr {
 .mdc-dialog .mdc-dialog__scrim {
   background: rgba(0,0,0,.56);
 }
+.mdc-menu .mdc-list {
+  font-size: 0.875rem;
+  
+  .mdc-list-item {
+    height: 36px;
+  }
+}
 
 /////////////////
 // Helper classes
@@ -189,6 +200,28 @@ hr {
 .small-show {
   @include breakpoint-medium-up {
     display: none;
+  }
+}
+
+.split-button-outer {
+  display: flex;
+
+  .split-button-left {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+  }
+
+  .split-button-right {
+    padding: 0;
+    min-width: 32px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    .mdc-button__icon {
+      margin: 0;
+    }
+
   }
 }
 
@@ -290,38 +323,6 @@ hr {
   // background: #ffffff;
   color: $text-on-dark-header;
   font-weight: normal;
-}
-
-.header-perks-bar-outer {
-  position: relative;
-  width: 140px; 
-  margin-right: 24px;
-  display: inline-block; 
-  vertical-align: middle; 
-  font-size: 0; 
-  background: $perks-bar-outer; 
-  border-radius: 40px; 
-  overflow: hidden;
-}
-.header-perks-bar-inner {
-  width: 35%; 
-  display: inline-block; 
-  height: 24px; 
-  background: $perks-bar-inner;
-}
-
-.perks-text {
-  position: absolute;
-  color: $text-on-dark-header;
-  font-weight: 500;
-  right: 4px;
-  top: 3px;
-  text-transform: uppercase;
-  font-size: 12px;
-
-  .material-icons {
-    font-size: 18px;
-  }
 }
 
 .header-main-nav-links {
@@ -530,8 +531,8 @@ hr {
   .button-add-circle-outer {
     visibility: hidden;
     position: absolute;
-    bottom: -14px;
-    height: 28px;
+    bottom: -18px;
+    // height: 28px;
     right: $global-margin-large;
     z-index: 2;
     border-radius: $global-border-radius;
@@ -542,8 +543,16 @@ hr {
     button {
       background: transparent;
       border: none;
-      color: $body-text-color;
+      // color: $body-text-color;
       padding: 0;
+
+      &.split-button-left {
+        
+        .mdc-button__icon {
+          margin: 0;
+        }        
+
+      }
 
       &.button-add-circle {
         width: 28px;
@@ -845,12 +854,15 @@ hr {
 /////////////////
 
 .demo-survey {
-  background: #f5e6fa;
+  background: #dfd5e2;
   padding: 20px;
 
   .demo-survey-container {
     width: 100%;
+    max-width: 760px;
     color: #422773;
+    display: flex;
+    flex-direction: column;
 
     label {
       color: #422773;
@@ -879,6 +891,93 @@ hr {
   .mdc-form-field {
     display: flex;
   }
+
+  .mdc-button {
+    margin-top: $global-margin-large*2;
+    margin-left: auto;
+    background: #422773;
+  }
+
+}
+
+/////////////////
+// Survey Preview page
+/////////////////
+
+.sp-main-container {
+  padding-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: $dark-bg;
+
+  &.sp-bar-hidden-container {
+    padding-top: 0;
+  }
+
+}
+
+.sp-iframe-wrapper {
+  width: 100%;
+  height: 100%;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  @include breakpoint-medium-up {
+    &.sp-mobile {
+      width: 320px;
+      margin: $global-margin-large*2 auto 0 auto;
+      height: 480px;
+
+    }
+  }
+
+  iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.mdc-button.sp-toggle-width {
+
+  background: $gray-bg;
+  padding: 0;
+
+  .mdc-button__icon {
+    margin: 0;
+    color: $body-text-color;
+  }
+
+  &.sptw-selected {
+    background: #eaedff; // primary light blue
+  
+    .mdc-button__icon {
+      color: $mdc-theme-primary;
+    }
+
+  }
+
+}
+
+.sp-bar-hidden {
+  background: purple;
+  position: absolute;
+  top: -60px;
+
+  .sp-menu-icon {
+    position: fixed;
+    top: 0;
+    left: 14px;
+
+  }
+  .mdc-menu {
+    margin-top: 84px; // This is a hack, this shouldn't be this way. 
+  }
+
 }
 
 
@@ -903,3 +1002,75 @@ hr {
 //     margin-left: 4px;
 //   }
 // }
+
+// .split-button-outer.sp-toggle-width {
+
+//   button {
+//     background: transparent;
+//     color: $body-text-color;
+
+//     &.sptw-selected {
+//       color: $mdc-theme-primary;
+//       background: #eaedff; // primary light blue
+//     }
+//   }
+
+//   .split-button-left {
+//     padding: 0;
+//     min-width: 32px;
+
+//     .mdc-button__icon {
+//       margin: 0;
+//     }
+
+//   }
+
+// }
+
+
+// // No perks bar in Survey Builder
+//
+// .header-perks-bar-outer {
+//   position: relative;
+//   width: 140px; 
+//   margin-right: 24px;
+//   display: inline-block; 
+//   vertical-align: middle; 
+//   font-size: 0; 
+//   background: $perks-bar-outer; 
+//   border-radius: 40px; 
+//   overflow: hidden;
+// }
+// .header-perks-bar-inner {
+//   width: 35%; 
+//   display: inline-block; 
+//   height: 24px; 
+//   background: $perks-bar-inner;
+// }
+
+// .perks-text {
+//   position: absolute;
+//   color: $text-on-dark-header;
+//   font-weight: 500;
+//   right: 4px;
+//   top: 3px;
+//   text-transform: uppercase;
+//   font-size: 12px;
+
+//   .material-icons {
+//     font-size: 18px;
+//   }
+// }
+//
+//
+// This is the HTML not being used:
+//
+// <!-- <div class="app-header__item">
+//   <div class="header-perks-bar-outer">
+//     <div class="perks-text">
+//       <span>Perks</span>
+//       <span class="material-icons">monetization_on</span>
+//     </div>
+//     <div class="header-perks-bar-inner"></div>
+//   </div>
+// </div> -->
