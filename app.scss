@@ -3,8 +3,8 @@
 /////////////////
 
 // Material Theme Variables
-$mdc-theme-primary: #395064;
-$mdc-theme-secondary: #395064; // #3386ff  // #568cdb // Google blue: #536dfe; // Innovate Blue alternative: #4294f9;
+$mdc-theme-primary: #5ab9e6;
+$mdc-theme-secondary: #34d8a3; // Innovate Blue: #548ade; // #395064; // #3386ff  // #568cdb // Google blue: #536dfe; // Innovate Blue alternative: #4294f9;
 $mdc-theme-on-primary: #ffffff;
 $mdc-theme-on-secondary: #ffffff;
 $light-blue: #eceefb;
@@ -13,7 +13,7 @@ $light-blue: #eceefb;
 $white: #ffffff;
 $black: #222222;
 $body-text-color: $black;
-$light-border: none; // #d4d4d4;
+$light-border: 1px solid #e0e0e0; // #d4d4d4;
 $dark-blue: #282e33;
 $gray-bg: #f0f1f3;
 $dark-bg: #343846; // #32384a; // #34414e; // #465461; // #394148;
@@ -51,7 +51,7 @@ $global-margin-large: 24px;
 $global-border-radius: 3px;
 
 // Presets
-$style: gd;
+$style: i;
 $group-contained: yes;
 
 
@@ -186,6 +186,10 @@ hr {
   .mdc-list-item {
     height: 36px;
   }
+}
+
+.mdc-dialog .mdc-dialog__surface {
+  max-width: none;
 }
 
 /////////////////
@@ -537,7 +541,6 @@ hr {
     z-index: 2;
     border-radius: $global-border-radius;
     display: inline-flex;
-    border: $light-border;
     background: $gray-bg;
 
     button {
@@ -645,19 +648,6 @@ hr {
     display: inline-flex;
     flex: 1 1 auto;
   }
-  .sbc-question-title {
-  }
-  .sbc-question-number {
-    background: $question-number-background-color;
-    border-radius: 3px;
-    padding: 4px 8px;
-    top: -2px;
-    position: relative;
-    margin-right: 8px;
-    font-size: 0.875rem;
-    color: #fff;
-    height: 1.5rem;
-  }
   .sbc-question-icons {
     justify-content: flex-end;
     height: 1rem; // to align to top of question title regardless of length (height) of question text. 
@@ -671,8 +661,21 @@ hr {
   }
 }
 
+.sbc-question-number {
+  background: $question-number-background-color;
+  border-radius: 3px;
+  padding: 4px 8px;
+  top: -2px;
+  position: relative;
+  margin-right: 8px;
+  font-size: 0.875rem;
+  color: #fff;
+  height: 1.5rem;
+}
+
 .sbc-answer-text-editor {
   margin-left: $global-margin-large;
+  cursor: text;
 
   .sbc-answer-text-line {
     margin-top: $global-margin*2;
@@ -691,24 +694,50 @@ hr {
     //   }
     // }
 
-    .sbc-atl-menu {
-      opacity: .24;
-      position: absolute;
-      left: -28px;
-      top: -2px;
-      color: $body-text-color;
-      user-select: none;
-      
-      &:hover {
-        opacity: 1;
-      }
-    }
-
     // &:before {
     //   content: "-";
     //   position: absolute;
     //   left: -12px;
     // }
+  }
+  .sbc-atl-text {
+  }
+
+  .sbc-atl-menu {
+    background: transparent;
+    position: absolute;
+    left: -28px;
+    // color: $body-text-color;
+    user-select: none;
+    cursor: pointer;
+
+    padding: 0;
+    min-width: 24px;
+    height: 1.4rem;
+
+    .material-icons {
+      margin: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .atl-icons {
+    // position: absolute;
+    line-height: 1.2rem;
+    user-select: none;
+    margin-left: $global-margin*2;
+    cursor: default;
+
+    .material-icons {
+      font-size: 12px;
+      background: #c0c0c5;
+      color: $white;
+      padding: 3px;
+      border-radius: 2px;
+    }
   }
 }
 
@@ -737,6 +766,7 @@ hr {
   bottom: 0;
   border-left: $light-border;
   padding: $global-padding*2 $global-padding-large/2 0 $global-padding-large/2;
+  overflow: scroll;
 
   @include breakpoint-large {
     right: 0;
@@ -808,6 +838,22 @@ hr {
 }
 
 /////////////////
+// Logic Modal
+/////////////////
+
+.logic-conditions-outer {
+  background: cornsilk;
+  padding: $global-padding-large;
+  border-radius: $global-border-radius;
+  display: flex;
+  
+  .question-settings-form-field {
+    display: inline-flex;
+  }
+}
+
+
+/////////////////
 // Survey Builder Preview
 /////////////////
 
@@ -847,6 +893,11 @@ hr {
     height: 100%;
     border: none;
   }
+
+  .preview-toggle-button {
+    position: absolute;
+    right: 0;
+  }
 }
 
 /////////////////
@@ -854,18 +905,18 @@ hr {
 /////////////////
 
 .demo-survey {
-  background: #dfd5e2;
+  background: #FFC107;
   padding: 20px;
 
   .demo-survey-container {
     width: 100%;
     max-width: 760px;
-    color: #422773;
+    color: #420d1f;
     display: flex;
     flex-direction: column;
 
     label {
-      color: #422773;
+      color: #420d1f;
       font-size: 18px;
     }
 
@@ -895,7 +946,7 @@ hr {
   .mdc-button {
     margin-top: $global-margin-large*2;
     margin-left: auto;
-    background: #422773;
+    background: #e91d63;
   }
 
 }

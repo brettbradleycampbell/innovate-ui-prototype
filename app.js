@@ -23,7 +23,10 @@ const topAppBar = new MDCTopAppBar(topAppBarElement);
 const list = new MDCList(document.querySelector('.mdc-list'));
 const select = new MDCSelect(document.querySelector('.mdc-select'));
 const select2 = new MDCSelect(document.querySelector('.mdc-select-2'));
-const selectdemo = new MDCSelect(document.querySelector('.mdc-select-3'));
+const select4 = new MDCSelect(document.querySelector('.mdc-select-4'));
+const select5 = new MDCSelect(document.querySelector('.mdc-select-5'));
+const select6 = new MDCSelect(document.querySelector('.mdc-select-6'));
+const selectdemo = new MDCSelect(document.querySelector('.mdc-select-3'));  
 
 //
 const switchControl = new MDCSwitch(document.querySelector('.mdc-switch1'));
