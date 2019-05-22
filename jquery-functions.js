@@ -13,12 +13,12 @@ $(function() {
 
   // Open/close logic diaglog 
   $('.qg-logic').click( function() {
-    $('.qg-logic-dialog').toggleClass('mdc-dialog--open');
+    $('.logic-dialog').toggleClass('mdc-dialog--open');
   });
 
   // Open/close logic diaglog 
-  $('.qg-logic-dialog .mdc-dialog__button').click( function() {
-    $('.qg-logic-dialog').removeClass('mdc-dialog--open');
+  $('.logic-dialog .mdc-dialog__button').click( function() {
+    $('.logic-dialog').removeClass('mdc-dialog--open');
   });
 
   // Survey Preview page

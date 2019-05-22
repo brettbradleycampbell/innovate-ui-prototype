@@ -3,8 +3,8 @@
 /////////////////
 
 // Material Theme Variables
-$mdc-theme-primary: #5ab9e6;
-$mdc-theme-secondary: #34d8a3; // Innovate Blue: #548ade; // #395064; // #3386ff  // #568cdb // Google blue: #536dfe; // Innovate Blue alternative: #4294f9;
+$mdc-theme-primary: #7bb33a; // Innovate Blue alt: 5ab9e6;
+$mdc-theme-secondary: #7bb33a; // Innovate Blue: #548ade; // #395064; // #3386ff  // #568cdb // Google blue: #536dfe; // Innovate Blue alternative: #4294f9;
 $mdc-theme-on-primary: #ffffff;
 $mdc-theme-on-secondary: #ffffff;
 $light-blue: #eceefb;
@@ -13,18 +13,21 @@ $light-blue: #eceefb;
 $white: #ffffff;
 $black: #222222;
 $body-text-color: $black;
-$light-border: 1px solid #e0e0e0; // #d4d4d4;
 $dark-blue: #282e33;
-$gray-bg: #f0f1f3;
-$dark-bg: #343846; // #32384a; // #34414e; // #465461; // #394148;
+$dark-bg: #1e2830; // #414144; // #343846; // #32384a; // #34414e; // #465461; // #394148;
+$gray-bg: #f2f1f0;
+$gray-bg-lighter: #f9f8f7;
+$light-border: 1px solid #e2e1e0; // #d4d4d4;
+$light-border-low: 1px solid $gray-bg;
+$hr-border: 1px solid darken($gray-bg, 7%);
 $perks-bar-outer: $white;
 $perks-bar-inner: #568cdb;
 $background-color-header-row-one: $dark-bg; // #384f63
 $background-color-header-row-two: $white;
-$background-color-settings-menu: #f7f7f9;
+$background-color-settings-menu: $gray-bg-lighter;
 $header-row-one-border: none;
 $background-color-question-group: $white;
-$background-color-question-hover: #f7f7f9;
+$background-color-question-hover: $gray-bg-lighter;
 $background-color-survey-builder-container: $gray-bg;
 $header-search-bar-background-color: rgba(0,0,0,.24);
 $question-number-background-color: $dark-bg;
@@ -53,7 +56,8 @@ $global-border-radius: 3px;
 // Presets
 $style: i;
 $group-contained: yes;
-
+$question-settings-sidebar: right;
+$borders: low;
 
 @if $style == i {
 
@@ -77,12 +81,15 @@ $mdc-theme-primary: #536dfe;
 $mdc-theme-secondary: #536dfe; // #e4ad07;
 
 
-} @else if $style == matte {
+} @else if $style == 3 {
 
 $mdc-theme-primary: red;  
 
 }
 
+@if $borders == low {
+  $light-border: none; // #d4d4d4;
+}
 
 /////////////////
 // Media Queries
@@ -163,7 +170,7 @@ a {
 
 hr {
   border: none;
-  border-bottom: $light-border;
+  border-bottom: $hr-border;
 }
 
 /////////////////
@@ -228,6 +235,11 @@ hr {
 
   }
 }
+
+.button-secondary {
+  @include mdc-button-filled-accessible($mdc-theme-secondary);
+}
+
 
 /////////////////
 // App Header
@@ -464,7 +476,13 @@ hr {
   padding-right: 0; 
 
   @include breakpoint-large-up {
-    padding-right: $settings-menu-width + $survey-preview-width;
+    @if $question-settings-sidebar == left {
+      padding-right: $survey-preview-width;  
+      padding-left: $settings-menu-width;  
+    } @else if $question-settings-sidebar == right {
+      padding-right: $settings-menu-width + $survey-preview-width;
+    }
+
   }
   @include breakpoint-large {
     padding-right: $settings-menu-width;
@@ -518,6 +536,9 @@ hr {
 
 .sbc-question-outer {
   border-top: $light-border;
+  @if $borders == low {
+    border-top: $light-border-low;
+  }
   padding: $global-padding-large*1.5 $global-padding-large/2 $global-padding-large*1.5 $global-padding-large;
   position: relative;
   // transition: background-color, .2s; // this was causing weird reload side effects (question outers stretching height on reload. )
@@ -575,13 +596,18 @@ hr {
 
   &.sbc-question-first {
     border-top: $light-border;
-    
+    @if $borders == low {
+      border-top: $light-border-low;
+    }
     @if $group-contained == no {
       border-top-left-radius: $global-border-radius;
     }
   }
   &.sbc-question-last {
     border-bottom: $light-border;
+    @if $borders == low {
+      border-bottom: $light-border-low;
+    }
     @if $group-contained == no {
       border-bottom-left-radius: $global-border-radius;
     }
@@ -589,6 +615,10 @@ hr {
   &.sbc-question-only {
     border-top: $light-border;
     border-bottom: $light-border;
+    @if $borders == low {
+      border-top: $light-border-low;
+      border-bottom: $light-border-low;
+    }
     @if $group-contained == no {
       border-radius: $global-border-radius;
     }
@@ -609,15 +639,19 @@ hr {
     //   right: 0;
     //   }
 
-    @include breakpoint-large-up {
-      width: calc(100% + 25px);
+    @if $question-settings-sidebar == right {
 
-      .sbc-question-inner {
-        width: calc(100% - 25px);
-      }
+      @include breakpoint-large-up {
+        width: calc(100% + 24px); // 25 if border heavy
 
-      .button-add-circle-outer {
-        right: $global-margin-large + 25px; // 24px + 25px;
+        .sbc-question-inner {
+          width: calc(100% - 24px);
+        }
+
+        .button-add-circle-outer {
+          right: $global-margin-large + 24px; // 24px + 24px;
+        }
+
       }
 
     }
@@ -761,11 +795,16 @@ hr {
   width: $settings-menu-width;
   background: $background-color-settings-menu;
   position: absolute;
-  right: $survey-preview-width; 
+  @if $question-settings-sidebar == left {
+    left: 0;
+    border-right: $light-border;
+  } @else if $question-settings-sidebar == right {
+    right: $survey-preview-width; 
+    border-left: $light-border;
+  }
   top: 0;
   bottom: 0;
-  border-left: $light-border;
-  padding: $global-padding*2 $global-padding-large/2 0 $global-padding-large/2;
+  padding: $global-padding-large*1.5 $global-padding-large/2 0 $global-padding-large/2;
   overflow: scroll;
 
   @include breakpoint-large {
@@ -776,31 +815,6 @@ hr {
   }
 
   .question-settings-form-field {
-
-    .mdc-select {
-      display: flex;
-      padding-top: 0;
-      padding-bottom: 0;
-      margin-top: $global-margin;
-      margin-bottom: $global-margin;
-      background: $white;
-      border-radius: 4px;
-
-    }
-    .mdc-select,
-    .mdc-select__selected-text {
-      height: 40px;
-      align-items: center;
-
-    }
-
-    .mdc-select__selected-text {
-      padding-left: 8px;
-      font-size: 0.875rem;
-    }
-    .mdc-select__dropdown-icon {
-      bottom: 8px;
-    }
 
     label {
       display: flex;
@@ -815,18 +829,45 @@ hr {
         width: 100%;
       }
     }
-
   }
 
   .close-menu {
-    display: flex;
-    justify-content: flex-end;
+    position: absolute;
+    top: $global-margin*2;
+    right: $global-margin*2;
     
     .material-icons {
       font-size: 18px;
       color: #cacaca;
     }
   }
+}
+
+.mdc-select--dense {
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: $global-margin;
+  margin-bottom: $global-margin;
+  border-radius: 4px;
+  height: 40px;
+  align-items: center;
+
+  &.mdc-select--outlined {
+    background: $white;
+  }
+
+  .mdc-select__selected-text {
+    height: 40px;
+    align-items: center;
+    padding-left: 8px;
+    font-size: 0.875rem;
+    min-width: 0;
+  }
+  .mdc-select__dropdown-icon {
+    bottom: 8px;
+  }
+
 }
 
 .sb-settings .mdc-list-item {
@@ -841,16 +882,54 @@ hr {
 // Logic Modal
 /////////////////
 
+.logic-dialog {
+  .mdc-dialog__surface {
+    @include breakpoint-large-up {
+      width: 750px;
+    }
+  }
+
+  .mdc-select {
+    width: 164px;
+    margin-left: $global-margin*2;
+    margin-right: $global-margin*2;
+
+    .mdc-select__selected-text {
+      padding-right: 32px;
+      overflow: hidden;
+    }
+  }
+
+}
+
 .logic-conditions-outer {
-  background: cornsilk;
+  background: $gray-bg;
+  border: $light-border;
   padding: $global-padding-large;
+  padding-right: $global-padding-large/2;
   border-radius: $global-border-radius;
-  display: flex;
-  
+  // display: flex;
+  // flex-wrap: wrap; 
+
   .question-settings-form-field {
     display: inline-flex;
+    align-items: center;
   }
+
+  .logic-add-button-outer {
+    flex: 1 100%;
+  }
+
+  .logic-conditions-row {
+    display: flex;
+  }
+
+  .logic-row-remove {
+    margin-left: auto; // aligns right
+  }
+
 }
+
 
 
 /////////////////
