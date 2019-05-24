@@ -15,10 +15,16 @@ $(function() {
   $('.qg-logic').click( function() {
     $('.logic-dialog').toggleClass('mdc-dialog--open');
   });
-
-  // Open/close logic diaglog 
   $('.logic-dialog .mdc-dialog__button').click( function() {
     $('.logic-dialog').removeClass('mdc-dialog--open');
+  });
+
+  // Open/close Question Library diaglog 
+  $('.ql-dialog-button').click( function() {
+    $('.question-library-dialog').toggleClass('mdc-dialog--open');
+  });
+  $('.question-library-dialog .mdc-dialog__button').click( function() {
+    $('.question-library-dialog').removeClass('mdc-dialog--open');
   });
 
   // Survey Preview page
@@ -35,5 +41,34 @@ $(function() {
     $('.sp-main-container').toggleClass('sp-bar-hidden-container');
   });
 
+  // Logic modal tabs
+  $('.logic-tabs .mdc-tab').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.logic-tabs .mdc-tab').removeClass('mdc-tab--active');
+    $('.logic-tabs .mdc-tab .mdc-tab-indicator').removeClass('mdc-tab-indicator--active');
+    $('.logic-tabs .mdc-tab').removeClass('mdc-tab--active');
+
+    $('.tab-content').removeClass('current');
+
+    $(this).addClass('mdc-tab--active');
+    $(this).children('.mdc-tab-indicator').addClass('mdc-tab-indicator--active');
+    $("#"+tab_id).addClass('current');
+  })
+
+  // Question Library Hover preview
+  $('.question-library-dialog li').hover(function(){
+    // var tab_id = $(this).attr('data-tab');
+
+    // $('.logic-tabs .mdc-tab').removeClass('mdc-tab--active');
+    // $('.logic-tabs .mdc-tab .mdc-tab-indicator').removeClass('mdc-tab-indicator--active');
+    // $('.logic-tabs .mdc-tab').removeClass('mdc-tab--active');
+
+    // $('.tab-content').removeClass('current');
+
+    // $(this).addClass('mdc-tab--active');
+    // $(this).children('.mdc-tab-indicator').addClass('mdc-tab-indicator--active');
+    // $("#"+tab_id).addClass('current');
+  })
 
 });

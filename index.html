@@ -29,9 +29,9 @@
       </section>
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
         <div class="app-header__item">
-          <div class="mdc-text-field mdc-text-field--no-label mdc-text-field--with-leading-icon header-search-bar">
-            <input class="mdc-text-field__input header-search-bar-input">
-            <i class="material-icons mdc-text-field__icon header-search-bar-icon">search</i>
+          <div class="mdc-text-field mdc-text-field--no-label mdc-text-field--with-leading-icon custom-search-bar header-search-bar">
+            <input class="mdc-text-field__input custom-search-bar-input">
+            <i class="material-icons mdc-text-field__icon custom-search-bar-icon">search</i>
           </div>
         </div>
         <div class="app-header__item">
@@ -344,7 +344,7 @@
                       <li class="mdc-list-item" role="menuitem">
                         <span class="mdc-list-item__text qg-collapse">Page Break</span>
                       </li>
-                      <li class="mdc-list-item" role="menuitem">
+                      <li class="mdc-list-item ql-dialog-button" role="menuitem">
                         <span class="mdc-list-item__text qg-collapse">Import from Library</span>
                       </li>
                       <hr>
@@ -450,10 +450,36 @@
                 </div>             
               </div>
 
-            <button class="mdc-button new-question-button">
-              <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
-              <span class="mdc-button__label">New Question</span>
-            </button>
+              <div class="sbc-question-group-footer">
+                <div class="split-button-outer new-question-button">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <span class="mdc-button__label">New Question</span>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                  </button>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; left: 120px;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Page Break</span>
+                      </li>
+                      <li class="mdc-list-item ql-dialog-button" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Import from Library</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div> 
+              </div>
 
             </div> <!-- / question group-->
   
@@ -665,10 +691,36 @@
                 </div>
               </div>
 
-            <button class="mdc-button new-question-button">
-              <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
-              <span class="mdc-button__label">New Question</span>
-            </button>
+              <div class="sbc-question-group-footer">
+                <div class="split-button-outer new-question-button">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <span class="mdc-button__label">New Question</span>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                  </button>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; left: 120px;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Page Break</span>
+                      </li>
+                      <li class="mdc-list-item ql-dialog-button" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Import from Library</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div> 
+              </div>
 
             </div> <!-- / question group-->
 
@@ -1313,10 +1365,37 @@
                 </div>
               </div>
 
-            <button class="mdc-button new-question-button">
-              <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
-              <span class="mdc-button__label">New Question</span>
-            </button>
+              <div class="sbc-question-group-footer">
+                <div class="split-button-outer new-question-button">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <span class="mdc-button__label">New Question</span>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                  </button>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; left: 120px;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Page Break</span>
+                      </li>
+                      <li class="mdc-list-item ql-dialog-button" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Import from Library</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div> 
+              </div>
+
 
             </div> <!-- / question group-->
 
@@ -1492,19 +1571,72 @@
           <span class="sbc-question-number">Q1</span>What is your age?
         </h2>
         <div class="mdc-dialog__content" id="my-dialog-content">
-          Skip Logic \\ Display Logic
+          
 
-          <div class="logic-conditions-outer">
+
+          <div class="mdc-tab-bar logic-tabs" role="tablist">
+            <div class="mdc-tab-scroller">
+              <div class="mdc-tab-scroller__scroll-area">
+                <div class="mdc-tab-scroller__scroll-content">
+                  <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0" data-tab="skip-logic-tab">
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">Skip Logic</span>
+                    </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </button>
+                  <button class="mdc-tab" role="tab" aria-selected="false" tabindex="0" data-tab="display-logic-tab">
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">Display Logic</span>
+                    </span>
+                    <span class="mdc-tab-indicator">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="logic-conditions-outer tab-content current" id="skip-logic-tab">
             <div class="logic-conditions-row">
               <div class="question-settings-form-field">
-                If
+                <span class="logic-select-label">If</span>
                 <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-4">
                   <input type="hidden" name="enhanced-select">
                   <i class="mdc-select__dropdown-icon"></i>
                   <div class="mdc-select__selected-text">[Multiple answers]</div>
                   <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
                     <ul class="mdc-list">
-                      Any / All
+                      <li class="logic-any-all-radios">
+                        <div class="mdc-form-field">
+                          <div class="mdc-radio">
+                            <input class="mdc-radio__native-control" type="radio" id="radio-3" name="radios-1" checked>
+                            <div class="mdc-radio__background">
+                              <div class="mdc-radio__outer-circle"></div>
+                              <div class="mdc-radio__inner-circle"></div>
+                            </div>
+                          </div>
+                          <label for="radio-3">Any</label>
+                        </div>
+                        <div class="mdc-form-field">
+                          <div class="mdc-radio">
+                            <input class="mdc-radio__native-control" type="radio" id="radio-4" name="radios-1">
+                            <div class="mdc-radio__background">
+                              <div class="mdc-radio__outer-circle"></div>
+                              <div class="mdc-radio__inner-circle"></div>
+                            </div>
+                          </div>
+                          <label for="radio-4">All</label>
+                        </div>
+                      </li>
+
+                      <hr>
+
                       <li>
 
                         <div class="question-settings-form-field mdc-form-field">
@@ -1622,7 +1754,7 @@
               </div>
 
               <div class="question-settings-form-field">
-                is
+                <span class="logic-select-label">is</span>
                 <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-5">
                   <input type="hidden" name="enhanced-select">
                   <i class="mdc-select__dropdown-icon"></i>
@@ -1647,7 +1779,7 @@
               </div>
 
               <div class="question-settings-form-field">
-                skip to
+                <span class="logic-select-label">skip to</span>
                 <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-6">
                   <input type="hidden" name="enhanced-select">
                   <i class="mdc-select__dropdown-icon"></i>
@@ -1672,14 +1804,673 @@
               </div>
               <button class="mdc-icon-button material-icons logic-row-remove">remove_circle</button>
             </div>
+            <div class="logic-conditions-row">
+              <div class="question-settings-form-field">
+                <span class="logic-select-label">If</span>
+                <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-7">
+                  <input type="hidden" name="enhanced-select">
+                  <i class="mdc-select__dropdown-icon"></i>
+                  <div class="mdc-select__selected-text"></div>
+                  <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
+                    <ul class="mdc-list">
+                      <li class="logic-any-all-radios">
+                        <div class="mdc-form-field">
+                          <div class="mdc-radio">
+                            <input class="mdc-radio__native-control" type="radio" id="radio-7" name="radios-2" checked>
+                            <div class="mdc-radio__background">
+                              <div class="mdc-radio__outer-circle"></div>
+                              <div class="mdc-radio__inner-circle"></div>
+                            </div>
+                          </div>
+                          <label for="radio-7">Any</label>
+                        </div>
+                        <div class="mdc-form-field">
+                          <div class="mdc-radio">
+                            <input class="mdc-radio__native-control" type="radio" id="radio-8" name="radios-2">
+                            <div class="mdc-radio__background">
+                              <div class="mdc-radio__outer-circle"></div>
+                              <div class="mdc-radio__inner-circle"></div>
+                            </div>
+                          </div>
+                          <label for="radio-8">All</label>
+                        </div>
+                      </li>
 
+                      <hr>
+
+                      <li>
+
+                        <div class="question-settings-form-field mdc-form-field">
+                          <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="checkbox-a"/>
+                            <div class="mdc-checkbox__background">
+                              <svg class="mdc-checkbox__checkmark"
+                                   viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                              </svg>
+                              <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                          </div>
+                          18 - 24
+                        </div>
+
+                      </li>
+                      <li>
+
+                        <div class="question-settings-form-field mdc-form-field">
+                          <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="checkbox-b"/>
+                            <div class="mdc-checkbox__background">
+                              <svg class="mdc-checkbox__checkmark"
+                                   viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                              </svg>
+                              <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                          </div>
+                          25 - 34
+                        </div>
+
+                      </li>
+                      <li>
+
+                        <div class="question-settings-form-field mdc-form-field">
+                          <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="checkbox-c"/>
+                            <div class="mdc-checkbox__background">
+                              <svg class="mdc-checkbox__checkmark"
+                                   viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                              </svg>
+                              <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                          </div>
+                          35 - 44
+                        </div>
+
+                      </li>
+                      <li>
+
+                        <div class="question-settings-form-field mdc-form-field">
+                          <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="checkbox-d"/>
+                            <div class="mdc-checkbox__background">
+                              <svg class="mdc-checkbox__checkmark"
+                                   viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                              </svg>
+                              <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                          </div>
+                          45 - 54
+                        </div>
+
+                      </li>
+                      <li>
+
+                        <div class="question-settings-form-field mdc-form-field">
+                          <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="checkbox-e"/>
+                            <div class="mdc-checkbox__background">
+                              <svg class="mdc-checkbox__checkmark"
+                                   viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                              </svg>
+                              <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                          </div>
+                          55+
+                        </div>
+
+                      </li>
+                    </ul>
+                  </div>
+                   <div class="mdc-notched-outline">
+                     <div class="mdc-notched-outline__leading"></div>
+                     <div class="mdc-notched-outline__notch">
+                     </div>
+                     <div class="mdc-notched-outline__trailing"></div>
+                   </div>
+                </div>
+              </div>
+
+              <div class="question-settings-form-field">
+                <span class="logic-select-label">is</span>
+                <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-8">
+                  <input type="hidden" name="enhanced-select">
+                  <i class="mdc-select__dropdown-icon"></i>
+                  <div class="mdc-select__selected-text"></div>
+                  <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
+                    <ul class="mdc-list">
+                      <li class="mdc-list-item">
+                        selected  
+                      </li>
+                      <li class="mdc-list-item">
+                        not selected  
+                      </li>
+                    </ul>
+                  </div>
+                   <div class="mdc-notched-outline">
+                     <div class="mdc-notched-outline__leading"></div>
+                     <div class="mdc-notched-outline__notch">
+                     </div>
+                     <div class="mdc-notched-outline__trailing"></div>
+                   </div>
+                </div>
+              </div>
+
+              <div class="question-settings-form-field">
+                <span class="logic-select-label">skip to</span>
+                <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-9">
+                  <input type="hidden" name="enhanced-select">
+                  <i class="mdc-select__dropdown-icon"></i>
+                  <div class="mdc-select__selected-text"></div>
+                  <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
+                    <ul class="mdc-list">
+                      <li class="mdc-list-item">
+                        End of survey 
+                      </li>
+                      <li class="mdc-list-item">
+                        Q2 - What state do you live in? 
+                      </li>
+                    </ul>
+                  </div>
+                   <div class="mdc-notched-outline">
+                     <div class="mdc-notched-outline__leading"></div>
+                     <div class="mdc-notched-outline__notch">
+                     </div>
+                     <div class="mdc-notched-outline__trailing"></div>
+                   </div>
+                </div>
+              </div>
+              <button class="mdc-icon-button material-icons logic-row-remove">remove_circle</button>
+            </div>
             <div class="logic-add-button-outer">
-              <button class="mdc-button">
+              <button class="mdc-button button-action-secondary">
                 <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
                 <span class="mdc-button__label">Add skip</span>
               </button>
             </div>
           </div>
+
+          <div class="logic-conditions-outer tab-content" id="display-logic-tab">
+            <div class="question-settings-form-field">
+              <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-10" style="width: auto;">
+                <input type="hidden" name="enhanced-select">
+                <i class="mdc-select__dropdown-icon"></i>
+                <div class="mdc-select__selected-text">Display</div>
+                <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
+                  <ul class="mdc-list">
+                    <li class="mdc-list-item">
+                      Display 
+                    </li>
+                    <li class="mdc-list-item">
+                      Hide
+                    </li>
+                  </ul>
+                </div>
+                 <div class="mdc-notched-outline">
+                   <div class="mdc-notched-outline__leading"></div>
+                   <div class="mdc-notched-outline__notch">
+                   </div>
+                   <div class="mdc-notched-outline__trailing"></div>
+                 </div>
+              </div>
+              <span class="logic-select-label">only if</span> 
+            </div>
+            <div class="logic-conditions-row">
+
+              <div class="question-settings-form-field">
+                <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-11">
+                  <input type="hidden" name="enhanced-select">
+                  <i class="mdc-select__dropdown-icon"></i>
+                  <div class="mdc-select__selected-text"></div>
+                  <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
+                    <ul class="mdc-list">
+                      <li class="mdc-list-item">
+                        Q1 - What is your age
+                      </li>
+                      <li class="mdc-list-item">
+                        Q2 - What state do you live in? 
+                      </li>
+                    </ul>
+                  </div>
+                   <div class="mdc-notched-outline">
+                     <div class="mdc-notched-outline__leading"></div>
+                     <div class="mdc-notched-outline__notch">
+                     </div>
+                     <div class="mdc-notched-outline__trailing"></div>
+                   </div>
+                </div>
+              </div>
+
+              <div class="question-settings-form-field">
+                <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-12">
+                  <input type="hidden" name="enhanced-select">
+                  <i class="mdc-select__dropdown-icon"></i>
+                  <div class="mdc-select__selected-text"></div>
+                  <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
+                    <ul class="mdc-list">
+                      <li class="logic-any-all-radios">
+                        <div class="mdc-form-field">
+                          <div class="mdc-radio">
+                            <input class="mdc-radio__native-control" type="radio" id="radio-5" name="radios-3" checked>
+                            <div class="mdc-radio__background">
+                              <div class="mdc-radio__outer-circle"></div>
+                              <div class="mdc-radio__inner-circle"></div>
+                            </div>
+                          </div>
+                          <label for="radio-5">Any</label>
+                        </div>
+                        <div class="mdc-form-field">
+                          <div class="mdc-radio">
+                            <input class="mdc-radio__native-control" type="radio" id="radio-6" name="radios-3">
+                            <div class="mdc-radio__background">
+                              <div class="mdc-radio__outer-circle"></div>
+                              <div class="mdc-radio__inner-circle"></div>
+                            </div>
+                          </div>
+                          <label for="radio-6">All</label>
+                        </div>
+                      </li>
+
+                      <hr>
+
+                      <li>
+
+                        <div class="question-settings-form-field mdc-form-field">
+                          <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="checkbox-a"/>
+                            <div class="mdc-checkbox__background">
+                              <svg class="mdc-checkbox__checkmark"
+                                   viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                              </svg>
+                              <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                          </div>
+                          18 - 24
+                        </div>
+
+                      </li>
+                      <li>
+
+                        <div class="question-settings-form-field mdc-form-field">
+                          <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="checkbox-b"/>
+                            <div class="mdc-checkbox__background">
+                              <svg class="mdc-checkbox__checkmark"
+                                   viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                              </svg>
+                              <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                          </div>
+                          25 - 34
+                        </div>
+
+                      </li>
+                      <li>
+
+                        <div class="question-settings-form-field mdc-form-field">
+                          <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="checkbox-c"/>
+                            <div class="mdc-checkbox__background">
+                              <svg class="mdc-checkbox__checkmark"
+                                   viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                              </svg>
+                              <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                          </div>
+                          35 - 44
+                        </div>
+
+                      </li>
+                      <li>
+
+                        <div class="question-settings-form-field mdc-form-field">
+                          <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="checkbox-d"/>
+                            <div class="mdc-checkbox__background">
+                              <svg class="mdc-checkbox__checkmark"
+                                   viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                              </svg>
+                              <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                          </div>
+                          45 - 54
+                        </div>
+
+                      </li>
+                      <li>
+
+                        <div class="question-settings-form-field mdc-form-field">
+                          <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="checkbox-e"/>
+                            <div class="mdc-checkbox__background">
+                              <svg class="mdc-checkbox__checkmark"
+                                   viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                              </svg>
+                              <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                          </div>
+                          55+
+                        </div>
+
+                      </li>
+                    </ul>
+                  </div>
+                   <div class="mdc-notched-outline">
+                     <div class="mdc-notched-outline__leading"></div>
+                     <div class="mdc-notched-outline__notch">
+                     </div>
+                     <div class="mdc-notched-outline__trailing"></div>
+                   </div>
+                </div>
+              </div>
+
+              <div class="question-settings-form-field">
+                <span class="logic-select-label">is</span> 
+                <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-13">
+                  <input type="hidden" name="enhanced-select">
+                  <i class="mdc-select__dropdown-icon"></i>
+                  <div class="mdc-select__selected-text"></div>
+                  <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
+                    <ul class="mdc-list">
+                      <li class="mdc-list-item">
+                        selected  
+                      </li>
+                      <li class="mdc-list-item">
+                        not selected  
+                      </li>
+                    </ul>
+                  </div>
+                   <div class="mdc-notched-outline">
+                     <div class="mdc-notched-outline__leading"></div>
+                     <div class="mdc-notched-outline__notch">
+                     </div>
+                     <div class="mdc-notched-outline__trailing"></div>
+                   </div>
+                </div>
+              </div>
+              <button class="mdc-icon-button material-icons logic-row-remove">remove_circle</button>
+            </div>
+            <div class="logic-conditions-row">
+
+              <div class="question-settings-form-field">
+                <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-14" style="width: auto;">
+                  <input type="hidden" name="enhanced-select">
+                  <i class="mdc-select__dropdown-icon"></i>
+                  <div class="mdc-select__selected-text">And</div>
+                  <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
+                    <ul class="mdc-list">
+                      <li class="mdc-list-item">
+                        And 
+                      </li>
+                      <li class="mdc-list-item">
+                        Or
+                      </li>
+                    </ul>
+                  </div>
+                   <div class="mdc-notched-outline">
+                     <div class="mdc-notched-outline__leading"></div>
+                     <div class="mdc-notched-outline__notch">
+                     </div>
+                     <div class="mdc-notched-outline__trailing"></div>
+                   </div>
+                </div>
+              </div>
+
+              <div class="question-settings-form-field">
+                <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-15">
+                  <input type="hidden" name="enhanced-select">
+                  <i class="mdc-select__dropdown-icon"></i>
+                  <div class="mdc-select__selected-text"></div>
+                  <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
+                    <ul class="mdc-list">
+                      <li class="mdc-list-item">
+                        Q1 - What is your age
+                      </li>
+                      <li class="mdc-list-item">
+                        Q2 - What state do you live in? 
+                      </li>
+                    </ul>
+                  </div>
+                   <div class="mdc-notched-outline">
+                     <div class="mdc-notched-outline__leading"></div>
+                     <div class="mdc-notched-outline__notch">
+                     </div>
+                     <div class="mdc-notched-outline__trailing"></div>
+                   </div>
+                </div>
+              </div>
+
+              <div class="question-settings-form-field">
+                <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-16">
+                  <input type="hidden" name="enhanced-select">
+                  <i class="mdc-select__dropdown-icon"></i>
+                  <div class="mdc-select__selected-text"></div>
+                  <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
+                    <ul class="mdc-list">
+                      <li class="logic-any-all-radios">
+                        <div class="mdc-form-field">
+                          <div class="mdc-radio">
+                            <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios-4" checked>
+                            <div class="mdc-radio__background">
+                              <div class="mdc-radio__outer-circle"></div>
+                              <div class="mdc-radio__inner-circle"></div>
+                            </div>
+                          </div>
+                          <label for="radio-1">Any</label>
+                        </div>
+                        <div class="mdc-form-field">
+                          <div class="mdc-radio">
+                            <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios-4">
+                            <div class="mdc-radio__background">
+                              <div class="mdc-radio__outer-circle"></div>
+                              <div class="mdc-radio__inner-circle"></div>
+                            </div>
+                          </div>
+                          <label for="radio-2">All</label>
+                        </div>
+                      </li>
+
+                      <hr>
+                      <li>
+
+                        <div class="question-settings-form-field mdc-form-field">
+                          <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="checkbox-a"/>
+                            <div class="mdc-checkbox__background">
+                              <svg class="mdc-checkbox__checkmark"
+                                   viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                              </svg>
+                              <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                          </div>
+                          18 - 24
+                        </div>
+
+                      </li>
+                      <li>
+
+                        <div class="question-settings-form-field mdc-form-field">
+                          <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="checkbox-b"/>
+                            <div class="mdc-checkbox__background">
+                              <svg class="mdc-checkbox__checkmark"
+                                   viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                              </svg>
+                              <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                          </div>
+                          25 - 34
+                        </div>
+
+                      </li>
+                      <li>
+
+                        <div class="question-settings-form-field mdc-form-field">
+                          <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="checkbox-c"/>
+                            <div class="mdc-checkbox__background">
+                              <svg class="mdc-checkbox__checkmark"
+                                   viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                              </svg>
+                              <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                          </div>
+                          35 - 44
+                        </div>
+
+                      </li>
+                      <li>
+
+                        <div class="question-settings-form-field mdc-form-field">
+                          <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="checkbox-d"/>
+                            <div class="mdc-checkbox__background">
+                              <svg class="mdc-checkbox__checkmark"
+                                   viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                              </svg>
+                              <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                          </div>
+                          45 - 54
+                        </div>
+
+                      </li>
+                      <li>
+
+                        <div class="question-settings-form-field mdc-form-field">
+                          <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="checkbox-e"/>
+                            <div class="mdc-checkbox__background">
+                              <svg class="mdc-checkbox__checkmark"
+                                   viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                              </svg>
+                              <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
+                          </div>
+                          55+
+                        </div>
+
+                      </li>
+                    </ul>
+                  </div>
+                   <div class="mdc-notched-outline">
+                     <div class="mdc-notched-outline__leading"></div>
+                     <div class="mdc-notched-outline__notch">
+                     </div>
+                     <div class="mdc-notched-outline__trailing"></div>
+                   </div>
+                </div>
+              </div>
+
+              <div class="question-settings-form-field">
+                <span class="logic-select-label">is</span> 
+                <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-17">
+                  <input type="hidden" name="enhanced-select">
+                  <i class="mdc-select__dropdown-icon"></i>
+                  <div class="mdc-select__selected-text"></div>
+                  <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
+                    <ul class="mdc-list">
+                      <li class="mdc-list-item">
+                        selected  
+                      </li>
+                      <li class="mdc-list-item">
+                        not selected  
+                      </li>
+                    </ul>
+                  </div>
+                   <div class="mdc-notched-outline">
+                     <div class="mdc-notched-outline__leading"></div>
+                     <div class="mdc-notched-outline__notch">
+                     </div>
+                     <div class="mdc-notched-outline__trailing"></div>
+                   </div>
+                </div>
+              </div>
+              <button class="mdc-icon-button material-icons logic-row-remove">remove_circle</button>
+            </div>
+
+            <div class="logic-add-button-outer">
+              <button class="mdc-button button-action-secondary">
+                <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+                <span class="mdc-button__label">Add condition</span>
+              </button>
+            </div>
+          </div>
+
+
         </div>
         <footer class="mdc-dialog__actions">
           <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
@@ -1687,6 +2478,127 @@
           </button>
           <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="accept">
             <span class="mdc-button__label">Save</span>
+          </button>
+        </footer>
+      </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
+
+  <div class="mdc-dialog mdc-dialog--scrollable question-library-dialog"
+       role="alertdialog"
+       aria-modal="true"
+       aria-labelledby="my-dialog-title"
+       aria-describedby="my-dialog-content">
+    <div class="mdc-dialog__container">
+      <div class="mdc-dialog__surface">
+        <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+        <h2 class="mdc-dialog__title">
+          Import from Question Library
+        </h2>
+        <div class="mdc-dialog__content">
+
+          <div class="" style="display: flex;">
+            <div class="ql-list">
+              <div class="mdc-text-field mdc-text-field--no-label mdc-text-field--with-leading-icon custom-search-bar">
+                <input class="mdc-text-field__input custom-search-bar-input">
+                <i class="material-icons mdc-text-field__icon custom-search-bar-icon">search</i>
+              </div>
+              
+              <ul class="mdc-list">
+                <li>
+                  <div class="question-settings-form-field mdc-form-field">
+                    <label for="checkbox-age">Age <span>- How old are you?</span></label>
+                    <div class="mdc-checkbox">
+                      <input type="checkbox"
+                             class="mdc-checkbox__native-control"
+                             id="checkbox-age"/>
+                      <div class="mdc-checkbox__background">
+                        <svg class="mdc-checkbox__checkmark"
+                             viewBox="0 0 24 24">
+                          <path class="mdc-checkbox__checkmark-path"
+                                fill="none"
+                                d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                        </svg>
+                        <div class="mdc-checkbox__mixedmark"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="question-settings-form-field mdc-form-field">
+                    <label for="checkbox-gender">Gender <span>- What is your gender?</span></label>
+                    <div class="mdc-checkbox">
+                      <input type="checkbox"
+                             class="mdc-checkbox__native-control"
+                             id="checkbox-gender"/>
+                      <div class="mdc-checkbox__background">
+                        <svg class="mdc-checkbox__checkmark"
+                             viewBox="0 0 24 24">
+                          <path class="mdc-checkbox__checkmark-path"
+                                fill="none"
+                                d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                        </svg>
+                        <div class="mdc-checkbox__mixedmark"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="question-settings-form-field mdc-form-field">
+                    <label for="checkbox-economic">Socioeconomic status</label>
+                    <div class="mdc-checkbox">
+                      <input type="checkbox"
+                             class="mdc-checkbox__native-control"
+                             id="checkbox-economic"/>
+                      <div class="mdc-checkbox__background">
+                        <svg class="mdc-checkbox__checkmark"
+                             viewBox="0 0 24 24">
+                          <path class="mdc-checkbox__checkmark-path"
+                                fill="none"
+                                d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                        </svg>
+                        <div class="mdc-checkbox__mixedmark"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="question-settings-form-field mdc-form-field">
+                    <label for="checkbox-ed">Education</label>
+                    <div class="mdc-checkbox">
+                      <input type="checkbox"
+                             class="mdc-checkbox__native-control"
+                             id="checkbox-ed"/>
+                      <div class="mdc-checkbox__background">
+                        <svg class="mdc-checkbox__checkmark"
+                             viewBox="0 0 24 24">
+                          <path class="mdc-checkbox__checkmark-path"
+                                fill="none"
+                                d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                        </svg>
+                        <div class="mdc-checkbox__mixedmark"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+
+              </ul>
+                 
+            </div>
+            <div class="ql-preview">
+              Questions preview
+            </div>
+          </div>
+
+        </div>
+        <footer class="mdc-dialog__actions">
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
+            <span class="mdc-button__label">Cancel</span>
+          </button>
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="accept">
+            <span class="mdc-button__label">Import 3 Questions</span>
           </button>
         </footer>
       </div>

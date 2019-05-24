@@ -26,6 +26,17 @@ const select2 = new MDCSelect(document.querySelector('.mdc-select-2'));
 const select4 = new MDCSelect(document.querySelector('.mdc-select-4'));
 const select5 = new MDCSelect(document.querySelector('.mdc-select-5'));
 const select6 = new MDCSelect(document.querySelector('.mdc-select-6'));
+const select7 = new MDCSelect(document.querySelector('.mdc-select-7'));
+const select8 = new MDCSelect(document.querySelector('.mdc-select-8'));
+const select9 = new MDCSelect(document.querySelector('.mdc-select-9'));
+const select10 = new MDCSelect(document.querySelector('.mdc-select-10'));
+const select11 = new MDCSelect(document.querySelector('.mdc-select-11'));
+const select12 = new MDCSelect(document.querySelector('.mdc-select-12'));
+const select13 = new MDCSelect(document.querySelector('.mdc-select-13'));
+const select14 = new MDCSelect(document.querySelector('.mdc-select-14'));
+const select15 = new MDCSelect(document.querySelector('.mdc-select-15'));
+const select16 = new MDCSelect(document.querySelector('.mdc-select-16'));
+const select17 = new MDCSelect(document.querySelector('.mdc-select-17'));
 const selectdemo = new MDCSelect(document.querySelector('.mdc-select-3'));  
 
 //

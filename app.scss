@@ -3,8 +3,8 @@
 /////////////////
 
 // Material Theme Variables
-$mdc-theme-primary: #7bb33a; // Innovate Blue alt: 5ab9e6;
-$mdc-theme-secondary: #7bb33a; // Innovate Blue: #548ade; // #395064; // #3386ff  // #568cdb // Google blue: #536dfe; // Innovate Blue alternative: #4294f9;
+$mdc-theme-primary: #57adce; // Green: #7bb33a; // Innovate Blue alt: 5ab9e6;
+$mdc-theme-secondary: #57adce; // Innovate Blue: #548ade; // #395064; // #3386ff  // #568cdb // Google blue: #536dfe; // Innovate Blue alternative: #4294f9;
 $mdc-theme-on-primary: #ffffff;
 $mdc-theme-on-secondary: #ffffff;
 $light-blue: #eceefb;
@@ -215,7 +215,8 @@ hr {
 }
 
 .split-button-outer {
-  display: flex;
+  display: inline-flex;
+  position: relative;
 
   .split-button-left {
     border-top-right-radius: 0;
@@ -238,6 +239,12 @@ hr {
 
 .button-secondary {
   @include mdc-button-filled-accessible($mdc-theme-secondary);
+}
+
+.mdc-button.button-action-secondary {
+  background: $gray-bg;
+  border: 1px solid rgba(0,0,0,.12);
+  color: rgba(0,0,0,.6);
 }
 
 
@@ -302,25 +309,33 @@ hr {
 
 }
 .header-search-bar.mdc-text-field {
-  border-radius: 4px; 
-  height: 32px; 
   margin-right: 24px;
   background: $header-search-bar-background-color;
 
-  .header-search-bar-input.mdc-text-field__input {
+  .mdc-text-field__input {
     color: #fff;
     caret-color: #fff;
+  }
+}
+
+.custom-search-bar.mdc-text-field {
+  border-radius: 4px; 
+  height: 32px; 
+  display: flex;
+
+  .custom-search-bar-input.mdc-text-field__input {
     padding: 0 8px 0 36px;
     border: none;
     font-size: 0.875rem;
-    height: 100%;
+    height: 100%;      
   }
-  .header-search-bar-icon.mdc-text-field__icon {
+  
+  .mdc-text-field__icon {
     color: $text-on-dark-header; 
     left: 8px;
     bottom: 4px;
-
   }
+
 }
 
 
@@ -775,11 +790,13 @@ hr {
   }
 }
 
-.new-question-button.mdc-button {
-  margin: $global-margin-large/2;
+.sbc-question-group-footer {
+  padding: $global-padding-large/2;
+}
+
+.new-question-button .mdc-button {
   background: $gray-bg;
   color: rgba(0,0,0,.6);
-  padding-right: 12px;
 }
 
 .new-group-button-container {
@@ -889,9 +906,35 @@ hr {
     }
   }
 
+  .mdc-dialog__content {
+    padding: 0;
+  }
+
+  .mdc-dialog__title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .mdc-tab-bar {
+    background: $white;
+    border-bottom: $light-border-low;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .mdc-tab {
+    letter-spacing: initial;
+    text-transform: none;
+    flex: 0;
+  }
+
+  .mdc-tab--active .mdc-tab__text-label {
+    color: $body-text-color;
+  }
+
   .mdc-select {
     width: 164px;
-    margin-left: $global-margin*2;
     margin-right: $global-margin*2;
 
     .mdc-select__selected-text {
@@ -900,16 +943,27 @@ hr {
     }
   }
 
+  .logic-select-label {
+    margin-right: $global-margin*2;
+  }
+
+  .logic-any-all-radios {
+    .mdc-form-field {
+      margin-right: $global-margin-large; 
+    }
+  }
+
 }
 
-.logic-conditions-outer {
+.mdc-dialog__content .logic-conditions-outer {
   background: $gray-bg;
   border: $light-border;
   padding: $global-padding-large;
   padding-right: $global-padding-large/2;
   border-radius: $global-border-radius;
-  // display: flex;
-  // flex-wrap: wrap; 
+  margin: $global-margin-large;
+  margin-bottom: $global-margin-large;
+  margin-top: $global-margin-large + 48px; // height of tab bar. 
 
   .question-settings-form-field {
     display: inline-flex;
@@ -918,6 +972,7 @@ hr {
 
   .logic-add-button-outer {
     flex: 1 100%;
+    margin-top: $global-margin-large;
   }
 
   .logic-conditions-row {
@@ -930,7 +985,54 @@ hr {
 
 }
 
+.tab-content{
+  display: none;
+}
 
+.tab-content.current{
+  display: inherit;
+}
+
+
+/////////////////
+// Question Library Modal
+/////////////////
+
+.question-library-dialog {
+
+  .mdc-dialog__surface {
+    @include breakpoint-large-up {
+      width: 750px;
+    }
+  }
+  .mdc-dialog__content {
+    padding: 0;
+  }
+  .ql-list,
+  .ql-preview {
+    width: 50%;
+  }
+  .ql-preview {
+    border-left: $light-border-low;
+  }
+}
+
+.question-settings-form-field {
+
+  label {
+    display: flex;
+    font-size: 0.875rem;
+  }
+
+  &.mdc-form-field {
+    display: flex;
+
+    > label {
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+}
 
 /////////////////
 // Survey Builder Preview
