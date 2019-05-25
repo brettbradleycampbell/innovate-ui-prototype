@@ -113,15 +113,15 @@
   <aside class="mdc-drawer mdc-top-app-bar--fixed-adjust app-sidebar">
     <div class="mdc-drawer__content">
       <nav class="mdc-list">
-        <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+        <a class="mdc-list-item mdc-list-item--activated" href="/innovate-ui-prototype/index.html" aria-current="page">
           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">list_alt</i>
           <span class="mdc-list-item__text">Content</span>
         </a>
-        <a class="mdc-list-item" href="#">
+        <a class="mdc-list-item" href="/innovate-ui-prototype/index-create-design.html">
           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">color_lens</i>
           <span class="mdc-list-item__text">Design</span>
         </a>
-        <a class="mdc-list-item" href="#">
+        <a class="mdc-list-item" href="/innovate-ui-prototype/index-create-settings.html">
           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">settings</i>
           <span class="mdc-list-item__text">Settings</span>
         </a>
@@ -1413,7 +1413,7 @@
               <span class="material-icons">close</span>
             </div>
 
-            <div class="question-settings-form-field">
+            <div class="question-settings-form-field select-form-field">
 
               <label>Question Type</label>
               <div class="mdc-select mdc-select--dense mdc-select--outlined">
@@ -2506,7 +2506,7 @@
               </div>
               
               <ul class="mdc-list">
-                <li>
+                <li data-tab="ql-age">
                   <div class="question-settings-form-field mdc-form-field">
                     <label for="checkbox-age">Age <span>- How old are you?</span></label>
                     <div class="mdc-checkbox">
@@ -2525,7 +2525,7 @@
                     </div>
                   </div>
                 </li>
-                <li>
+                <li data-tab="ql-gender">
                   <div class="question-settings-form-field mdc-form-field">
                     <label for="checkbox-gender">Gender <span>- What is your gender?</span></label>
                     <div class="mdc-checkbox">
@@ -2544,7 +2544,7 @@
                     </div>
                   </div>
                 </li>
-                <li>
+                <li data-tab="ql-economic">
                   <div class="question-settings-form-field mdc-form-field">
                     <label for="checkbox-economic">Socioeconomic status</label>
                     <div class="mdc-checkbox">
@@ -2563,7 +2563,7 @@
                     </div>
                   </div>
                 </li>
-                <li>
+                <li data-tab="ql-ed">
                   <div class="question-settings-form-field mdc-form-field">
                     <label for="checkbox-ed">Education</label>
                     <div class="mdc-checkbox">
@@ -2588,7 +2588,172 @@
                  
             </div>
             <div class="ql-preview">
-              Questions preview
+              <div class="tab-content" id="ql-age">                
+                <div class="ql-preview-question">
+                  <h2>How old are you?</h2>
+
+                  <div class="mdc-form-field">
+                    <div class="mdc-radio">
+                      <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios-age">
+                      <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                      </div>
+                    </div>
+                    <label for="radio-1">18 - 24</label>
+                  </div>
+
+                  <div class="mdc-form-field">
+                    <div class="mdc-radio">
+                      <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios-age">
+                      <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                      </div>
+                    </div>
+                    <label for="radio-2">25 - 34</label>
+                  </div>
+
+                  <div class="mdc-form-field">
+                    <div class="mdc-radio">
+                      <input class="mdc-radio__native-control" type="radio" id="radio-3" name="radios-age">
+                      <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                      </div>
+                    </div>
+                    <label for="radio-3">35 - 44</label>
+                  </div>
+
+                  <div class="mdc-form-field">
+                    <div class="mdc-radio">
+                      <input class="mdc-radio__native-control" type="radio" id="radio-4" name="radios-age">
+                      <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                      </div>
+                    </div>
+                    <label for="radio-4">45 - 54</label>
+                  </div>
+
+                  <div class="mdc-form-field">
+                    <div class="mdc-radio">
+                      <input class="mdc-radio__native-control" type="radio" id="radio-5" name="radios-age">
+                      <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                      </div>
+                    </div>
+                    <label for="radio-5">55+</label>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-content" id="ql-gender">
+                <div class="ql-preview-question">
+                  <h2>What is your gender?</h2>
+
+                  <div class="mdc-form-field">
+                    <div class="mdc-radio">
+                      <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios-gender">
+                      <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                      </div>
+                    </div>
+                    <label for="radio-1">Female</label>
+                  </div>
+
+                  <div class="mdc-form-field">
+                    <div class="mdc-radio">
+                      <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios-gender">
+                      <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                      </div>
+                    </div>
+                    <label for="radio-2">Male</label>
+                  </div>
+
+                  <div class="mdc-form-field">
+                    <div class="mdc-radio">
+                      <input class="mdc-radio__native-control" type="radio" id="radio-3" name="radios-gender">
+                      <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                      </div>
+                    </div>
+                    <label for="radio-3">Other</label>
+                  </div>
+
+                  <div class="mdc-form-field">
+                    <div class="mdc-radio">
+                      <input class="mdc-radio__native-control" type="radio" id="radio-4" name="radios-gender">
+                      <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                      </div>
+                    </div>
+                    <label for="radio-4">Prefer not to answer</label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="tab-content" id="ql-economic">
+                <div class="ql-preview-question">
+                  <h2>What is your salary? </h2>
+
+                  <div class="mdc-form-field">
+                    <div class="mdc-radio">
+                      <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios-economic">
+                      <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                      </div>
+                    </div>
+                    <label for="radio-1">Answer 1</label>
+                  </div>
+
+                  <div class="mdc-form-field">
+                    <div class="mdc-radio">
+                      <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios-economic">
+                      <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                      </div>
+                    </div>
+                    <label for="radio-2">Answer 2</label>
+                  </div>
+
+                </div>              
+              </div>
+              <div class="tab-content" id="ql-ed">
+                <div class="ql-preview-question">
+                  <h2>Please select your education level. </h2>
+
+                  <div class="mdc-form-field">
+                    <div class="mdc-radio">
+                      <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios-ed">
+                      <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                      </div>
+                    </div>
+                    <label for="radio-1">Answer 1</label>
+                  </div>
+
+                  <div class="mdc-form-field">
+                    <div class="mdc-radio">
+                      <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios-ed">
+                      <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                      </div>
+                    </div>
+                    <label for="radio-2">Answer 2</label>
+                  </div>
+
+                </div>
+              </div>
             </div>
           </div>
 

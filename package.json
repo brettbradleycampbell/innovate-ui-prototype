@@ -26,6 +26,7 @@
     "webpack-dev-server": "^2.11.5"
   },
   "dependencies": {
+    "@material/card": "^2.1.1",
     "@material/checkbox": "^2.0.0",
     "@material/dialog": "^2.0.0",
     "@material/drawer": "^2.0.0",

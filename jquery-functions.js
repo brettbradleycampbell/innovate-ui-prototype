@@ -58,17 +58,16 @@ $(function() {
 
   // Question Library Hover preview
   $('.question-library-dialog li').hover(function(){
-    // var tab_id = $(this).attr('data-tab');
+    var tab_id = $(this).attr('data-tab');
+    $('.tab-content').removeClass('current');
+    $("#"+tab_id).addClass('current');
+  })
 
-    // $('.logic-tabs .mdc-tab').removeClass('mdc-tab--active');
-    // $('.logic-tabs .mdc-tab .mdc-tab-indicator').removeClass('mdc-tab-indicator--active');
-    // $('.logic-tabs .mdc-tab').removeClass('mdc-tab--active');
-
-    // $('.tab-content').removeClass('current');
-
-    // $(this).addClass('mdc-tab--active');
-    // $(this).children('.mdc-tab-indicator').addClass('mdc-tab-indicator--active');
-    // $("#"+tab_id).addClass('current');
+  // Themes/Customize Design Tabs
+  $('.create-design-menu a').click(function(){
+    var tab_id = $(this).attr('data-tab');
+    $('.tab-content').removeClass('current');
+    $("#"+tab_id).addClass('current');
   })
 
 });

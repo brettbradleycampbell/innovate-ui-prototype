@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+  <link rel="stylesheet" href="bundle.css">
+</head>
+<body class="mdc-typography" style="display: flex;">
+
+  <header id="header-desktop" class="mdc-top-app-bar mdc-top-app-bar--dense mdc-top-app-bar--fixed app-header">
+    <div class="mdc-top-app-bar__row header-row-one">
+      <section class="mdc-top-app-bar__section">
+        <div class="app-header__item">
+          <span>
+            <a href="#"><img src="images/innovate-logo-placeholder.png" class="innovate-logo"></a>
+          </span> 
+        </div>
+        <!-- <div class="app-header__item">
+          <span class="material-icons">home</span> 
+        </div> -->
+        <div class="app-header__item header-breadcrumbs">
+          <span class="breadcrumb-slash">/</span> 
+          <a href="#" class="breadcrumb-link">Surveys</a>
+          <span class="breadcrumb-slash">/</span> 
+          <a class="breadcrumb-link breadcrumb-current">Customer Feedback Survey 1</a>
+          <span class="material-icons pause-play-survey">pause_circle_outline</span>
+        </div>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+        <div class="app-header__item">
+          <div class="mdc-text-field mdc-text-field--no-label mdc-text-field--with-leading-icon custom-search-bar header-search-bar">
+            <input class="mdc-text-field__input custom-search-bar-input">
+            <i class="material-icons mdc-text-field__icon custom-search-bar-icon">search</i>
+          </div>
+        </div>
+        <div class="app-header__item">
+          <button class="mdc-button header-button">
+            <i class="material-icons mdc-button__icon">person</i>
+            <span class="mdc-button__label">Matt Dusig</span>
+            <!-- <i class="material-icons mdc-button__icon">arrow_drop_down</i> -->
+          </button>
+        </div>
+      </section>
+    </div>
+    <div class="mdc-top-app-bar__row header-row-two">
+      <section class="mdc-top-app-bar__section header-main-nav-links">
+        <div class="app-header__item hmnl-selected">
+          <a href="#"><span>Create</span></a>
+        </div>
+        <div class="app-header__item">
+          <a href="#"><span>Share</span></a>
+        </div>
+        <div class="app-header__item">
+          <a href="#"><span>Results</span></a>
+        </div>
+      </section>
+
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+        <div class="app-header__item" style="margin-right: 48px;">
+          <span style="color: #a2a3a7; text-decoration: underline;">Saving...</span>
+        </div>
+        <div class="app-header__item">
+          <button class="mdc-button mdc-button--unelevated" onclick="window.open('/innovate-ui-prototype/survey-preview.html'); return false;">
+            <span class="mdc-button__label">View</span>
+            <i class="material-icons mdc-button__icon" aria-hidden="true">open_in_new</i>
+          </button>
+        </div>
+      </section>
+    </div>
+
+  </header>
+
+  <header id="header-mobile" class=" mdc-top-app-bar mdc-top-app-bar--dense mdc-top-app-bar--fixed app-header">
+    <div class="mdc-top-app-bar__row header-row-one">
+      <section class="mdc-top-app-bar__section">
+        <div class="app-header__item">
+          <span class="material-icons mobile-menu-icon">menu</span> 
+        </div>
+        <div class="app-header__item header-breadcrumbs">
+          <span class="breadcrumb-link breadcrumb-current">Customer Feedback Survey 1</span>
+          <span class="material-icons pause-play-survey">pause_circle_outline</span>
+        </div>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+      </section>
+    </div>
+    <div class="mdc-top-app-bar__row header-row-two">
+      <section class="mdc-top-app-bar__section header-main-nav-links">
+        <div class="app-header__item hmnl-selected">
+          <a href="#"><span>Create</span></a>
+        </div>
+        <div class="app-header__item">
+          <a href="#"><span>Share</span></a>
+        </div>
+        <div class="app-header__item">
+          <a href="#"><span>Results</span></a>
+        </div>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+        <div class="app-header__item" style="margin-right: 12px;">
+          <span class="material-icons" style="color: #a2a3a7;">done</span>
+        </div>
+        <div class="app-header__item">
+          <button class="mdc-button mdc-button--unelevated">
+            <span class="mdc-button__label">View</span>
+          </button>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <aside class="mdc-drawer mdc-top-app-bar--fixed-adjust app-sidebar">
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+        <a class="mdc-list-item" href="/innovate-ui-prototype/index.html" aria-current="page">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">list_alt</i>
+          <span class="mdc-list-item__text">Content</span>
+        </a>
+        <a class="mdc-list-item mdc-list-item--activated" href="/innovate-ui-prototype/index-create-design.html">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">color_lens</i>
+          <span class="mdc-list-item__text">Design</span>
+        </a>
+        <a class="mdc-list-item" href="/innovate-ui-prototype/index-create-settings.html">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">settings</i>
+          <span class="mdc-list-item__text">Settings</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- App page content -->
+  <div class="app-body mdc-top-app-bar--fixed-adjust" >
+    <div class="" id="create-settings">
+      <div class="create-design-menu">
+
+        <div id="themes-menu" class="tab-content current">
+          grid / list
+          <div class="themes-menu-parent">
+
+
+<div class="mdc-card demo-card demo-basic-with-text-over-media">
+  <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
+    <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" style="background-image: url(&quot;https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg&quot;);">
+      <div class="mdc-card__media-content demo-card__media-content">
+      </div>
+    </div>
+  </div>
+  <div class="mdc-card__actions">
+    <div class="mdc-card__action-buttons">
+      <button class="mdc-button mdc-card__action mdc-card__action--button">Customize</button>
+    </div>
+    <div class="mdc-card__action-icons">
+      <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="More options" data-mdc-ripple-is-unbounded="true">more_vert</button>
+    </div>
+  </div>
+</div>
+
+
+
+            <div class="theme-outer">
+              <div class="theme-inner">
+                <div class="theme-preview"></div>
+                <div class="theme-menu-bar">
+                  <span>Innovate MR 1<span>
+                  <a class="mdc-icon-button material-icons" data-tab="customize-menu">more_horiz</a>
+                </div>
+              </div>
+            </div>
+            <div class="theme-outer">
+              <div class="theme-inner">
+                <div class="theme-preview"></div>
+                <div>
+                  <span>Innovate MR 1<span>
+                  <button class="mdc-icon-button material-icons" data-tab="customize-menu">more_horiz</button>
+                </div>
+              </div>
+            </div>
+            <div class="theme-outer">
+              <div class="theme-inner">
+                <div class="theme-preview"></div>
+                <div>
+                  <span>Innovate MR 1<span>
+                  <button class="mdc-icon-button material-icons" data-tab="customize-menu">more_horiz</button>
+                </div>
+              </div>
+            </div>
+            <div class="theme-outer">
+              <div class="theme-inner">
+                <div class="theme-preview"></div>
+                <div>
+                  <span>Innovate MR 1<span>
+                  <button class="mdc-icon-button material-icons" data-tab="customize-menu">more_horiz</button>
+                </div>
+              </div>
+            </div>
+           </div>
+        </div>
+        
+        <div id="customize-menu" class="tab-content">
+          <a href="#" data-tab="themes-menu">< Back to themes</a>
+
+          <div class="question-settings-form-field select-form-field">
+
+            <label>Survey Title</label>
+            <div class="mdc-text-field mdc-text-field--outlined">
+              <input type="text" id="tf-outlined" class="mdc-text-field__input" value="Customer Feedback Survey 1">
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <label for="tf-outlined" class="mdc-floating-label"></label>
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="question-settings-form-field select-form-field">
+
+            <label>Meta Description</label>
+            <div class="mdc-text-field mdc-text-field--textarea mdc-text-field--no-label">
+              <textarea class="mdc-text-field__input" rows="4" aria-label="Label" va></textarea>
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="question-settings-form-field mdc-form-field">
+            <div class="mdc-checkbox">
+              <input type="checkbox"
+                     class="mdc-checkbox__native-control"
+                     id="checkbox-predefined"/>
+              <div class="mdc-checkbox__background">
+                <svg class="mdc-checkbox__checkmark"
+                     viewBox="0 0 24 24">
+                  <path class="mdc-checkbox__checkmark-path"
+                        fill="none"
+                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                </svg>
+                <div class="mdc-checkbox__mixedmark"></div>
+              </div>
+            </div>
+            <label for="checkbox-predefined">Prevent indexing</label>
+          </div>  
+
+          <hr>
+
+          <div class="question-settings-form-field select-form-field">
+
+            <label>Custom Survey URL</label>
+            <span class="custom-survey-url-prefix">pegausumr.com/</span>
+            <div class="mdc-text-field mdc-text-field--outlined">
+              <input type="text" id="tf-outlined" class="mdc-text-field__input" value="Customer Feedback Survey 1">
+              <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                  <label for="tf-outlined" class="mdc-floating-label"></label>
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="radio-button-set">
+
+            <span class="radio-button-set-label">Survey completion</span>
+
+            <div class="mdc-form-field">
+              <div class="mdc-radio">
+                <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios-completion">
+                <div class="mdc-radio__background">
+                  <div class="mdc-radio__outer-circle"></div>
+                  <div class="mdc-radio__inner-circle"></div>
+                </div>
+              </div>
+              <label for="radio-1">Default end of survey message</label>
+            </div>
+            <div class="mdc-form-field">
+              <div class="mdc-radio">
+                <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios-completion">
+                <div class="mdc-radio__background">
+                  <div class="mdc-radio__outer-circle"></div>
+                  <div class="mdc-radio__inner-circle"></div>
+                </div>
+              </div>
+              <label for="radio-2">Redirect to URL</label>
+            </div>
+            <div class="mdc-form-field">
+              <div class="mdc-radio">
+                <input class="mdc-radio__native-control" type="radio" id="radio-3" name="radios-completion">
+                <div class="mdc-radio__background">
+                  <div class="mdc-radio__outer-circle"></div>
+                  <div class="mdc-radio__inner-circle"></div>
+                </div>
+              </div>
+              <label for="radio-3">Show custom message</label>
+            </div>
+
+          </div>
+
+          <div class="radio-button-set">
+
+            <span class="radio-button-set-label">Survey termination</span>
+
+            <div class="mdc-form-field">
+              <div class="mdc-radio">
+                <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios-completion">
+                <div class="mdc-radio__background">
+                  <div class="mdc-radio__outer-circle"></div>
+                  <div class="mdc-radio__inner-circle"></div>
+                </div>
+              </div>
+              <label for="radio-1">Default end of survey message</label>
+            </div>
+            <div class="mdc-form-field">
+              <div class="mdc-radio">
+                <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios-completion">
+                <div class="mdc-radio__background">
+                  <div class="mdc-radio__outer-circle"></div>
+                  <div class="mdc-radio__inner-circle"></div>
+                </div>
+              </div>
+              <label for="radio-2">Redirect to URL</label>
+            </div>
+            <div class="mdc-form-field">
+              <div class="mdc-radio">
+                <input class="mdc-radio__native-control" type="radio" id="radio-3" name="radios-completion">
+                <div class="mdc-radio__background">
+                  <div class="mdc-radio__outer-circle"></div>
+                  <div class="mdc-radio__inner-circle"></div>
+                </div>
+              </div>
+              <label for="radio-3">Show custom message</label>
+            </div>
+
+          </div>
+
+          <div class="question-settings-form-field mdc-form-field">
+            <div class="mdc-checkbox">
+              <input type="checkbox"
+                     class="mdc-checkbox__native-control"
+                     id="checkbox-1"/>
+              <div class="mdc-checkbox__background">
+                <svg class="mdc-checkbox__checkmark"
+                     viewBox="0 0 24 24">
+                  <path class="mdc-checkbox__checkmark-path"
+                        fill="none"
+                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                </svg>
+                <div class="mdc-checkbox__mixedmark"></div>
+              </div>
+            </div>
+            <label for="checkbox-1">Terminate duplicate respondents based on cookies</label>
+          </div>
+
+          <div class="question-settings-form-field mdc-form-field">
+            <div class="mdc-checkbox">
+              <input type="checkbox"
+                     class="mdc-checkbox__native-control"
+                     id="checkbox-2"/>
+              <div class="mdc-checkbox__background">
+                <svg class="mdc-checkbox__checkmark"
+                     viewBox="0 0 24 24">
+                  <path class="mdc-checkbox__checkmark-path"
+                        fill="none"
+                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                </svg>
+                <div class="mdc-checkbox__mixedmark"></div>
+              </div>
+            </div>
+            <label for="checkbox-2">Terminate duplicate respondents based on digital fingerprint</label>
+          </div>
+
+          <div class="question-settings-form-field mdc-form-field">
+            <div class="mdc-checkbox">
+              <input type="checkbox"
+                     class="mdc-checkbox__native-control"
+                     id="checkbox-3"/>
+              <div class="mdc-checkbox__background">
+                <svg class="mdc-checkbox__checkmark"
+                     viewBox="0 0 24 24">
+                  <path class="mdc-checkbox__checkmark-path"
+                        fill="none"
+                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                </svg>
+                <div class="mdc-checkbox__mixedmark"></div>
+              </div>
+            </div>
+            <label for="checkbox-3">Only allow respondents from select countries</label>
+          </div>
+
+          <hr>
+
+          <div class="question-settings-form-field mdc-form-field">
+            <div class="mdc-checkbox">
+              <input type="checkbox"
+                     class="mdc-checkbox__native-control"
+                     id="checkbox-3"/>
+              <div class="mdc-checkbox__background">
+                <svg class="mdc-checkbox__checkmark"
+                     viewBox="0 0 24 24">
+                  <path class="mdc-checkbox__checkmark-path"
+                        fill="none"
+                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                </svg>
+                <div class="mdc-checkbox__mixedmark"></div>
+              </div>
+            </div>
+            <label for="checkbox-3">Make these my default settings</label>          
+          </div>
+        </div>
+      </div>
+
+      <div class="create-settings-preview-container">      
+        <iframe src="demo-survey.html"></iframe>
+      </div>
+      
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="bundle.js" async></script>
+<script src="jquery-functions.js" async></script>
+</body>
+</html>
