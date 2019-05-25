@@ -1332,11 +1332,16 @@ hr {
 /////////////////
 
 .create-design-menu {
-  flex: 0 0 310px; 
+  flex: 0 0 280px; 
   background: $gray-bg; 
   align-items: stretch;
   overflow: scroll;
   padding: $global-padding*2;
+
+  .custom-search-bar {
+    background: $white;
+    margin: $global-margin-large/2;
+  }
 }
 
 /////////////////
@@ -1347,30 +1352,38 @@ hr {
   display: flex;
   flex-wrap: wrap;
 
-  .mdc-card {
+  .mdc-card.theme-card {
     width: 100%;
     box-shadow: none;
+    margin-left: $global-margin-large/2;
+    margin-right: $global-margin-large/2;
+    margin-bottom: $global-margin-large;
+
+    .mdc-card__actions {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 }
-.theme-outer {
-  width: 100%;
-  padding: $global-padding*2;
-  font-size: 0.875rem;
+// .theme-outer {
+//   width: 100%;
+//   padding: $global-padding*2;
+//   font-size: 0.875rem;
 
-  .theme-inner {
-    background: $white;
-    border-radius: $global-border-radius;
-    overflow: hidden;
-  }
-  .theme-title {
-    padding: $global-padding-large/2;
-  }
+//   .theme-inner {
+//     background: $white;
+//     border-radius: $global-border-radius;
+//     overflow: hidden;
+//   }
+//   .theme-title {
+//     padding: $global-padding-large/2;
+//   }
 
-  .theme-preview {
-    background: #bdcbd0;
-    height: 120px;
-  }
-}
+//   .theme-preview {
+//     background: #bdcbd0;
+//     height: 120px;
+//   }
+// }
 
 
 /////////////////

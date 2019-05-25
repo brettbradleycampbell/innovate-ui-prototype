@@ -64,7 +64,7 @@ $(function() {
   })
 
   // Themes/Customize Design Tabs
-  $('.create-design-menu a').click(function(){
+  $('.create-design-menu .customize-button').click(function(){
     var tab_id = $(this).attr('data-tab');
     $('.tab-content').removeClass('current');
     $("#"+tab_id).addClass('current');
