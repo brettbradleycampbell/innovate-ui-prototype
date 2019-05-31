@@ -27,20 +27,6 @@ $(function() {
     $('.question-library-dialog').removeClass('mdc-dialog--open');
   });
 
-  // Survey Preview page
-
-  // Toggle mobile/desktop class
-  $('.sp-toggle-width').click( function() {
-    $(this).toggleClass('sptw-selected');
-    $('.sp-iframe-wrapper').toggleClass('sp-mobile');
-  });
-
-  // Hide/show Preview Bar
-  $('.sp-hide-bar').click( function() {
-    $('.sp-bar').toggleClass('sp-bar-hidden');
-    $('.sp-main-container').toggleClass('sp-bar-hidden-container');
-  });
-
   // Logic modal tabs
   $('.logic-tabs .mdc-tab').click(function(){
     var tab_id = $(this).attr('data-tab');
@@ -69,5 +55,37 @@ $(function() {
     $('.tab-content').removeClass('current');
     $("#"+tab_id).addClass('current');
   })
+
+  // Select Question
+  $('.sbc-question-outer').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('.sbc-question-outer').removeClass('sbc-selected');
+    // $('.logic-tabs .mdc-tab').removeClass('mdc-tab--active');
+
+    $('.survey-builder-settings-inner').removeClass('current');
+
+    $(this).addClass('sbc-selected');
+    $("#"+tab_id).addClass('current');
+  })
+
+  ////////////////
+  //
+  // Survey Preview page
+  //
+  ////////////////
+
+  // Toggle mobile/desktop class
+  $('.sp-toggle-width').click( function() {
+    $(this).toggleClass('sptw-selected');
+    $('.sp-iframe-wrapper').toggleClass('sp-mobile');
+  });
+
+  // Hide/show Preview Bar
+  $('.sp-hide-bar').click( function() {
+    $('.sp-bar').toggleClass('sp-bar-hidden');
+    $('.sp-main-container').toggleClass('sp-bar-hidden-container');
+  });
+
 
 });

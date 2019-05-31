@@ -37,6 +37,8 @@ const select14 = new MDCSelect(document.querySelector('.mdc-select-14'));
 const select15 = new MDCSelect(document.querySelector('.mdc-select-15'));
 const select16 = new MDCSelect(document.querySelector('.mdc-select-16'));
 const select17 = new MDCSelect(document.querySelector('.mdc-select-17'));
+const select18 = new MDCSelect(document.querySelector('.mdc-select-18'));
+const select19 = new MDCSelect(document.querySelector('.mdc-select-19'));
 const selectdemo = new MDCSelect(document.querySelector('.mdc-select-3'));  
 
 //

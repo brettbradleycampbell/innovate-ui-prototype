@@ -137,14 +137,17 @@
         <div class="mdc-layout-grid__cell--span-12 survey-builder-container">
           
           <div class="survey-builder-content">
+<!-- Question group 1 -->
+
             <div class="sbc-question-group">
+
+              <!-- Question Group 1 Header -->
               <div class="sbc-question-group-header">
-                <div class="sbc-question-group-title">Question Group 1</div>
+                <div class="sbc-question-group-title">Group 1</div>
                 <div class="sbc-question-group-icons">
 
                   <div style="position: relative;">
                     <button class="mdc-icon-button material-icons qg-menu">more_horiz</button>
-                    <!-- <i class="material-icons qg-menu">more_vert</i> -->
                     <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="right: -12px;">
                       <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
                         <li class="mdc-list-item" role="menuitem">
@@ -162,19 +165,152 @@
 
                 </div>
               </div>
-              <div class="sbc-question-outer sbc-question-first sbc-selected">
+
+
+<!-- Question 1 -->
+              <div class="sbc-question-outer sbc-question-first" data-tab="sbs-statement">
                 <div class="sbc-question-inner">
                   <div class="sbc-question-header">
                     <div class="sbc-question-title">
-                      <span class="sbc-question-number">Q1</span>What is your age? </span>
+                      <span class="sbc-question-number"><span class="material-icons question-number-icon">format_quote</span> <span>1</span></span>Thank you for taking our survey. Please click the button below to start. </span>
                     </div>
                     <div class="sbc-question-icons">
 
                       <button class="mdc-icon-button material-icons qg-logic">call_split</button>
-                      <!-- <i class="material-icons qg-logic">call_split</i> -->
-
                       <div style="position: relative;">
                         <button class="mdc-icon-button material-icons qg-menu">more_horiz</button>
+                        <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; right: 0px;">
+                          <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Move</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Duplicate</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Delete</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div> 
+
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
+
+                <div class="split-button-outer button-add-circle-outer">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                  </button>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; right: 0px;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Page Break</span>
+                      </li>
+                      <li class="mdc-list-item ql-dialog-button" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Import from Library</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div> 
+<!-- / Question 1 -->
+
+
+<!-- Page Break -->
+              <div class="sbc-question-outer page-break">
+                <hr class="page-break-hr">
+                <span class="page-break-text">Page break</span>
+                <span class="material-icons page-break-remove">remove_circle</span>
+
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
+
+                <div class="split-button-outer button-add-circle-outer">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                  </button>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; right: 0px;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Page Break</span>
+                      </li>
+                      <li class="mdc-list-item ql-dialog-button" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Import from Library</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+              </div>
+
+<!-- Question 2 -->
+              <div class="sbc-question-outer sbc-selected" data-tab="sbs-mc">
+                <div class="sbc-question-inner">
+                  <div class="sbc-question-header">
+                    <div class="sbc-question-title">
+                      <span class="sbc-question-number"><span class="material-icons question-number-icon">radio_button_checked</span> <span>2</span></span>What is your age?</span>
+                    </div>
+                    <div class="sbc-question-icons">
+
+                      <button class="mdc-icon-button material-icons qg-logic">call_split</button>
+                      <div style="position: relative;">
+                        <button class="mdc-icon-button material-icons qg-menu">more_horiz</button>
+                        <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; right: 0px;">
+                          <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Move</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Duplicate</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Delete</span>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
 
                     </div>
@@ -332,6 +468,16 @@
 
                   </div>
                 </div> 
+
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
+
                 <div class="split-button-outer button-add-circle-outer">
                   <button class="mdc-button mdc-button--unelevated split-button-left">
                     <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
@@ -339,7 +485,7 @@
                   <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
                     <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
                   </button>
-                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; right: 0px;">
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; right: 0px;">
                     <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
                       <li class="mdc-list-item" role="menuitem">
                         <span class="mdc-list-item__text qg-collapse">Page Break</span>
@@ -363,12 +509,16 @@
 
               </div>
 
-
-              <div class="sbc-question-outer sbc-question-last">
+<!-- Question 3 -->
+              <div class="sbc-question-outer sbc-question-last" data-tab="sbs-mc">
                 <div class="sbc-question-inner">
                   <div class="sbc-question-header">
                     <div class="sbc-question-title">
-                      <span class="sbc-question-number">Q2</span><span>What state do you live in?</span>
+                      <span class="sbc-question-number">
+                        <span class="material-icons question-number-icon">unfold_more</span> 
+                        <span>3</span>
+                      </span>
+                      <span>What state do you live in?</span>
                     </div>
                     <div class="sbc-question-icons">
 
@@ -382,6 +532,259 @@
                           <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
                             <li class="mdc-list-item" role="menuitem">
                               <span class="mdc-list-item__text qg-collapse">Collapse</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Duplicate</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Delete</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="sbc-answer-text-editor preset-answers"> <!-- Try Slate js text editor -->
+                    <div class="sbc-answer-text-line">
+                      <span>[ US States Abbreviated ]</span>
+                      <a href="#" class="preset-answers-expand-button">collapse</a>
+                    </div>
+                    <div class="preset-answers-inner preset-answers-expanded">
+                      <div class="sbc-answer-text-line">
+                        <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
+                          <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                        </button>
+                        <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
+                          <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Anchor</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Move up</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Move down</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Remove</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <span class="sbc-atl-text">AL</span>
+                      </div>
+                      <div class="sbc-answer-text-line">
+                        <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
+                          <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                        </button>
+                        <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
+                          <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Anchor</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Move up</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Move down</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Remove</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <span class="sbc-atl-text">AK</span>
+                      </div>
+                      <div class="sbc-answer-text-line">
+                        <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
+                          <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                        </button>
+                        <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
+                          <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Anchor</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Move up</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Move down</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Remove</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <span class="sbc-atl-text">AZ</span>
+                      </div>
+                      <div class="sbc-answer-text-line">
+                        <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
+                          <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                        </button>
+                        <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
+                          <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Anchor</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Move up</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Move down</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Remove</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <span class="sbc-atl-text">AR</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div> 
+
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
+
+                <div class="split-button-outer button-add-circle-outer">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                  </button>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; right: 0;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>             
+              </div>
+
+<!-- Question Group 1 Footer -->
+              <div class="sbc-question-group-footer">
+                <div class="split-button-outer new-question-button">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <span class="mdc-button__label">New Question</span>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                  </button>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; left: 120px;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Page Break</span>
+                      </li>
+                      <li class="mdc-list-item ql-dialog-button" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Import from Library</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div> 
+              </div>
+
+            </div> 
+<!-- / question group-->
+  
+            <div class="new-group-button-container">
+
+              <button class="mdc-button new-group-button">
+                <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+                <span class="mdc-button__label">New Group</span>
+              </button>
+            </div>
+
+<!-- Question Group - Multiple Choice  -->
+            <div class="sbc-question-group">
+              <div class="sbc-question-group-header">
+                <div class="sbc-question-group-title">Multiple Choice</div>
+                <div class="sbc-question-group-icons">
+
+                  <div style="position: relative;">
+                    <button class="mdc-icon-button material-icons qg-menu">more_horiz</button>
+                    <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="right: -12px;">
+                      <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                        <li class="mdc-list-item" role="menuitem">
+                          <span class="mdc-list-item__text qg-collapse">Collapse</span>
+                        </li>
+                        <li class="mdc-list-item" role="menuitem">
+                          <span class="mdc-list-item__text qg-collapse">Duplicate</span>
+                        </li>
+                        <li class="mdc-list-item" role="menuitem">
+                          <span class="mdc-list-item__text qg-collapse">Delete</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+<!-- Question 4 -->
+              <div class="sbc-question-outer sbc-question-first" data-tab="sbs-mc">
+                <div class="sbc-question-inner">
+                  <div class="sbc-question-header">
+                    <div class="sbc-question-title">
+                      <span class="sbc-question-number"><span class="material-icons question-number-icon">radio_button_checked</span> <span>4</span></span>What is your favorite color? </span>
+                    </div>
+                    <div class="sbc-question-icons">
+
+                      <button class="mdc-icon-button material-icons qg-logic">call_split</button>
+                      <div style="position: relative;">
+                        <button class="mdc-icon-button material-icons qg-menu">more_horiz</button>
+                        <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; right: 0px;">
+                          <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Move</span>
                             </li>
                             <li class="mdc-list-item" role="menuitem">
                               <span class="mdc-list-item__text qg-collapse">Duplicate</span>
@@ -422,128 +825,7 @@
                           </li>
                         </ul>
                       </div>
-                      <span>[ US States Abbreviated ]</span>
-                    </div>
-                  </div>
-                </div> 
-                <div class="split-button-outer button-add-circle-outer">
-                  <button class="mdc-button mdc-button--unelevated split-button-left">
-                    <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
-                  </button>
-                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
-                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                  </button>
-                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; right: 0;">
-                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                      <li class="mdc-list-item" role="menuitem">
-                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
-                      </li>
-                      <hr>
-                      <li class="mdc-list-item" role="menuitem">
-                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
-                      </li>
-                      <li class="mdc-list-item" role="menuitem">
-                        <span class="mdc-list-item__text qg-collapse">Scale</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>             
-              </div>
-
-              <div class="sbc-question-group-footer">
-                <div class="split-button-outer new-question-button">
-                  <button class="mdc-button mdc-button--unelevated split-button-left">
-                    <span class="mdc-button__label">New Question</span>
-                  </button>
-                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
-                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                  </button>
-                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; left: 120px;">
-                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                      <li class="mdc-list-item" role="menuitem">
-                        <span class="mdc-list-item__text qg-collapse">Page Break</span>
-                      </li>
-                      <li class="mdc-list-item ql-dialog-button" role="menuitem">
-                        <span class="mdc-list-item__text qg-collapse">Import from Library</span>
-                      </li>
-                      <hr>
-                      <li class="mdc-list-item" role="menuitem">
-                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
-                      </li>
-                      <li class="mdc-list-item" role="menuitem">
-                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
-                      </li>
-                      <li class="mdc-list-item" role="menuitem">
-                        <span class="mdc-list-item__text qg-collapse">Scale</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div> 
-              </div>
-
-            </div> <!-- / question group-->
-  
-            <div class="new-group-button-container">
-              <button class="mdc-button new-question-button">
-                <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
-                <span class="mdc-button__label">New Group</span>
-              </button>
-            </div>
-
-            <div class="sbc-question-group">
-              <div class="sbc-question-group-header">
-                <div class="sbc-question-group-title">Question Group 2</div>
-                <div class="sbc-question-group-icons">
-                  <button class="mdc-icon-button material-icons">call_split</button>
-                  <button class="mdc-icon-button material-icons">more_vert</button>
-                </div>
-              </div>
-              
-              <div class="sbc-question-outer sbc-question-only">
-                <div class="sbc-question-inner">
-                  <div class="sbc-question-header">
-                    <div class="sbc-question-title">
-                      <span class="sbc-question-number">Q3</span><span>How satisfied were you with the support you received? </span>
-                    </div>
-                    <div class="sbc-question-icons">
-
-                      <button class="mdc-icon-button material-icons qg-logic">call_split</button>
-                      <!-- <i class="material-icons qg-logic">call_split</i> -->
-
-                      <div style="position: relative;">
-                        <button class="mdc-icon-button material-icons qg-menu">more_horiz</button>
-                      </div>
-
-                    </div>
-                  </div>
-                  <div class="sbc-answer-text-editor"> <!-- Try Slate js text editor -->
-                    <div class="sbc-answer-text-line">
-                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                      </button>
-                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
-                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move up</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move down</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Remove</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <span>Very Satisfied</span>
+                      <span class="sbc-atl-text">Red</span>
                     </div>
                     <div class="sbc-answer-text-line">
                       <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
@@ -571,7 +853,7 @@
                           </li>
                         </ul>
                       </div>
-                      <span>Satisfied</span>
+                      <span>Green</span>
                     </div>
                     <div class="sbc-answer-text-line">
                       <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
@@ -599,7 +881,7 @@
                           </li>
                         </ul>
                       </div>
-                      <span>Unsatisfied</span>
+                      <span class="sbc-atl-text">Blue</span>
                     </div>
                     <div class="sbc-answer-text-line">
                       <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
@@ -627,45 +909,24 @@
                           </li>
                         </ul>
                       </div>
-                      <span>Very Unsatisfied</span>
-                    </div>
-                    <div class="sbc-answer-text-line">
-                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                      </button>
-                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
-                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move up</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move down</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Remove</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <span class="sbc-atl-text">Long answer text Long answer text Long answer text Long answer text Long answer text Long answer text Long answer text.</span>
+                      <span class="sbc-atl-text">Other</span>
                       <span class="atl-icons">
                         <span class="material-icons">chat_bubble</span>
-                        <span class="material-icons">lock</span>
-                        <span class="material-icons">radio_button_checked</span>
-                        <span class="material-icons">call_split</span>
                       </span>
+
                     </div>
 
                   </div>
                 </div> 
+
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
 
                 <div class="split-button-outer button-add-circle-outer">
                   <button class="mdc-button mdc-button--unelevated split-button-left">
@@ -674,12 +935,18 @@
                   <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
                     <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
                   </button>
-                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; right: 0;">
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; right: 0px;">
                     <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Page Break</span>
+                      </li>
+                      <li class="mdc-list-item ql-dialog-button" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Import from Library</span>
+                      </li>
+                      <hr>
                       <li class="mdc-list-item" role="menuitem">
                         <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
                       </li>
-                      <hr>
                       <li class="mdc-list-item" role="menuitem">
                         <span class="mdc-list-item__text qg-collapse">Star Rating</span>
                       </li>
@@ -689,8 +956,371 @@
                     </ul>
                   </div>
                 </div>
-              </div>
 
+              </div> 
+<!-- / Question 4 -->
+
+
+<!-- Question 5 -->
+              <div class="sbc-question-outer" data-tab="sbs-mc">
+                <div class="sbc-question-inner">
+                  <div class="sbc-question-header">
+                    <div class="sbc-question-title">
+                      <span class="sbc-question-number"><span class="material-icons question-number-icon">radio_button_checked</span> <span>5</span></span>Choose all that apply. </span>
+                    </div>
+                    <div class="sbc-question-icons">
+
+                      <button class="mdc-icon-button material-icons qg-logic">call_split</button>
+                      <div style="position: relative;">
+                        <button class="mdc-icon-button material-icons qg-menu">more_horiz</button>
+                        <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; right: 0px;">
+                          <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Move</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Duplicate</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Delete</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="sbc-answer-text-editor"> <!-- Try Slate js text editor -->
+                    <div class="sbc-answer-text-line">
+                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
+                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                      </button>
+                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move up</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move down</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Remove</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <span class="sbc-atl-text">I live in the United States</span>
+                    </div>
+                    <div class="sbc-answer-text-line">
+                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
+                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                      </button>
+                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move up</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move down</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Remove</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <span>I am an immigrant</span>
+                    </div>
+                    <div class="sbc-answer-text-line">
+                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
+                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                      </button>
+                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move up</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move down</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Remove</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <span class="sbc-atl-text">I am a U.S. citizen</span>
+                    </div>
+
+                  </div>
+                </div> 
+
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
+
+                <div class="split-button-outer button-add-circle-outer">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                  </button>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; right: 0px;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Page Break</span>
+                      </li>
+                      <li class="mdc-list-item ql-dialog-button" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Import from Library</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div> 
+<!-- / Question 5 -->
+
+<!-- Question 6 -->
+              <div class="sbc-question-outer sbc-question-last" data-tab="sbs-mc">
+                <div class="sbc-question-inner">
+                  <div class="sbc-question-header">
+                    <div class="sbc-question-title">
+                      <span class="sbc-question-number"><span class="material-icons question-number-icon">radio_button_checked</span> <span>6</span></span>Please choose a picture. </span>
+                    </div>
+                    <div class="sbc-question-icons">
+
+                      <button class="mdc-icon-button material-icons qg-logic">call_split</button>
+                      <div style="position: relative;">
+                        <button class="mdc-icon-button material-icons qg-menu">more_horiz</button>
+                        <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; right: 0px;">
+                          <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Move</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Duplicate</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem">
+                              <span class="mdc-list-item__text qg-collapse">Delete</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="sbc-answer-text-editor"> <!-- Try Slate js text editor -->
+                    <div class="sbc-answer-text-line">
+                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
+                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                      </button>
+                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move up</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move down</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Remove</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <span class="sbc-atl-image-thumbnail" style="background-image: url(images/yosemite.jpg);">
+                        <span class="material-icons thumbnail-change">close</span>
+                      </span>
+                      <span class="sbc-atl-text sbc-atl-text-with-image">Yosemite</span>
+                    </div>
+                    <div class="sbc-answer-text-line">
+                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
+                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                      </button>
+                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move up</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move down</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Remove</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <span class="sbc-atl-image-thumbnail" style="background-image: url(images/yellowstone.jpg);">
+                        <span class="material-icons thumbnail-change">close</span>
+                      </span>
+                      <span class="sbc-atl-text sbc-atl-text-with-image">Yellowstone</span>
+                    </div>
+                    <div class="sbc-answer-text-line">
+                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
+                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                      </button>
+                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move up</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move down</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Remove</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <span class="sbc-atl-image-thumbnail" style="background-image: url(images/niagra-falls.jpg);">
+                        <span class="material-icons thumbnail-change">close</span>
+                      </span>
+                      <span class="sbc-atl-text sbc-atl-text-with-image">Niagra Falls</span>
+                    </div>
+
+                    <div class="sbc-answer-text-line">
+                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
+                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                      </button>
+                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move up</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move down</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Remove</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <span class="sbc-atl-image-thumbnail no-image">
+                        <span class="material-icons thumbnail-add">add</span>
+                      </span>
+                      <span class="sbc-atl-text sbc-atl-text-with-image">Image Label</span>
+                    </div>
+
+                  </div>
+                </div> 
+
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
+
+                <div class="split-button-outer button-add-circle-outer">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                  </button>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; right: 0px;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Page Break</span>
+                      </li>
+                      <li class="mdc-list-item ql-dialog-button" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Import from Library</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div> 
+<!-- / Question 6 -->
+
+<!-- Question Group Footer - Multiple Choice -->
               <div class="sbc-question-group-footer">
                 <div class="split-button-outer new-question-button">
                   <button class="mdc-button mdc-button--unelevated split-button-left">
@@ -699,7 +1329,7 @@
                   <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
                     <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
                   </button>
-                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; left: 120px;">
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; left: 120px;">
                     <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
                       <li class="mdc-list-item" role="menuitem">
                         <span class="mdc-list-item__text qg-collapse">Page Break</span>
@@ -722,29 +1352,290 @@
                 </div> 
               </div>
 
-            </div> <!-- / question group-->
-
+            </div> 
+<!-- / question group-->
+  
             <div class="new-group-button-container">
-              <button class="mdc-button new-question-button">
+
+              <button class="mdc-button new-group-button">
                 <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
                 <span class="mdc-button__label">New Group</span>
               </button>
             </div>
 
+<!-- Question Group - Scales -->
+            <div class="sbc-question-group">
+              <!-- Question Group Header - Scales -->
+              <div class="sbc-question-group-header">
+                <div class="sbc-question-group-title">Scales</div>
+                <div class="sbc-question-group-icons">
+                  <button class="mdc-icon-button material-icons">more_vert</button>
+                </div>
+              </div>
+  
+<!-- Question 7 -->
+              <div class="sbc-question-outer sbc-question-first" data-tab="sbs-scale">
+                <div class="sbc-question-inner">
+                  <div class="sbc-question-header">
+                    <div class="sbc-question-title">
+                      <span class="sbc-question-number">
+                        <span class="material-icons question-number-icon">star</span> 
+                        <span>7</span>
+                      </span>
+                      <span>Please rate your experience. </span>
+                    </div>
+                    <div class="sbc-question-icons">
+
+                      <button class="mdc-icon-button material-icons qg-logic">call_split</button>
+
+                      <div style="position: relative;">
+                        <button class="mdc-icon-button material-icons qg-menu">more_horiz</button>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="sbc-answer-text-editor preset-answers-collapsed"> <!-- Try Slate js text editor -->
+                    <div>
+                      <span class="material-icons">star_outline</span>
+                      <span class="material-icons">star_outline</span>
+                      <span class="material-icons">star_outline</span>
+                      <span class="material-icons">star_outline</span>
+                      <span class="material-icons">star_outline</span>
+                      <span class="material-icons">star_outline</span>
+                      <span class="material-icons">star_outline</span>
+                      <span class="material-icons">star_outline</span>
+                      <span class="material-icons">star_outline</span>
+                      <span class="material-icons">star_outline</span>
+                    </div>
+                  </div>
+                </div> 
+
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
+
+                <div class="split-button-outer button-add-circle-outer">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                  </button>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; right: 0;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+<!-- Question 8 -->
+
+              <div class="sbc-question-outer" data-tab="sbs-scale">
+                <div class="sbc-question-inner">
+                  <div class="sbc-question-header">
+                    <div class="sbc-question-title">
+                      <span class="sbc-question-number">
+                        <span class="material-icons question-number-icon">star</span> 
+                        <span>8</span>
+                      </span>
+                      <span>Please rate your stay. </span>
+                    </div>
+                    <div class="sbc-question-icons">
+
+                      <button class="mdc-icon-button material-icons qg-logic">call_split</button>
+
+                      <div style="position: relative;">
+                        <button class="mdc-icon-button material-icons qg-menu">more_horiz</button>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="sbc-answer-text-editor preset-answers-collapsed"> <!-- Try Slate js text editor -->
+                    <div>
+                      <span class="material-icons">favorite_outline</span>
+                      <span class="material-icons">favorite_outline</span>
+                      <span class="material-icons">favorite_outline</span>
+                      <span class="material-icons">favorite_outline</span>
+                      <span class="material-icons">favorite_outline</span>
+                    </div>
+                  </div>
+                </div> 
+
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
+
+                <div class="split-button-outer button-add-circle-outer">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                  </button>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; right: 0;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+<!-- /Question 8 -->
+
+<!-- Question 9 -->
+
+              <div class="sbc-question-outer sbc-question-last" data-tab="sbs-scale">
+                <div class="sbc-question-inner">
+                  <div class="sbc-question-header">
+                    <div class="sbc-question-title">
+                      <span class="sbc-question-number">
+                        <span class="material-icons question-number-icon">star</span> 
+                        <span>9</span>
+                      </span>
+                      <span>How likely are you to recommend our service to a friend? </span>
+                    </div>
+                    <div class="sbc-question-icons">
+
+                      <button class="mdc-icon-button material-icons qg-logic">call_split</button>
+
+                      <div style="position: relative;">
+                        <button class="mdc-icon-button material-icons qg-menu">more_horiz</button>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="sbc-answer-text-editor preset-answers-collapsed"> <!-- Try Slate js text editor -->
+                    <div class="sbc-answer-text-line">
+                      <span>[0 - 10]</span>
+                      <a href="#" class="preset-answers-expand-button">expand</a>
+                    </div>
+                  </div>
+                </div> 
+
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
+
+                <div class="split-button-outer button-add-circle-outer">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                  </button>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; right: 0;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+<!-- /Question 9 -->
+
+              <div class="sbc-question-group-footer">
+                <div class="split-button-outer new-question-button">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <span class="mdc-button__label">New Question</span>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                  </button>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; left: 120px;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Page Break</span>
+                      </li>
+                      <li class="mdc-list-item ql-dialog-button" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Import from Library</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div> 
+              </div>
+
+            </div> 
+<!-- / question group - Scales -->
+
+            <div class="new-group-button-container">
+
+              <button class="mdc-button new-group-button">
+                <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+                <span class="mdc-button__label">New Group</span>
+              </button>
+            </div>
+
+<!-- Question Group - Text Entry -->
             <div class="sbc-question-group">
               <div class="sbc-question-group-header">
-                <div class="sbc-question-group-title">Question Group 3</div>
+                <div class="sbc-question-group-title">Text Entry / Rank</div>
                 <div class="sbc-question-group-icons">
-                  <button class="mdc-icon-button material-icons">call_split</button>
                   <button class="mdc-icon-button material-icons">more_vert</button>
                 </div>
               </div>
 
-              <div class="sbc-question-outer sbc-question-first">
+              <div class="sbc-question-outer sbc-question-first" data-tab="sbs-text-entry">
                 <div class="sbc-question-inner">
                   <div class="sbc-question-header">
                     <div class="sbc-question-title">
-                      <span class="sbc-question-number">Q3</span><span>How satisfied were you with the support you received? </span>
+                      <span class="sbc-question-number">
+                        <span class="material-icons question-number-icon">notes</span> 
+                        <span>10</span>
+                      </span>
+                      <span>Please enter your email address. </span>
                     </div>
                     <div class="sbc-question-icons">
 
@@ -757,121 +1648,16 @@
 
                     </div>
                   </div>
-                  <div class="sbc-answer-text-editor"> <!-- Try Slate js text editor -->
-                    <div class="sbc-answer-text-line">
-                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                      </button>
-                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
-                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move up</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move down</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Remove</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <span>Very Satisfied</span>
-                    </div>
-                    <div class="sbc-answer-text-line">
-                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                      </button>
-                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
-                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move up</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move down</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Remove</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <span>Satisfied</span>
-                    </div>
-                    <div class="sbc-answer-text-line">
-                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                      </button>
-                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
-                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move up</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move down</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Remove</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <span>Unsatisfied</span>
-                    </div>
-                    <div class="sbc-answer-text-line">
-                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                      </button>
-                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
-                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move up</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move down</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Remove</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <span>Very Unsatisfied</span>
-                    </div>
-                  </div>
                 </div> 
+
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
 
                 <div class="split-button-outer button-add-circle-outer">
                   <button class="mdc-button mdc-button--unelevated split-button-left">
@@ -880,7 +1666,7 @@
                   <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
                     <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
                   </button>
-                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; right: 0;">
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; right: 0;">
                     <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
                       <li class="mdc-list-item" role="menuitem">
                         <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
@@ -896,11 +1682,16 @@
                   </div>
                 </div>
               </div>
-              <div class="sbc-question-outer">
+
+              <div class="sbc-question-outer sbc-question-first" data-tab="sbs-text-entry">
                 <div class="sbc-question-inner">
                   <div class="sbc-question-header">
                     <div class="sbc-question-title">
-                      <span class="sbc-question-number">Q3</span><span>How satisfied were you with the support you received? </span>
+                      <span class="sbc-question-number">
+                        <span class="material-icons question-number-icon">notes</span> 
+                        <span>11</span>
+                      </span>
+                      <span>Do you have any comments or suggestions?  </span>
                     </div>
                     <div class="sbc-question-icons">
 
@@ -913,121 +1704,16 @@
 
                     </div>
                   </div>
-                  <div class="sbc-answer-text-editor"> <!-- Try Slate js text editor -->
-                    <div class="sbc-answer-text-line">
-                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                      </button>
-                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
-                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move up</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move down</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Remove</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <span>Very Satisfied</span>
-                    </div>
-                    <div class="sbc-answer-text-line">
-                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                      </button>
-                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
-                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move up</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move down</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Remove</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <span>Satisfied</span>
-                    </div>
-                    <div class="sbc-answer-text-line">
-                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                      </button>
-                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
-                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move up</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move down</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Remove</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <span>Unsatisfied</span>
-                    </div>
-                    <div class="sbc-answer-text-line">
-                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                      </button>
-                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
-                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move up</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move down</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Remove</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <span>Very Unsatisfied</span>
-                    </div>
-                  </div>
                 </div> 
+
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
 
                 <div class="split-button-outer button-add-circle-outer">
                   <button class="mdc-button mdc-button--unelevated split-button-left">
@@ -1036,7 +1722,7 @@
                   <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
                     <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
                   </button>
-                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; right: 0;">
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; right: 0;">
                     <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
                       <li class="mdc-list-item" role="menuitem">
                         <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
@@ -1052,138 +1738,30 @@
                   </div>
                 </div>
               </div>
-              <div class="sbc-question-outer">
-                <div class="sbc-question-inner">
-                  <div class="sbc-question-header">
-                    <div class="sbc-question-title">
-                      <span class="sbc-question-number">Q3</span><span>How satisfied were you with the support you received? </span>
-                    </div>
-                    <div class="sbc-question-icons">
 
-                      <button class="mdc-icon-button material-icons qg-logic">call_split</button>
-                      <!-- <i class="material-icons qg-logic">call_split</i> -->
+<!-- PAGEBREAK2 PB2-->
+              <div class="sbc-question-outer page-break">
+                <hr class="page-break-hr">
+                <span class="page-break-text">Page break</span>
+                <span class="material-icons page-break-remove">remove_circle</span>
 
-                      <div style="position: relative;">
-                        <button class="mdc-icon-button material-icons qg-menu">more_horiz</button>
-                      </div>
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
 
-                    </div>
-                  </div>
-                  <div class="sbc-answer-text-editor"> <!-- Try Slate js text editor -->
-                    <div class="sbc-answer-text-line">
-                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                      </button>
-                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
-                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move up</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move down</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Remove</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <span>Very Satisfied</span>
-                    </div>
-                    <div class="sbc-answer-text-line">
-                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                      </button>
-                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
-                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move up</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move down</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Remove</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <span>Satisfied</span>
-                    </div>
-                    <div class="sbc-answer-text-line">
-                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                      </button>
-                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
-                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move up</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move down</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Remove</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <span>Unsatisfied</span>
-                    </div>
-                    <div class="sbc-answer-text-line">
-                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                      </button>
-                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
-                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move up</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move down</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Remove</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <span>Very Unsatisfied</span>
-                    </div>
-                  </div>
-                </div> 
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
 
                 <div class="split-button-outer button-add-circle-outer">
                   <button class="mdc-button mdc-button--unelevated split-button-left">
@@ -1192,12 +1770,18 @@
                   <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
                     <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
                   </button>
-                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; right: 0;">
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; right: 0px;">
                     <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Page Break</span>
+                      </li>
+                      <li class="mdc-list-item ql-dialog-button" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Import from Library</span>
+                      </li>
+                      <hr>
                       <li class="mdc-list-item" role="menuitem">
                         <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
                       </li>
-                      <hr>
                       <li class="mdc-list-item" role="menuitem">
                         <span class="mdc-list-item__text qg-collapse">Star Rating</span>
                       </li>
@@ -1207,12 +1791,19 @@
                     </ul>
                   </div>
                 </div>
+                
               </div>
+
+<!-- Question 12 -->
               <div class="sbc-question-outer sbc-question-last">
                 <div class="sbc-question-inner">
                   <div class="sbc-question-header">
                     <div class="sbc-question-title">
-                      <span class="sbc-question-number">Q3</span><span>How satisfied were you with the support you received? </span>
+                      <span class="sbc-question-number">
+                        <span class="material-icons question-number-icon">swap_vert</span> 
+                        <span>12</span>
+                      </span>
+                      <span>Please rank the following in order of your preference  </span>
                     </div>
                     <div class="sbc-question-icons">
 
@@ -1252,7 +1843,7 @@
                           </li>
                         </ul>
                       </div>
-                      <span>Very Satisfied</span>
+                      <span>Apple</span>
                     </div>
                     <div class="sbc-answer-text-line">
                       <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
@@ -1280,7 +1871,7 @@
                           </li>
                         </ul>
                       </div>
-                      <span>Satisfied</span>
+                      <span>Google</span>
                     </div>
                     <div class="sbc-answer-text-line">
                       <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
@@ -1308,38 +1899,19 @@
                           </li>
                         </ul>
                       </div>
-                      <span>Unsatisfied</span>
-                    </div>
-                    <div class="sbc-answer-text-line">
-                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
-                      </button>
-                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
-                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move up</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Move down</span>
-                          </li>
-                          <li class="mdc-list-item" role="menuitem">
-                            <span class="mdc-list-item__text qg-collapse">Remove</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <span>Very Unsatisfied</span>
+                      <span>Microsoft</span>
                     </div>
                   </div>
                 </div> 
+
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
 
                 <div class="split-button-outer button-add-circle-outer">
                   <button class="mdc-button mdc-button--unelevated split-button-left">
@@ -1348,7 +1920,7 @@
                   <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
                     <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
                   </button>
-                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; right: 0;">
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; right: 0;">
                     <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
                       <li class="mdc-list-item" role="menuitem">
                         <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
@@ -1364,6 +1936,193 @@
                   </div>
                 </div>
               </div>
+<!-- / Question 12 -->
+
+<!-- Question 13 -->
+              <div class="sbc-question-outer sbc-question-last">
+                <div class="sbc-question-inner">
+                  <div class="sbc-question-header">
+                    <div class="sbc-question-title">
+                      <span class="sbc-question-number">
+                        <span class="material-icons question-number-icon">swap_vert</span> 
+                        <span>13</span>
+                      </span>
+                      <span>Please rank these destinations. </span>
+                    </div>
+                    <div class="sbc-question-icons">
+
+                      <button class="mdc-icon-button material-icons qg-logic">call_split</button>
+                      <!-- <i class="material-icons qg-logic">call_split</i> -->
+
+                      <div style="position: relative;">
+                        <button class="mdc-icon-button material-icons qg-menu">more_horiz</button>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="sbc-answer-text-editor"> <!-- Try Slate js text editor -->
+                    <div class="sbc-answer-text-line">
+                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
+                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                      </button>
+                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move up</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move down</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Remove</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <span class="sbc-atl-image-thumbnail" style="background-image: url(images/yosemite.jpg);">
+                        <span class="material-icons thumbnail-change">close</span>
+                      </span>
+                      <span class="sbc-atl-text sbc-atl-text-with-image">Yosemite</span>
+                    </div>
+                    <div class="sbc-answer-text-line">
+                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
+                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                      </button>
+                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move up</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move down</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Remove</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <span class="sbc-atl-image-thumbnail" style="background-image: url(images/yellowstone.jpg);">
+                        <span class="material-icons thumbnail-change">close</span>
+                      </span>
+                      <span class="sbc-atl-text sbc-atl-text-with-image">Yellowstone</span>
+                    </div>
+                    <div class="sbc-answer-text-line">
+                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
+                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                      </button>
+                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move up</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move down</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Remove</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <span class="sbc-atl-image-thumbnail" style="background-image: url(images/niagra-falls.jpg);">
+                        <span class="material-icons thumbnail-change">close</span>
+                      </span>
+                      <span class="sbc-atl-text sbc-atl-text-with-image">Niagra Falls</span>
+                    </div>
+
+                    <div class="sbc-answer-text-line">
+                      <button class="mdc-button mdc-button--unelevated qg-menu sbc-atl-menu">
+                        <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                      </button>
+                      <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 24px; left: -24px;">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Allow text entry</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Anchor</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Make exclusive</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move up</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Move down</span>
+                          </li>
+                          <li class="mdc-list-item" role="menuitem">
+                            <span class="mdc-list-item__text qg-collapse">Remove</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <span class="sbc-atl-image-thumbnail no-image">
+                        <span class="material-icons thumbnail-add">add</span>
+                      </span>
+                      <span class="sbc-atl-text sbc-atl-text-with-image">Image Label</span>
+                    </div>
+
+                  </div>
+                </div> 
+
+                <div class="vertical-split-button-outer move-question-arrows">
+                  <button class="mdc-button mdc-button--unelevated move-question-up">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_upward</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated move-question-down">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_downward</i>
+                  </button>
+                </div>
+
+                <div class="split-button-outer button-add-circle-outer">
+                  <button class="mdc-button mdc-button--unelevated split-button-left">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+                  </button>
+                  <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
+                  </button>
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; right: 0;">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Multiple Choice</span>
+                      </li>
+                      <hr>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Star Rating</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text qg-collapse">Scale</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+<!-- / Question 13 -->
 
               <div class="sbc-question-group-footer">
                 <div class="split-button-outer new-question-button">
@@ -1373,7 +2132,7 @@
                   <button class="mdc-button mdc-button--unelevated split-button-right qg-menu">
                     <i class="material-icons mdc-button__icon" aria-hidden="true">arrow_drop_down</i>
                   </button>
-                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 36px; left: 120px;">
+                  <div class="mdc-menu mdc-menu-surface" tabindex="-1" style="top: 32px; left: 120px;">
                     <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
                       <li class="mdc-list-item" role="menuitem">
                         <span class="mdc-list-item__text qg-collapse">Page Break</span>
@@ -1397,22 +2156,23 @@
               </div>
 
 
-            </div> <!-- / question group-->
+            </div> 
+<!-- / question group - Text Entry / Rank -->
 
             <div class="new-group-button-container">
-              <button class="mdc-button new-question-button">
+
+              <button class="mdc-button new-group-button">
                 <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
                 <span class="mdc-button__label">New Group</span>
               </button>
             </div>
 
           </div>
-
+<!-- Survey Builder Settings Menus-->          
           <div class="survey-builder-settings">
             <div class="close-menu">
               <span class="material-icons">close</span>
             </div>
-
             <div class="question-settings-form-field select-form-field">
 
               <label>Question Type</label>
@@ -1433,7 +2193,6 @@
                     </li>
                   </ul>
                 </div>
-                  <!-- Other elements from the native or enhanced select remain. -->
                  <div class="mdc-notched-outline">
                    <div class="mdc-notched-outline__leading"></div>
                    <div class="mdc-notched-outline__notch">
@@ -1442,11 +2201,229 @@
                  </div>
               </div>
             </div>
-
             <hr>
+            <div class="survey-builder-settings-inner" id="sbs-statement">
+
+            </div>
+            <div class="survey-builder-settings-inner current" id="sbs-mc">
+
+              <div class="question-settings-form-field mdc-form-field">
+                <div class="mdc-checkbox">
+                  <input type="checkbox"
+                         class="mdc-checkbox__native-control"
+                         id="checkbox-predefined"/>
+                  <div class="mdc-checkbox__background">
+                    <svg class="mdc-checkbox__checkmark"
+                         viewBox="0 0 24 24">
+                      <path class="mdc-checkbox__checkmark-path"
+                            fill="none"
+                            d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                    </svg>
+                    <div class="mdc-checkbox__mixedmark"></div>
+                  </div>
+                </div>
+                <label for="checkbox-predefined">Use preset answers</label>              
+              </div>  
+
+              <div class="question-settings-form-field">
+                <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-2">
+                  <input type="hidden" name="enhanced-select">
+                  <i class="mdc-select__dropdown-icon"></i>
+                  <div class="mdc-select__selected-text"></div>
+                  <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
+                    <ul class="mdc-list">
+                      <li class="mdc-list-item mdc-list-item--selected" data-value="multiple-choice" aria-selected="true">
+                        Agree - Disagree
+                      </li>
+                      <li class="mdc-list-item" data-value="star">
+                        Satisfied - Not Satisfied
+                      </li>
+                      <li class="mdc-list-item" data-value="scale">
+                        Age Range
+                      </li>
+                    </ul>
+                  </div>
+                    <!-- Other elements from the native or enhanced select remain. -->
+                   <div class="mdc-notched-outline">
+                     <div class="mdc-notched-outline__leading"></div>
+                     <div class="mdc-notched-outline__notch">
+                     </div>
+                     <div class="mdc-notched-outline__trailing"></div>
+                   </div>
+                </div>
+              </div>
+
+              <hr>
+
+              <div class="question-settings-form-field mdc-form-field">
+                <div class="mdc-checkbox">
+                  <input type="checkbox"
+                         class="mdc-checkbox__native-control"
+                         id="checkbox-1"/>
+                  <div class="mdc-checkbox__background">
+                    <svg class="mdc-checkbox__checkmark"
+                         viewBox="0 0 24 24">
+                      <path class="mdc-checkbox__checkmark-path"
+                            fill="none"
+                            d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                    </svg>
+                    <div class="mdc-checkbox__mixedmark"></div>
+                  </div>
+                </div>
+                <label for="checkbox-1">Require answer</label>              
+              </div>
+
+              <div class="question-settings-form-field mdc-form-field">
+                <div class="mdc-checkbox">
+                  <input type="checkbox"
+                         class="mdc-checkbox__native-control"
+                         id="checkbox-2"/>
+                  <div class="mdc-checkbox__background">
+                    <svg class="mdc-checkbox__checkmark"
+                         viewBox="0 0 24 24">
+                      <path class="mdc-checkbox__checkmark-path"
+                            fill="none"
+                            d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                    </svg>
+                    <div class="mdc-checkbox__mixedmark"></div>
+                  </div>
+                </div>
+                <label for="checkbox-2">Allow multiple answers</label>
+              </div>
+
+              <div class="question-settings-form-field mdc-form-field">
+                <div class="mdc-checkbox">
+                  <input type="checkbox"
+                         class="mdc-checkbox__native-control"
+                         id="checkbox-3"/>
+                  <div class="mdc-checkbox__background">
+                    <svg class="mdc-checkbox__checkmark"
+                         viewBox="0 0 24 24">
+                      <path class="mdc-checkbox__checkmark-path"
+                            fill="none"
+                            d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                    </svg>
+                    <div class="mdc-checkbox__mixedmark"></div>
+                  </div>
+                </div>
+                <label for="checkbox-3">Randomize order</label>              
+              </div>
+
+              <hr>
+
+              <div class="question-settings-form-field mdc-form-field">
+                <div class="mdc-checkbox">
+                  <input type="checkbox"
+                         class="mdc-checkbox__native-control"
+                         id="checkbox-3"/>
+                  <div class="mdc-checkbox__background">
+                    <svg class="mdc-checkbox__checkmark"
+                         viewBox="0 0 24 24">
+                      <path class="mdc-checkbox__checkmark-path"
+                            fill="none"
+                            d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                    </svg>
+                    <div class="mdc-checkbox__mixedmark"></div>
+                  </div>
+                </div>
+                <label for="checkbox-3">Show image labels</label>              
+              </div>
+
+              <hr>
+
+            </div>
+
+            <div class="survey-builder-settings-inner" id="sbs-text-entry">
+
+              <div class="question-settings-form-field select-form-field">
+
+                <label>Text Field</label>
+                <div class="mdc-select mdc-select-19 mdc-select--dense mdc-select--outlined">
+                  <input type="hidden" name="enhanced-select">
+                  <i class="mdc-select__dropdown-icon"></i>
+                  <div class="mdc-select__selected-text"></div>
+                  <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
+                    <ul class="mdc-list">
+                      <li class="mdc-list-item mdc-list-item--selected" data-value="multiple-choice" aria-selected="true">
+                        Text
+                      </li>
+                      <li class="mdc-list-item" data-value="star">
+                        Email
+                      </li>
+                      <li class="mdc-list-item" data-value="scale">
+                        Number
+                      </li>
+                      <li class="mdc-list-item" data-value="scale">
+                        Essay
+                      </li>
+                    </ul>
+                  </div>
+                   <div class="mdc-notched-outline">
+                     <div class="mdc-notched-outline__leading"></div>
+                     <div class="mdc-notched-outline__notch">
+                     </div>
+                     <div class="mdc-notched-outline__trailing"></div>
+                   </div>
+                </div>
+              </div>
+
+
+            </div>
+
+            <div class="survey-builder-settings-inner" id="sbs-select">
+              Select Question Settings
+            </div>
+            <div class="survey-builder-settings-inner" id="sbs-scale">
+              <div class="question-settings-form-field select-form-field">
+
+                <label>Scale items</label>
+                <div class="mdc-select mdc-select-18 mdc-select--dense mdc-select--outlined">
+                  <input type="hidden" name="enhanced-select">
+                  <i class="mdc-select__dropdown-icon"></i>
+                  <div class="mdc-select__selected-text"></div>
+                  <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
+                    <ul class="mdc-list">
+                      <li class="mdc-list-item mdc-list-item--selected" data-value="multiple-choice" aria-selected="true">
+                        Stars
+                      </li>
+                      <li class="mdc-list-item" data-value="star">
+                        Hearts
+                      </li>
+                      <li class="mdc-list-item" data-value="scale">
+                        Numbers (0 - 10 NPS)
+                      </li>
+                    </ul>
+                  </div>
+                    <!-- Other elements from the native or enhanced select remain. -->
+                   <div class="mdc-notched-outline">
+                     <div class="mdc-notched-outline__leading"></div>
+                     <div class="mdc-notched-outline__notch">
+                     </div>
+                     <div class="mdc-notched-outline__trailing"></div>
+                   </div>
+                </div>
+              </div>
+
+              <div class="question-settings-form-field mdc-form-field">
+                <div class="mdc-checkbox">
+                  <input type="checkbox"
+                         class="mdc-checkbox__native-control"
+                         id="checkbox-3"/>
+                  <div class="mdc-checkbox__background">
+                    <svg class="mdc-checkbox__checkmark"
+                         viewBox="0 0 24 24">
+                      <path class="mdc-checkbox__checkmark-path"
+                            fill="none"
+                            d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                    </svg>
+                    <div class="mdc-checkbox__mixedmark"></div>
+                  </div>
+                </div>
+                <label for="checkbox-3">Show scale labels (Left, Center, Right)</label>              
+              </div>
+            </div>
 
             <div class="question-settings-form-field mdc-form-field">
-              <label for="checkbox-predefined">Use preset answers</label>
               <div class="mdc-checkbox">
                 <input type="checkbox"
                        class="mdc-checkbox__native-control"
@@ -1461,44 +2438,14 @@
                   <div class="mdc-checkbox__mixedmark"></div>
                 </div>
               </div>
-            </div>  
-
-            <div class="question-settings-form-field">
-              <div class="mdc-select mdc-select--outlined mdc-select--dense mdc-select-2">
-                <input type="hidden" name="enhanced-select">
-                <i class="mdc-select__dropdown-icon"></i>
-                <div class="mdc-select__selected-text"></div>
-                <div class="mdc-select__menu mdc-menu mdc-menu-surface sb-settings">
-                  <ul class="mdc-list">
-                    <li class="mdc-list-item mdc-list-item--selected" data-value="multiple-choice" aria-selected="true">
-                      Agree - Disagree
-                    </li>
-                    <li class="mdc-list-item" data-value="star">
-                      Satisfied - Not Satisfied
-                    </li>
-                    <li class="mdc-list-item" data-value="scale">
-                      Age Range
-                    </li>
-                  </ul>
-                </div>
-                  <!-- Other elements from the native or enhanced select remain. -->
-                 <div class="mdc-notched-outline">
-                   <div class="mdc-notched-outline__leading"></div>
-                   <div class="mdc-notched-outline__notch">
-                   </div>
-                   <div class="mdc-notched-outline__trailing"></div>
-                 </div>
-              </div>
-            </div>
-
-            <hr>
+              <label for="checkbox-predefined">Insert image</label>              
+            </div> 
 
             <div class="question-settings-form-field mdc-form-field">
-              <label for="checkbox-1">Require answer</label>
               <div class="mdc-checkbox">
                 <input type="checkbox"
                        class="mdc-checkbox__native-control"
-                       id="checkbox-1"/>
+                       id="checkbox-predefined"/>
                 <div class="mdc-checkbox__background">
                   <svg class="mdc-checkbox__checkmark"
                        viewBox="0 0 24 24">
@@ -1509,46 +2456,12 @@
                   <div class="mdc-checkbox__mixedmark"></div>
                 </div>
               </div>
-            </div>
-
-            <div class="question-settings-form-field mdc-form-field">
-              <label for="checkbox-2">Allow multiple answers</label>
-              <div class="mdc-checkbox">
-                <input type="checkbox"
-                       class="mdc-checkbox__native-control"
-                       id="checkbox-2"/>
-                <div class="mdc-checkbox__background">
-                  <svg class="mdc-checkbox__checkmark"
-                       viewBox="0 0 24 24">
-                    <path class="mdc-checkbox__checkmark-path"
-                          fill="none"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                  </svg>
-                  <div class="mdc-checkbox__mixedmark"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="question-settings-form-field mdc-form-field">
-              <label for="checkbox-3">Randomize order</label>
-              <div class="mdc-checkbox">
-                <input type="checkbox"
-                       class="mdc-checkbox__native-control"
-                       id="checkbox-3"/>
-                <div class="mdc-checkbox__background">
-                  <svg class="mdc-checkbox__checkmark"
-                       viewBox="0 0 24 24">
-                    <path class="mdc-checkbox__checkmark-path"
-                          fill="none"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                  </svg>
-                  <div class="mdc-checkbox__mixedmark"></div>
-                </div>
-              </div>
-            </div>
+              <label for="checkbox-predefined">Insert video</label>              
+            </div> 
 
           </div>
-          
+<!-- / Survey Builder Settings Menus-->          
+
           <div class="survey-builder-preview-container preview-toggle-on">
             <button class="mdc-icon-button material-icons preview-toggle-button">close</button>
             <!-- <button class="mdc-icon-button material-icons preview-toggle-button">vertical_split</button> -->

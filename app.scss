@@ -3,21 +3,22 @@
 /////////////////
 
 // Material Theme Variables
-$mdc-theme-primary: #57adce; // Green: #7bb33a; // Innovate Blue alt: 5ab9e6;
-$mdc-theme-secondary: #57adce; // Innovate Blue: #548ade; // #395064; // #3386ff  // #568cdb // Google blue: #536dfe; // Innovate Blue alternative: #4294f9;
+$mdc-theme-primary: #568cdb; // Finalish blue: #57adce; // Green: #7bb33a; // Innovate Blue alt: 5ab9e6;
+$mdc-theme-secondary: #568cdb; // Innovate Blue: #548ade; // #395064; // #3386ff  // #568cdb // Google blue: #536dfe; // Innovate Blue alternative: #4294f9;
 $mdc-theme-on-primary: #ffffff;
 $mdc-theme-on-secondary: #ffffff;
 $light-blue: #eceefb;
 
 // Colors
 $white: #ffffff;
-$black: #222222;
+$black: #111111;
 $body-text-color: $black;
 $dark-blue: #282e33;
 $dark-bg: #1e2830; // #414144; // #343846; // #32384a; // #34414e; // #465461; // #394148;
-$gray-bg: #f2f1f0;
-$gray-bg-lighter: #f9f8f7;
-$light-border: 1px solid #e2e1e0; // #d4d4d4;
+$gray-bg: #f2f1f0; // #f4f4f4; // #f0f0f0; // #f2f1f0;
+$gray-bg-lighter: #f9f8f7; // #faf9f8;
+$gray-button-bg: darken($gray-bg, 6%); // #e2e2e2; // #e2e0de;
+$light-border: 1px solid #e1e1e1; // #e1e1e1; // #d4d4d4; // #d9d8d7;
 $light-border-low: 1px solid $gray-bg;
 $hr-border: 1px solid darken($gray-bg, 7%);
 $perks-bar-outer: $white;
@@ -25,14 +26,19 @@ $perks-bar-inner: #568cdb;
 $background-color-header-row-one: $dark-bg; // #384f63
 $background-color-header-row-two: $white;
 $background-color-settings-menu: $gray-bg-lighter;
-$header-row-one-border: none;
+$header-row-one-border: 1px solid transparent;
 $background-color-question-group: $white;
-$background-color-question-hover: $gray-bg-lighter;
+$background-color-question-hover: $white;
 $background-color-survey-builder-container: $gray-bg;
+$background-color-sidebar: $white;
 $header-search-bar-background-color: rgba(0,0,0,.24);
-$question-number-background-color: $dark-bg;
-$text-on-dark-header: #9da4ab;
+$question-number-background-color: #5a5a59;
+$question-number-text-color: $white;
+$question-number-background-color-selected: $mdc-theme-primary;
+$question-number-text-color-selected: $white;
+$text-on-header-top: #9da4ab;
 $breadcrumb-current-color: $white;
+$breadcrumb-color-hover: $white;
 
 // Breakpoints
 $breakpoint-small: 480px;
@@ -44,51 +50,76 @@ $top-app-bar-height-row-one: 48px; // 36px // 48px is default for dense header
 $top-app-bar-height-row-two: 56px; // 56px
 $top-app-bar-height: $top-app-bar-height-row-one + $top-app-bar-height-row-two;
 $settings-menu-width: 228px;
-$survey-preview-width: 350px;
+$survey-preview-width: 400px;
 
 // Paddings, Margins, etc.
 $global-padding: 4px;
 $global-padding-large: 24px;
 $global-margin: 4px;
 $global-margin-large: 24px;
-$global-border-radius: 3px;
+$global-border-radius: 4px;
+
+$question-group-margin: 28px;
 
 // Presets
-$style: i;
-$group-contained: yes;
+$style: default;
 $question-settings-sidebar: right;
-$borders: low;
-
-@if $style == i {
-
-// default variables above 
-
-} @else if $style == g {
-
-$mdc-theme-primary: #536dfe;
-$mdc-theme-secondary: #536dfe; // #e4ad07;
-$perks-bar-inner: $mdc-theme-primary;
-$background-color-header-row-one: $gray-bg;
-$header-row-one-border: $light-border;
-$header-search-bar-background-color: $white;
-$text-on-dark-header: #565656;
-$breadcrumb-current-color: $body-text-color;
-$question-number-background-color: $mdc-theme-primary;
-
-} @else if $style == gd {
-
-$mdc-theme-primary: #536dfe;
-$mdc-theme-secondary: #536dfe; // #e4ad07;
+$group-contained: true;
+$low-borders: true;
+$boxed-sbc: true;
+$sbc-selected-attached: true;
+$dark-top-header: true;
 
 
-} @else if $style == 3 {
+// Presets Styles
+@if $style == matte {
 
-$mdc-theme-primary: red;  
+  $low-borders: true;
+  $background-color-sidebar: $white;
+  $sbc-selected-attached: true; 
+
+} @else if $style == matte-right {
+
+  $low-borders: true;
+  $question-settings-sidebar: right;
+  $background-color-sidebar: $gray-bg;
+  $sbc-selected-attached: true;
+
+} @else if $style == google {
+
+  $mdc-theme-primary: #536dfe;
+  $mdc-theme-secondary: #536dfe; // #e4ad07;
+  $perks-bar-inner: $mdc-theme-primary;
+  $background-color-header-row-one: $gray-bg;
+  $header-row-one-border: $light-border;
+  $header-search-bar-background-color: $white;
+  $text-on-header-top: #565656;
+  $breadcrumb-current-color: $body-text-color;
+  $question-number-background-color: $mdc-theme-primary;
+
+} @else if $style == border-town {
+  $low-borders: false;
+  $question-settings-sidebar: right;
+  $background-color-sidebar: $white;
 
 }
 
-@if $borders == low {
+@if $boxed-sbc == false {
+  $background-color-question-group: $white;
+  $low-borders: false;
+}
+
+@if $low-borders == true {
   $light-border: none; // #d4d4d4;
+}
+
+@if $dark-top-header == false {
+  $background-color-header-row-one: $white; // #384f63
+  $breadcrumb-current-color: $body-text-color;
+  $text-on-header-top: #8a8989;
+  $header-row-one-border: $light-border;
+  $header-search-bar-background-color: $gray-bg;
+  $breadcrumb-color-hover: $body-text-color;
 }
 
 /////////////////
@@ -257,6 +288,7 @@ hr {
   @include mdc-top-app-bar-fill-color($white);
   @include mdc-top-app-bar-ink-color($body-text-color);
 
+  // box-shadow: 0 0 4px rgba(0,0,0,.12);
   font-size: 0.875rem;
 
   .mdc-top-app-bar__row {
@@ -288,7 +320,7 @@ hr {
 
     .breadcrumb-link,
     .breadcrumb-slash {
-      color: $text-on-dark-header;
+      color: $text-on-header-top;
       padding-left: 4px;
       padding-right: 4px;
 
@@ -298,13 +330,13 @@ hr {
     }
     .breadcrumb-link {
       &:hover {
-        color: $white;
+        color: $breadcrumb-color-hover;
       }
     }
 
     .pause-play-survey {
       font-size: 18px;
-      color: $text-on-dark-header;
+      color: $text-on-header-top;
     }    
   }
 
@@ -332,7 +364,7 @@ hr {
   }
   
   .mdc-text-field__icon {
-    color: $text-on-dark-header; 
+    color: $text-on-header-top; 
     left: 8px;
     bottom: 4px;
   }
@@ -353,7 +385,7 @@ hr {
 
 .mdc-button.header-button {
   // background: #ffffff;
-  color: $text-on-dark-header;
+  color: $text-on-header-top;
   font-weight: normal;
 }
 
@@ -390,8 +422,15 @@ hr {
 }
 
 .hmnl-selected.app-header__item {
+  
+  // &:first-child {
+  //   margin-left: 70%; // Testing these styles out with a hack -- center/margin left header menu items - Create/Share/Results
+  // }
   border-bottom: 2px solid $mdc-theme-primary;
   font-weight: 500;
+  a {
+    color: $mdc-theme-primary;
+  }
 }
 .app-header__item.hmnl-submenu {
   // padding-left: 0;
@@ -413,11 +452,12 @@ hr {
 /////////////////
 
 .mdc-drawer.app-sidebar {
-  width: 57px;
+  width: 56px;
   // width: 164px; // with text (also change icon margin-right)
   border: none;
   z-index: 2;
   border-right: $light-border;
+  background: $background-color-sidebar;
 
   // // Hide sidebar: 
   // width: 0;
@@ -509,17 +549,28 @@ hr {
 
 }
 .sbc-question-group {
-  margin: $global-margin-large;
-  border: $light-border;
-  border-radius: $global-border-radius;
-  background: $background-color-question-group;
 
-  @if $group-contained == no {
+  @if $boxed-sbc == true {
+    margin: $question-group-margin;
+    border: $light-border;    
+    border-radius: $global-border-radius;
+  }
+  // background: $background-color-question-group;
+
+  @if $group-contained == false {
     border: none;
     background: transparent;
     border-radius: none;
 
+  } @else if $group-contained == true {
+    @if $low-borders == false {
+      border: none;
+      background: transparent;
+      border-radius: none;
+    }
   }
+
+
 }
 
 .sbc-question-group-header {
@@ -527,6 +578,15 @@ hr {
   position: relative;
   box-sizing: border-box;
   width: 100%;
+  background: $background-color-question-group;
+  border-top-left-radius: $global-border-radius;
+  border-top-right-radius: $global-border-radius;
+  border: $light-border;
+  border-bottom: none;
+
+  // @if $group-contained == true and $low-borders == false {
+
+  // }
 
   .sbc-question-group-title,
   .sbc-question-group-icons {
@@ -534,36 +594,103 @@ hr {
     flex: 1 1 auto;
     align-items: center;
     min-width: 0;
-    padding: $global-padding-large/2;
     z-index: 1;
+    @if $group-contained == true {
+      padding: $global-padding-large/1.5;      
+    }
+
   }
   .sbc-question-group-title {
-    padding-left: $global-padding-large;
-    @if $group-contained == no {
+    padding-left: $global-padding-large/1.5;
+    font-size: 0.875rem;
+
+    @if $group-contained == false {
+      color: #777;
+      padding: $global-padding*4;
       padding-left: 0;
     }
 
   }
   .sbc-question-group-icons {
     justify-content: flex-end;
+    padding: 0;
   }
 
 }
 
+.move-question-arrows {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: $gray-bg;
+  position: absolute;
+  top: calc(50% - 36px);
+  @if $low-borders == false {
+    left: -24px - 1px;
+  } @else  {
+    left: -24px;
+  }
+  background: $gray-button-bg;
+  border-radius: $global-border-radius 0 0 $global-border-radius;
+
+  visibility: hidden;
+
+  button.mdc-button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    min-width: 24px;
+    height: 36px;
+    border-radius: 0; 
+
+    &.move-question-up {
+      border-top-left-radius: $global-border-radius;
+    }
+    &.move-question-down {
+      border-bottom-left-radius: $global-border-radius;
+    }
+
+    .mdc-button__icon {
+      margin: 0;
+    }
+
+    .material-icons {
+      font-size: 18px;
+    }
+
+  }
+}
+
 .sbc-question-outer {
   border-top: $light-border;
-  @if $borders == low {
+  @if $low-borders == true {
     border-top: $light-border-low;
   }
-  padding: $global-padding-large*1.5 $global-padding-large/2 $global-padding-large*1.5 $global-padding-large;
+  padding: $global-padding-large $global-padding-large/1.5;
   position: relative;
   // transition: background-color, .2s; // this was causing weird reload side effects (question outers stretching height on reload. )
+  
+  @if $group-contained == true {
+    background: $background-color-question-group;
 
-  @if $group-contained == no {
-    border-left: $light-border;
-    border-right: $light-border;
-    background: $white;
+    @if $low-borders == false {
+      border-left: $light-border;
+      border-right: $light-border;
+    }
+
   }
+  @if $group-contained == false {
+
+    @if $boxed-sbc == false {
+      border-left-color: none;
+      border-right: none;
+    } @else {
+      border-left: $light-border;
+      border-right: $light-border;      
+    }
+    background: $gray-bg-lighter;
+  }
+
 
   &:hover {
     background: $background-color-question-hover;
@@ -572,19 +699,21 @@ hr {
   .button-add-circle-outer {
     visibility: hidden;
     position: absolute;
-    bottom: -18px;
+    bottom: -16px;
     // height: 28px;
     right: $global-margin-large;
     z-index: 2;
     border-radius: $global-border-radius;
     display: inline-flex;
-    background: $gray-bg;
+    background: $gray-button-bg;
 
     button {
       background: transparent;
       border: none;
       // color: $body-text-color;
       padding: 0;
+      min-width: 38px;
+      height: 32px;
 
       &.split-button-left {
         
@@ -612,39 +741,52 @@ hr {
 
   &.sbc-question-first {
     border-top: $light-border;
-    @if $borders == low {
+    @if $low-borders == true {
       border-top: $light-border-low;
     }
-    @if $group-contained == no {
+    @if $group-contained == false {
       border-top-left-radius: $global-border-radius;
+      border-top-right-radius: $global-border-radius;      
     }
   }
   &.sbc-question-last {
     border-bottom: $light-border;
-    @if $borders == low {
+    @if $low-borders == true {
       border-bottom: $light-border-low;
     }
-    @if $group-contained == no {
+    @if $group-contained == false {
       border-bottom-left-radius: $global-border-radius;
+      border-bottom-right-radius: $global-border-radius;
     }
   }
   &.sbc-question-only {
     border-top: $light-border;
     border-bottom: $light-border;
-    @if $borders == low {
+    @if $low-borders == true {
       border-top: $light-border-low;
       border-bottom: $light-border-low;
     }
-    @if $group-contained == no {
+    @if $group-contained == false {
       border-radius: $global-border-radius;
     }
 
   }
   &.sbc-selected {
-    background: $background-color-settings-menu;
-    border-top: $light-border;
-    border-bottom: $light-border;
+    @if $sbc-selected-attached == false {
+      background: $background-color-question-group;
+    } @else {
+      background: $background-color-settings-menu;
+    }
 
+    @if $low-borders == true {
+      border-top: $light-border-low;
+      border-bottom: $light-border-low;
+      border-color: transparent;
+    } @else {
+      border-top: $light-border;
+      border-bottom: $light-border;      
+    }
+    border-right: none;
     // &:after { // trying to make the menu connect to the outer, and hide the border in between. 
     //   content: "";
     //   background: blue;
@@ -655,17 +797,20 @@ hr {
     //   right: 0;
     //   }
 
-    @if $question-settings-sidebar == right {
+    @if $question-settings-sidebar == right and $sbc-selected-attached == true {
 
       @include breakpoint-large-up {
-        width: calc(100% + 24px); // 25 if border heavy
-
+        @if $low-borders == false {
+          width: calc(100% + #{$question-group-margin}); // Previously had to add 1px for border. Don't know what's changed now. 
+        } @else {
+          width: calc(100% + #{$question-group-margin}); 
+        }
         .sbc-question-inner {
-          width: calc(100% - 24px);
+          width: calc(100% - #{$question-group-margin});
         }
 
         .button-add-circle-outer {
-          right: $global-margin-large + 24px; // 24px + 24px;
+          right: $global-margin-large + $question-group-margin; 
         }
 
       }
@@ -676,14 +821,76 @@ hr {
       border-top: none;
     }
     .button-add-circle-outer,
-    .sbc-question-icons {
+    .sbc-question-icons,
+    .move-question-arrows {
       visibility: visible;
+    }
+
+    .sbc-question-number,
+    .question-number-icon {
+      background: $question-number-background-color-selected;
+      color: $question-number-text-color-selected;
     }
 
   }
   &:hover {
-    .button-add-circle-outer {
+    .button-add-circle-outer,
+    .move-question-arrows {
       visibility: visible;
+    }
+  }
+
+}
+
+
+.page-break {
+  text-align: center;
+  padding: 20px $global-padding*3;
+  background: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+
+  &:hover {
+    background: $gray-bg;
+
+    @if $low-borders == false {
+      border-left: $light-border;
+    }
+
+  }
+
+  .page-break-hr {
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+    border-bottom-color: #b4b4b4;
+    margin: 0;
+  }
+
+  .page-break-text {
+    position: absolute;
+    padding: $global-padding*2;
+    background: $gray-bg;
+    border-radius: $global-border-radius;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #777;
+    display: none;
+  }
+
+  .page-break-remove {
+    position: absolute;
+    left: 0;
+    top: 11px;
+    background: $gray-bg;
+    padding: 0 $global-padding-large/2;
+    font-size: 18px;
+    opacity: 0;
+  }
+
+  &:hover {
+    .page-break-remove {
+      opacity: 1;
     }
   }
 
@@ -714,18 +921,46 @@ hr {
 .sbc-question-number {
   background: $question-number-background-color;
   border-radius: 3px;
-  padding: 4px 8px;
+  padding: 4px 6px;
   top: -2px;
   position: relative;
   margin-right: 8px;
   font-size: 0.875rem;
-  color: #fff;
+  color: $question-number-text-color;
   height: 1.5rem;
+  display: inline-flex;
+
+  .question-number-icon {
+    font-size: 16px;
+    color: $question-number-text-color;
+    vertical-align: top;
+    margin-right: 4px;
+  }
+
+  span {
+    vertical-align: top;
+  }
+
 }
 
 .sbc-answer-text-editor {
-  margin-left: $global-margin-large;
+  margin-left: 48px; // $global-margin-large;
   cursor: text;
+  display: inline-block;
+
+  .preset-answers-inner {
+    margin-top: 12px;
+  }
+
+
+  .preset-answers-expand-button {
+    text-decoration: underline;
+    font-size: 80%;
+    position: relative;
+    bottom: 2px;
+    margin-left: 8px;
+    color: gray;
+  }
 
   .sbc-answer-text-line {
     margin-top: $global-margin*2;
@@ -767,6 +1002,7 @@ hr {
 
     .material-icons {
       margin: 0;
+      color: #999;
     }
 
     &:hover {
@@ -783,26 +1019,86 @@ hr {
 
     .material-icons {
       font-size: 12px;
-      background: #c0c0c5;
-      color: $white;
+      background: $gray-bg;
+      color: #777;
       padding: 3px;
       border-radius: 2px;
     }
   }
 }
 
-.sbc-question-group-footer {
-  padding: $global-padding-large/2;
+.sbc-atl-image-thumbnail {
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: cover; 
+  width: 28px; 
+  height: 20px; 
+  border-radius: 2px; 
+  position: absolute;
+  text-align: center; 
+  display: inline-flex; 
+  align-items: center;  
+  cursor: pointer;  
+  overflow: hidden;
+
+  .thumbnail-change {
+    background: rgba(0,0,0,.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    color: $white;
+    font-size: 16px;
+    padding-top: 2px;
+  }
+
+  &:hover {
+    .thumbnail-change {
+      opacity: 1;
+    }
+  }
+
+  &.no-image {
+    background: $gray-button-bg; 
+    .thumbnail-add {
+      font-size: 16px; 
+      display: inline-flex; 
+      margin-left: auto; 
+      margin-right: auto;
+      color: $body-text-color;
+    }
+  }
 }
 
-.new-question-button .mdc-button {
-  background: $gray-bg;
-  color: rgba(0,0,0,.6);
+.sbc-atl-text-with-image {
+  margin-left: 36px;
+}
+
+.sbc-question-group-footer {
+  padding: $global-padding-large/2;
+  border: $light-border;
+  border-top: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: $background-color-question-group;
 }
 
 .new-group-button-container {
   display: flex;
   justify-content: center;
+  @if $group-contained == false {
+    margin: $global-margin-large*2 0 $global-margin-large*1.5;
+  } @else  {
+    margin: $global-margin-large*1.5 0;    
+  }
+}
+
+.new-question-button .mdc-button,
+.mdc-button.new-group-button {
+  background: $gray-button-bg;
+  color: rgba(0,0,0,.6);
 }
 
 /////////////////
@@ -868,6 +1164,14 @@ hr {
       font-size: 18px;
       color: #cacaca;
     }
+  }
+}
+
+.survey-builder-settings-inner {
+  display: none;
+
+  &.current {
+    display: inherit;
   }
 }
 
@@ -1455,7 +1759,7 @@ hr {
 
 // .perks-text {
 //   position: absolute;
-//   color: $text-on-dark-header;
+//   color: $text-on-header-top;
 //   font-weight: 500;
 //   right: 4px;
 //   top: 3px;
